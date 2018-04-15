@@ -3,7 +3,8 @@
 	controls
 	{
 		subheaderlabels { controlname="CDetailsSubHeaderLabelsPanel" }
-		launchbutton { controlname="Button" labeltext="#Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
+		//launchbutton { controlname="Button" labeltext="#Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
+		launchbutton { controlname="Button" labeltext="*Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
 		clientlist { controlname="ClientListButton" labeltext="" style="ClientListButton" tabposition=2 zpos=100 }
 	}
 
@@ -17,7 +18,13 @@
 	{
 		CDetailsGameSubHeaderPanel
 		{
-			bgcolor=backgroundstartsubtle
+			bgcolor=none
+			render_bg 
+			{
+				// TODO: 游戏预览图边框 style
+				0="fill( x0, y0, x0+2, y1, myHerderImage )"
+				0="fill( x0+2, y0, x0+200, y1, myBackground )"
+			}
 		}
 		
 		
@@ -139,199 +146,77 @@
 			}	
 		}
 		
+		// TODO: 启动游戏按钮
 		DetailsLaunchButton
 		{   
 			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="white"
-			font-style=uppercase
-			bgcolor=none
-
-			render
-			{
-				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
-
-
-			}	
+			textcolor=none
+			bgcolor=none 
+			render_bg { 1="image( x0, y0, x1, y1, graphics/icon_play )" }	
 		}
-	
-		DetailsLaunchButton:Hover
-		{   
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none   
-
-			render
-			{
-				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
-
-
-			}	
-		}
-		
-		DetailsLaunchButton:Selected
-		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
-			}
-			render_bg
-			{
-        // background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
-			}
-		}
-		
-		
-		DetailsLaunchButton:Active
-		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
-			}
-			
-			render_bg
-			{
-       				 // background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
-			}	
-		}
+		DetailsLaunchButton:Hover { render_bg { 1="image( x0, y0, x1, y1, graphics/icon_play_hover )" } }
+		DetailsLaunchButton:Active { render_bg { 1="image( x0, y0, x1, y1, graphics/icon_play_active )" } }
+		DetailsLaunchButton:Selected {}
+		DetailsLaunchButton:Disabled {}
 				
-		DetailsLaunchButton:Disabled
-		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor=TextDisabled
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
-			}
-			
-			render_bg
-			{
-       				 // background fill
-				0="gradient( x0, y0+1, x1, y1-1, buttonfacedisabled, buttonfacedisabled )"
-			}	
-		}
-				
+		// TODO: 游戏安装按钮
 		DetailsInstallButton
 		{  
-			
 			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none   
 			render
 			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install)"
+				1="image( x0, y0, x1, y1, graphics/icon_install)"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
+				//0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
 
 
 			}	
 		}
-		
+		// TODO: 安装图标
 		DetailsInstallButton:Hover
 		{  
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none   
-
 			render
 			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
+				//1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
+				//0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
 			}	
 		}
 		
 		DetailsInstallButton:Selected
 		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none   
 			
 			render
 			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
+				//1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
 			}
 			render_bg
 			{
        				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"           
+				//0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"           
 			}
 		}
 		
 		
 		DetailsInstallButton:Active
 		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
+				//1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
 			}
 			
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+				//0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
 			}	
 		}
 		
@@ -432,21 +317,24 @@
 		place { 
 			control=launchbutton
 			region=header
-			dir=right
-			align=middle
-			margin-left=10
+			dir=down
+			width=72
+			height=72
+			align=left
+			margin-left=448
 			margin-right=0
-			margin-top=10
-			margin-bottom=10
+			margin-top=180
+			margin-bottom=0
 			spacing=0
 		}
 		place { 
 			start=launchbutton
 			control=clientlist
 			region=header
-			dir=right
-			align=middle
-			margin-left=0
+			dir=down
+			align=left
+			margin-top=30
+			margin-left=-35
 			margin-right=0
 			spacing=0
 		}

@@ -15,32 +15,29 @@
 	{
 		CDetailsGameTitleHeaderPanel
 		{
-			bgcolor=myNone
-		}
-
-		headertextlarge
-		{
-			padding-bottom=5
-			padding-top=5
-			font-size=24
-			textcolor=Text
-			font-family=basefont
-			font-weight=400 
 			bgcolor=none
 		}
+
+		// TODO: 游戏详情 游戏名 style
+		headertextlarge
+		{
+			padding-bottom=0
+			padding-top=70
+			padding-left=200
+			font-size=60
+			textcolor=Text
+			font-family=myFont
+			// font-style="uppercase"
+			font-weight=700 
+			bgcolor=none
+		}
+
 	}
 
 	layout
 	{
 		region { name="header" y=0 x=0 width=max height=max }
-		place {
-			control=iconimage,gametitlelabel
-			region=header
-			dir=right
-			align=left-center
-			margin-left=10
-			margin-right=10
-			spacing=10
-		}
+		place { control=iconimage region=header width=0 height=0 align=top-center margin-left=0 margin-right=0 }
+		place { control=gametitlelabel region=header align=top-center margin-left=0 margin-right=0}
 	}
 }

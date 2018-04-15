@@ -4,6 +4,9 @@ steam.styles
   {
     // colors section can include colors in "R G B A" form, or references to already defined colors;
     // it can also include just general settings controls can pull from for extra customization
+
+    myFont="Iomanoid"
+    myLaunchFont="HuJingLi-Mao"
   
     myTest = "201 76 109 255"
     myNone = "201 76 109 50"
@@ -24,6 +27,9 @@ steam.styles
 
     // 游戏预览图
     myHerderImage=myDivider
+
+    // 开始游戏按钮
+    myLaunchBtn=myBackground
 
 
     black="0 0 0 255"
