@@ -27,6 +27,7 @@ steam.styles
 
     // 游戏预览图
     myHerderImage=myDivider
+    myHerderImage1=myDivider
 
     // 开始游戏按钮
     myLaunchBtn=myBackground
