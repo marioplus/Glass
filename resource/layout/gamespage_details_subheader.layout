@@ -146,7 +146,7 @@
 			}	
 		}
 		
-		// TODO: 启动游戏按钮
+		// TODO: 启动游戏按钮 图标 style
 		DetailsLaunchButton
 		{   
 			inset="23 2 0 1"
@@ -159,154 +159,29 @@
 		DetailsLaunchButton:Selected {}
 		DetailsLaunchButton:Disabled {}
 				
-		// TODO: 游戏安装按钮
+		// TODO: 游戏安装按钮 图标 style
 		DetailsInstallButton
 		{  
 			inset="23 2 0 1"
 			textcolor=none
 			bgcolor=none   
-			render
-			{
-				1="image( x0, y0, x1, y1, graphics/icon_install)"
-			}
-			render_bg
-			{
-				// background fill
-				//0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
-
-
-			}	
+			render_bg { 1="image( x0, y0, x1, y1, graphics/icon_install)" }
 		}
-		// TODO: 安装图标
-		DetailsInstallButton:Hover
-		{  
-			render
-			{
-				//1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
-			}
-			render_bg
-			{
-				// background fill
-				//0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
-			}	
-		}
+		DetailsInstallButton:Hover { render_bg { 1="image( x0, y0, x1, y1, graphics/icon_install_hover)" } }
+		DetailsInstallButton:Active { render_bg { 1="image( x0, y0, x1, y1, graphics/icon_install_active)" } } 
+		DetailsInstallButton:Selected {}
 		
-		DetailsInstallButton:Selected
-		{
-			
-			render
-			{
-				//1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
-			}
-			render_bg
-			{
-       				// background fill
-				//0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"           
-			}
-		}
-		
-		
-		DetailsInstallButton:Active
-		{
-			render
-			{
-				//1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
-			}
-			
-			render_bg
-			{
-				// background fill
-				//0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
-			}	
-		}
-		
-		
+		// TODO: 游戏购买按钮 图标 style
 		DetailsBuyButton
 		{   
 			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none
-
-			render
-			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
-
-			}	
+			render_bg { 0="image( x0, y0, x1, y1, raphics/icon_bay )" }	
 		}
-		
-		DetailsBuyButton:hover
-		{   
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none   
-
-			render
-			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
-
-
-			}	
-		}
-		
-		DetailsBuyButton:active
-		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
-			}
-			
-			render_bg
-			{
-        			// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
-			}	
-		}
-		
-		
-		DetailsBuyButton:Selected
-		{
-			inset="23 2 0 1"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="White"
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
-			}
-			render_bg
-			{     
-        			// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
-			}
-		}
+		DetailsBuyButton:hover { render_bg { 0="image( x0, y0, x1, y1, raphics/icon_bay_hover )" } }
+		DetailsBuyButton:active { render_bg { 0="image( x0, y0, x1, y1, raphics/icon_bay_active )" } }
+		DetailsBuyButton:Selected {}
 	}
 
 	layout
@@ -314,6 +189,7 @@
 		// Y offset here should match the vertical padding value above in the colors section
 		region { name="header" y=0 x=0 width=max height=max }
 
+		// TODO: 游戏开始、安装、购买图标 layout
 		place { 
 			control=launchbutton
 			region=header
