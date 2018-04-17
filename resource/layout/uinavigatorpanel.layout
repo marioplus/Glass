@@ -169,9 +169,9 @@
 		library_zoom	   { ControlName=Slider showbar="1" showticks="0" style=zoomslider group=zoom zpos="4" }
 		label_zoom_separator { ControlName=Label labelText="  |  " style="LibrarySeparator" group=zoom }
 		
-		label_library_view          { ControlName=Label labelText="#steam_library_views" style="NavLabelView" 		group=views }
-		library_filters_list	    { ControlName=Label style="ViewListButton"	tooltiptext="#tooltip_view_list"	group=views }
-		library_filters_grid	    { ControlName=Label style="ViewGridButton" 	tooltiptext="#tooltip_view_grid"	group=views }
+		label_library_view          { ControlName=Label labelText="#steam_library_views" style="NavLabelView" 			group=views }
+		library_filters_list	    { ControlName=Label style="ViewListButton"	tooltiptext="#tooltip_view_list"		group=views }
+		library_filters_grid	    { ControlName=Label style="ViewGridButton" 	tooltiptext="#tooltip_view_grid"		group=views }
 		library_filters_details	    { ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
 		
 		library_music_menu { ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
@@ -899,13 +899,13 @@
  
 		place { control="library_zoom" width=82 height=20 }
 	    
-		// TODO: 游戏预览类型位置
-		region { name="libraryFilterView" align=bottom height=20 margin-right=500 }
-		place [!$OSX] { control="label_library_zoom" 										   margin-top=3 region="libraryFilterView" align=right spacing=3 margin-right=207 }
-		place [!$OSX] { control="library_zoom"							 					   margin-top=0 region="libraryFilterView" align=right spacing=3 margin-right=120 }
-		place [!$OSX] { control="label_zoom_separator, label_library_view" 					   margin-top=3 region="libraryFilterView" align=right spacing=3 margin-right=68 }
-		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view"  	region="libraryFilterView" align=right spacing=3 margin-right=0 }
-		place { control="library_filters_details,library_filters_list,library_filters_grid," 				region="libraryFilterView" align=right spacing=3 margin-right=0 }
+		// TODO: 游戏列表视图类型 style
+		region { name="libraryFilterView" align=bottom height=20 margin-right=20 }
+		place [!$OSX] { control="label_library_zoom" 										   				margin-top=3 region="libraryFilterView" align=right spacing=3 margin-right=207 }
+		place [!$OSX] { control="library_zoom"							 					   				margin-top=0 region="libraryFilterView" align=right spacing=3 margin-right=120 }
+		place [!$OSX] { control="label_zoom_separator, label_library_view" 					   				margin-top=3 region="libraryFilterView" align=right spacing=3 margin-right=68 }
+		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view"  				 region="libraryFilterView" align=right spacing=3 margin-right=0 }
+		place { control="library_filters_details,library_filters_list,library_filters_grid," 							 region="libraryFilterView" align=right spacing=3 margin-right=0 }
 		
 
 		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }

@@ -279,7 +279,7 @@
 
 	layout
 	{
-		// 游戏列表面板区域
+		// TODO: 游戏详情 layout
 		region	{ name="list" width=300 height=max margin-bottom=0 }
 		region	{ name="details" y=1 x=300 width=max height=max overflow=scroll-vertical margin-left=16 margin-top=1 margin-bottom=1 margin-right=-1}
 		region	{ name="headertext" region=details y=0 x=0 width=max height=max margin-top=20 }
@@ -289,7 +289,7 @@
 		// Empty list text, which goes across regions
 		place	{ control=emptylisttext x=0 y=0 width=max height=max margin=0 }
 
-		// TODO: 游戏列表
+		// TODO: 左边游戏列表 layout
 		// Games list on left
 		place 	{ control=GamesList  margin-top=50 region=list width=max height=max }
 		
@@ -311,16 +311,11 @@
 		// Details border
 		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
 
-		// TODO: 游戏预览图
-		// Main header image is at the bottom, then one of three color overlays is visible, and finally the 
-		// horizontal fade out gradient on the top.  We have an a and a b image, which we crossfade between.
-		//place 	{ control=headerimagea width=1024 height=max x=120 y=0 }
-		// place { control=headerimagebox width=max height=max align=top-center region="headerImageBox" }
-
+		// TODO: 游戏预览图 layout
 		place { region=details control=headerimageb 		width=800 height=350 margin-right=15 margin-top=20 align=left }
 		// Header text
-		place 	{ control=gametitleheader region=headertext width=800 height=150 } // TODO: 游戏图标和名字 位置
-		place	{ control=gamesubheader region=headertext 	width=800 height=350 } // TODO: 开始游戏按钮 和游戏时间信息 位置
+		place 	{ control=gametitleheader region=headertext width=800 height=150 } // TODO: 游戏图标和名字 layout
+		place	{ control=gamesubheader region=headertext 	width=800 height=350 } // TODO: 开始游戏按钮 和游戏时间信息 layout
 		
 		// Buttons and links on the right
 		place	

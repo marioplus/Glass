@@ -1984,7 +1984,7 @@ steam.styles
 		font-size=14
 		font-weight=400
 		textcolor="Text"
-		bgcolor="none"
+		bgcolor="myTest"
   }
          	
     ProgressBar
