@@ -161,7 +161,7 @@
 
 		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=0 group=library align=right }
 		
-		// TODO: 搜索框字符 图标 具体设置
+		// TODO: 搜索框字符 图标 controls
 		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
 		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
 
@@ -193,7 +193,7 @@
 			render_bg
 			{
 				// background fill
-				// TODO: 搜索框背景
+				// TODO: 搜索框背景 style
 				// 0="fill( x0+10, y0, x0 + 290, y1, clientgrouper )"
 				0="fill( x0+10, y0, x0+11, y1, mySearchBorder )"
 
@@ -688,6 +688,11 @@
 			textcolor="133 176 223 255"
 			font-weight=800
 		}
+
+		CUINavButtonConsole
+		{
+			image="graphics/icon_console"
+		}
 		
 		CUINavButton [!$OSX]
 		{
@@ -700,9 +705,10 @@
 			// font-style="uppercase"
 			// image="graphics/icon_down_default"
 			// TODO: 主菜单图标
-			image="graphics/1"
+			image="graphics/icon_null"
 			padding-left=5
 			padding-right=5
+			bgcolor=none
 		}
 
 		CUINavButton [$OSX]
@@ -869,7 +875,7 @@
 	
 	layout
 	{
-		// TODO: 主菜单位置
+		// TODO: 主菜单 style
 		place { control="label_store,label_library,label_community,label_me,label_news,label_console" dir=down x=5 y=40 spacing=20 margin=0 height=30 } 
 
 		place { control="label_community_friends,label_community_profile,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" x="84" y="40" x="10" }
