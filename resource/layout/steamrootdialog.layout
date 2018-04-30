@@ -143,10 +143,23 @@
 			textAlignment=east
 			zpos=-1
 		}
+		FriendPanelBorder 
+		{ 
+			ControlName=ImagePanel 
+			style="friendPanelBorder" 
+		}
 	}
 	
 	styles
 	{    
+		friendPanelBorder
+		{ 
+			bgcolor=myTest
+			render_bg
+			{ 
+				//0="image( x0, y0 x1, y1, graphics/avatarBorderOnline1)"
+			}
+		}
 		AccountBalanceStyle
 		{
 		      textcolor="labeldisabled"
@@ -1042,8 +1055,7 @@
 			bgcolor="none"
 			image="graphics/win32_win_close_disabled" 
 			image="graphics/osx_win_dis" [$OSX]
-		}
-				
+		}			
 	}
 	
 	colors
@@ -1094,16 +1106,16 @@
 		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=10 margin-right=9 spacing=-5 }
 		place [$OSX] { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=10 margin-left=4 spacing=-7 }
 
-		// TODO 个人头像 region
-		region { name=bottom align=bottom width=100 height=75 }
-		// TODO: 添加游戏 style
+		// TODO: 个人头像、在线好友 region
+		region { name=bottom align=bottom width=800 height=75 }
+		// TODO: 添加游戏 region
 		place { control="add_game" align=bottom region=bottom height=0 width=0}
 
-		place { control="FriendPanel" height=48 width=48 region=bottom align=left margin-left=5 }
+		place { control="FriendPanel" height=48 width=48 region=bottom align=left margin-left=5}
 		place { control="view_friends" height=62 y=12 region=bottom align=right dir=right margin-right=56 }
 		place { control="online_friends" height=12 y=38 region=bottom align=right dir=right margin-right=56 }
 	
  		// the title bar is missing, so increase the size of the grip
-		// place { control="frame_captiongrip" margin=2 width=max height=104 }
+		place { control="FriendPanelBorder" region=bottom align=top-center margin=2 width=40 height=40 }
 	}
 }

@@ -531,7 +531,7 @@ steam.styles
     CFriendPanel
     {
       inset="0 2 0 0"
-      bgcolor=none
+      bgcolor=myTest
       font-family=basefont
       font-size=14
       font-size=13 [$OSX]
