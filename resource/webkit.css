@@ -14,7 +14,7 @@
 ::-webkit-scrollbar-track:horizontal,
 ::-webkit-scrollbar-thumb:horizontal {
 	border-left: 0;
-	border-rigtht: 0;
+	border-right: 0;
 }
 
 ::-webkit-scrollbar-track:vertical,

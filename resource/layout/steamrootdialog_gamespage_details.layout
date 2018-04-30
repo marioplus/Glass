@@ -59,6 +59,7 @@
 
 	styles
 	{
+
 		CGamesListPanel
 		{
 			render_bg { }
@@ -73,11 +74,8 @@
 
 		CGamesPage_Details
 		{
-			bgcolor="none"
-			inset="0 0 0 1"
-			render
-						{
-						}
+			bgcolor=none
+			render {}
 			render_bg
 			{
 				 //0="gradient( x0+2, y0+2, x1-1, y1 - 1, dialogbg, almostblack )"
@@ -89,7 +87,7 @@
 		// Some overrides for our listpanel
 		"GamesPage_Details ListPanel"
 		{
-			bgcolor="myTest"
+			bgcolor="none"
 			render_bg {}
 			render {}
 		}
@@ -179,8 +177,7 @@
 
 		rightcolumnheadertext
 		{
-			inset="-9 0 0 0"
-			font-style=uppercase;
+			inset="0 0 0 0"
 			font-family=basefont
 			font-weight=700
 			font-size=17
@@ -189,64 +186,36 @@
 			padding-left=10
 		}
 		
-		rightcolumnheadertext-red
-		{
-			inset="-9 0 0 0"
-			font-style=uppercase;
-			font-size=17
-			textcolor=GameDetailsRed
+		// TODO: 游戏详情 连接 连接二字 style
+		rightcolumnheadertext-red {
+			font-size=14
 			font-family=basefont
 			font-weight=700
-			padding-top=12
-			padding-left=10
+			textcolor=myTest
 		}
-
-		rightcolumnheadertext-green
-		{
-			
-			inset="-9 0 0 0"
-			font-style=uppercase;
-			font-size=17
-			textcolor=GameDetailsGreen
+		rightcolumnheadertext-green {
+			font-size=14
 			font-family=basefont
 			font-weight=700
-			padding-top=12
-			padding-left=10
+			textcolor=myTest
 		}
-
-		rightcolumnheadertext-blue
-		{
-			inset="-9 0 0 0"
-			font-style=uppercase;
-			font-size=17
-			textcolor=GameDetailsBlue
+		rightcolumnheadertext-blue {
+			font-size=14
 			font-family=basefont
 			font-weight=700
-			padding-top=12
-			padding-left=10
+			textcolor=myTest
 		}
 
-		rightcolumnlink
-		{
-			inset="-9 0 0 0"
-			font-size=15
-			inset="-9 0 0 0"
-			font-style=normal
+		rightcolumnlink {
+			font-size=14
 			textcolor=Text
 			font-family=basefont
-			padding-left=10
-			padding-top=0
-			padding-bottom=0
 		}
-
-		rightcolumnlink:hover
-		{
+		rightcolumnlink:hover {
 			textcolor=White
 		}
-
-		rightcolumnlink:disabled
-		{
-			textcolor="TextDisabled"
+		rightcolumnlink:disabled {
+			textcolor=TextDisabled
 		}
 		
 		rightcolumntag
@@ -281,10 +250,10 @@
 	{
 		// TODO: 游戏详情 layout
 		region	{ name="list" width=300 height=max margin-bottom=0 }
-		region	{ name="details" y=1 x=300 width=max height=max overflow=scroll-vertical margin-left=16 margin-top=1 margin-bottom=1 margin-right=-1}
-		region	{ name="headertext" region=details y=0 x=0 width=max height=max margin-top=20 }
-		region	{ name="rightcolumn" region=details y=471 height=max width=1156 margin-right=0 margin-top=1 margin-bottom=1 overflow=allow-vertical }
-		region  { name="detailsbody" region=details y=474 height=max width=1156 margin-right=160 overflow=allow-vertical }
+		region	{ name="details" y=1 x=300 width=max height=max overflow=scroll-vertical margin-left=16}
+		region	{ name="headertext" 	region=details width=max height=max }
+		region	{ name="rightcolumn" 	region=details y=400 height=max width=max margin-right=0 overflow=allow-vertical }
+		region  { name="detailsbody" 	region=details y=600 height=max width=max overflow=allow-vertical }
 
 		// Empty list text, which goes across regions
 		place	{ control=emptylisttext x=0 y=0 width=max height=max margin=0 }
@@ -312,22 +281,24 @@
 		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
 
 		// TODO: 游戏预览图 layout
-		place { region=details control=headerimageb 		width=800 height=350 margin-right=15 margin-top=20 align=left }
+		place { 
+			region=details
+			control=headerimageb
+			width=1156
+			height=350
+			align=top-center
+		}
 		// Header text
-		place 	{ control=gametitleheader region=headertext width=800 height=150 } // TODO: 游戏图标和名字 layout
-		place	{ control=gamesubheader region=headertext 	width=800 height=350 } // TODO: 开始游戏按钮 和游戏时间信息 layout
+		place 	{ control=gametitleheader region=headertext width=max height=150 } // TODO: 游戏图标和名字 layout
+		place	{ control=gamesubheader region=headertext 	width=max height=350 } // TODO: 开始游戏按钮 和游戏时间信息 layout
 		
-		// Buttons and links on the right
-		place	
-		{ 
-			control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,tagslabel,*taglink,edittagslink
+		// TODO: 游戏详情右侧的 链接和类型 layout
+		place { 
+			// control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,tagslabel,*taglink,edittagslink
+			control=linkslabel,storelink
 			region=rightcolumn 
-			dir=down 
-			width=150 
-			margin=0
-			align=right
-			spacing=5 
-
+			dir=right
+			align=left
 		}
 
 		
