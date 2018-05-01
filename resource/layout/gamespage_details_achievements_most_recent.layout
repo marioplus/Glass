@@ -17,7 +17,7 @@
 	colors
 	{
 		// ProgressBarMarings must be the combined left+right margin of the actual bar from it's container
-		GameDetailsAchievements.ProgressBarMargins "8"
+		GameDetailsAchievements.ProgressBarMargins "0"
 		
 		Tooltip.Anchor=Parent
 	}
@@ -25,7 +25,7 @@
 	{
 		mostrecent
 		{
-			minimum-height="118"
+			minimum-height="200"
 		}
 
 		achievementimagebg
@@ -38,7 +38,7 @@
 
 		mostrecent_label
 		{
-			font-size=17
+			font-size=16
 			textcolor="Text"
 			font-weight=400
 		}
@@ -54,39 +54,30 @@
 			font-size=15
 		}
 
-		progressbackground
-		{
-			bgcolor=none
-			render_bg
-			{
-			// lines around
-			1="fill( x0, y0, x1, y0 + 1, ButtonBorderDisabled )"  // top
-			2="fill( x0, y1 - 1, x1, y1, ButtonBorderDisabled )"  // bottom
-			3="fill( x0, y0 + 1, x0 + 1, y1 - 1, ButtonBorderDisabled )"  // left
-			4="fill( x1 - 1, y0 + 1, x1, y1 - 1, ButtonBorderDisabled )"  // right
-	
-			}
+		// TODO: 成就进度条 style
+		progressbackground {
+			bgcolor=myAchievementsProgressBar.all
 		}
-
-		progressbarimage
-		{
-			bgcolor="focus"
-			render_bg = {}
+		progressbarimage {
+			bgcolor=myAchievementsProgressBar.get
 		}
 	}
 
 	layout
 	{
-		region { name=body margin=0 width=max height=max }
+		region { name=body margin=16 width=max height=max }
 
-		place { region=body control=mostrecent_label x=82 y=8 width=max }
-		place { region=body control=mostrecent_name x=82 y=25 width=max }
-		place { region=body control=mostrecent_unlockedsofar x=82 y=44 width=max }
-
-		place { region=body control=mostrecent_background x=2 y=2 width=80 height=80 }
-		place { region=body control=mostrecent_image x=5 y=10 width=64 height=64 }
-
-		place { region=body control=progressbackground y=92 width=max height=18 margin-right=44 }
-		place { region=body control=progressbarimage y=96 height=10 margin-left=4 margin-right=4 }
+		// TODO: 最近获得的成就 layout
+		place { region=body control=mostrecent_label }
+		place { region=body control=mostrecent_name x=90}
+		region { name=mostrecent_image_box region=body y=20 }
+		place { region=mostrecent_image_box control=mostrecent_background 	width=80 height=80 }
+		place { region=mostrecent_image_box control=mostrecent_image 		width=64 height=64 y=8 x=3}
+		
+		// TODO: 成就进度条 layout
+		region { name=mostrecent_progressbar_box region=body y=132}
+		place { region=mostrecent_progressbar_box control=mostrecent_unlockedsofar }
+		place { region=mostrecent_progressbar_box control=progressbackground 	x=0		y=26 	height=10 width=max }
+		place { region=mostrecent_progressbar_box control=progressbarimage 		x=0		y=26 	height=10 }
 	}
 }

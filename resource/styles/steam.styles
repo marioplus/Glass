@@ -33,6 +33,15 @@ steam.styles
     // 开始游戏按钮
     myLaunchBtn=myBackground
 
+    // 游戏详情子面板
+    myGameDetailsChildPanel.title="235 235 235 255"
+    myGameDetailsChildPanel.content="255 255 255 255"
+
+    // 成就进度条
+    myAchievementsProgressBar.all=myNone
+    myAchievementsProgressBar.get=myTest
+
+
 
     black="0 0 0 255"
     dark="35 35 35 255"
@@ -384,18 +393,70 @@ steam.styles
 	      image="graphics/icon_right_hover"    
 		}
     
-    viewallbutton {
-      font-size=16
+    	 
+    // "Page Button"
+    // {     
+    //   render_bg
+    //   {
+    //     // background fill
+    //     0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
+    //   }
+    // }
+    // "Page Button:hover"
+    // {   
+    //   textcolor="TextHover"
+    //   render_bg
+    //   {     
+    //     // background fill
+    //     0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+    //   }
+    // }
+    // "Page Button:active"
+    // {
+    //    textcolor="TextHover"
+    //    render_bg
+    //   {     
+    //     // background fill
+    //     0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
+    //   }
+    // }
+    // "Page Button:focus"
+    // {
+    //   textcolor="TextHover"
+    //   render_bg
+    //   {     
+    //     0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
+    //   }
+    // }
+    // "Page Button:selected"
+    // {
+    //   textcolor="TextHover"
+    //   render_bg
+    //   {     
+    //     // background fill
+    //     0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
+    //   }
+    // }
+
+    
+    // "Page Button:disabled"
+    // {     
+		// 	textcolor="LabelDisabled"
+    //   render_bg
+    //   {
+		// 		// background fill
+    //     0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
+    //   }   
+    // }
+
+    Button {
+      font-size=20
       font-weight=600
       textcolor=myTest
-      bgcolor=none
-      render {}
-      render_bg {}
       padding=8
-    }
-    viewallbutton:hover {
       bgcolor=none
-      render {}
+    }
+    Button:hover {
       render_bg {
         0="fill(x0+1, y0+1, x1-1, y1-1, myNone)"
 
@@ -405,128 +466,10 @@ steam.styles
         1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
       }
     }
-
-	  Button
-	  {     
-		font-family=basefont
-		font-size=13
-		font-weight=400
-		textcolor="Text"
-		font-style=uppercase
-		bgcolor=none
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
-			}
-	  }
-	 
-    "Page Button"
-    {     
-		render_bg
-		{
-			// background fill
-			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
-		}
-    }
-    
-	Button:hover
-    {   
-  		textcolor="TextHover"
-  		render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"             
-      }
-    }
-
-    "Page Button:hover"
-    {   
-      textcolor="TextHover"
-      render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
-      }
-    }
-    
-    Button:focus
-    {
-			textcolor="TextHover"
-			render_bg
-	      {
-	        0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"			    
-	      }
-    }
-    
-    "Page Button:focus"
-    {
-      textcolor="TextHover"
-      render_bg
-      {     
-        0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
-      }
-    }
-    
-    Button:active // this is the left-mouse-currently-pressed state
-		{
-       textcolor="TextHover"
-       render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
-      }
-    }
-    
-    "Page Button:active"
-    {
-       textcolor="TextHover"
-       render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
-      }
-    }
-    
-    Button:selected
-    {
-      textcolor="TextHover"
-      render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
-      }
-    }
-
-    "Page Button:selected"
-    {
-      textcolor="TextHover"
-      render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
-      }
-    }
-    
-    Button:disabled
-    {
-      textcolor="LabelDisabled"
-      render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
-      }
-    }   
-    
-    "Page Button:disabled"
-    {     
-			textcolor="LabelDisabled"
-      render_bg
-      {
-				// background fill
-        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
-      }   
-    }
+    Button:focus {}
+    Button:active {}
+    Button:selected {}
+    Button:disabled {} 
        
     CFriendsListSectionAffordance
     {     

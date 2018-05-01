@@ -46,9 +46,9 @@
 				//  0="image_proportional			( x0+7, 	y1-9, 	x1-9, 	y1, 	graphics/shadows/bottom)"
 
 				// 0="fill					( x0+7, 	y0+7, 	x1-9, 	y1-9, 	h)"
-				0="fill(x0+2,y0+2,x1-2,y1-2, mb)"
+				0="fill(x0+2,y0+2,x1-2,y1-2, myGameDetailsChildPanel.content)"
 				
-				0="fill(x0+2,y0+2,x1-2,y0+58, sb)"
+				0="fill(x0+2,y0+2,x1-2,y0+58, myGameDetailsChildPanel.title)"
 
 
 				1="image(x0-3,y1-2,x0+2,y1+4, graphics/material/buttons/blue/bottomleft)"
@@ -140,8 +140,7 @@
 	layout {
 		region { name=body width=max dir=down}
 		region { region=body name=title dir=down margin=16 }
-		region { region=body name=friendviewbody dir=down  start=title y=64 }
-		region { region=body name=friendviewbutton start=friendviewbody dir=down align=bottom }
+		region { region=body name=friendviewbody dir=down y=64 }
 
 		// TODO: 游戏详情 好友 layout
 		place { 

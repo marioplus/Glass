@@ -259,7 +259,7 @@
 		{ 
 			control=welcomedetails,rentaldetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody
-			spacing=50
+			spacing=30
 			dir=down
 			width=max
 			margin=16
