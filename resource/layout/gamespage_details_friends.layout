@@ -1,8 +1,7 @@
 "resource/layout/gamespage_details_friends.layout"
 {
-	controls
-	{
-		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails" }
+	controls {
+		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails"}
 		
 		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
 		listplayingnow	{ controlname="CGamesPage_Details_Friends_List" }
@@ -11,16 +10,57 @@
 		viewall { controlname="Button" style="viewallbutton" labeltext="#Steam_ViewAllFriends" command="OpenFriendsDialog" }
 	}
 
-	colors
-	{
-		GameDetailsFriends.ExtraVerticalSpacing=75	
+	colors {
+		GameDetailsFriends.ExtraVerticalSpacing=130
+		c012="0 0 0 30"
+		c014="0 0 0 35"
+		c02="0 0 0 50"
+		r="255 0 0 255"
+		g="0 150 0 255"
+		b="0 0 255 255"
+		w="30 40 45 255"
+		h="200 200 200 255"
+		sb="235 235 235 255"
+		mb="255 255 255 255"
 	}
 
-	styles
-	{
-		friendsdetails
-		{
-			bgcolor=BackgroundStart
+	styles {
+
+		friendsdetails {
+			bgcolor=none
+			render_bg {
+				//x y r c
+				//0 2px 2px 0 rgba(0,0,0,0.14)
+				//0 1px 5px 0 rgba(0,0,0,0.12)
+				//0 3px 1px -2px rgba(0,0,0,0.2)
+				// 0="gradient_horizontal( x0, y0, x1, y1, r, g )"
+
+				//left
+				// 0="gradient_horizontal	( x0, 		y0, 	x0+3, 	y1, 	none, 		c012 )"
+				// //top
+				// 0="gradient				( x0+3,		y0, 	x1, 	y0+3, 	none, 		c012 )"
+				// //right
+				// 0="gradient_horizontal	( x1-3, 	y0+3, 	x1, 	y1-3, 	c014,		none )"
+				// //bottom
+				// //  0="gradient				( x0+3, 	y1-3, 	x1, 	y1, 	c014,		none )"graphics/shadows/shadow_bottom
+				//  0="image_proportional			( x0+7, 	y1-9, 	x1-9, 	y1, 	graphics/shadows/bottom)"
+
+				// 0="fill					( x0+7, 	y0+7, 	x1-9, 	y1-9, 	h)"
+				0="fill(x0+2,y0+2,x1-2,y1-2, mb)"
+				
+				0="fill(x0+2,y0+2,x1-2,y0+58, sb)"
+
+
+				1="image(x0-3,y1-2,x0+2,y1+4, graphics/material/buttons/blue/bottomleft)"
+				2="image_tiled(x0+2,y1-2,x1-2,y1+4, graphics/material/buttons/blue/bottommiddle)"
+				3="image(x1-2,y1-2,x1+3,y1+2, graphics/material/buttons/blue/bottomright)"
+				4="image_tiled(x0-3,y0+2,x0+2,y1-2, graphics/material/buttons/blue/leftmiddle)"
+				5="image_tiled(x1-2,y0+2,x1+3,y1-2, graphics/material/buttons/blue/rightmiddle)"
+				6="image(x0-3,y0-2,x0+2,y0+2, graphics/material/buttons/blue/topleft)"
+				7="image_tiled(x0+2,y0-2,x1-2,y0+2, graphics/material/buttons/blue/topmiddle)"
+				8="image(x1-2,y0-2,x1+3,y0+2, graphics/material/buttons/blue/topright)"
+
+			}
 		}
 
 		infolabel
@@ -32,7 +72,7 @@
 		friendlabelmore
 		{
 			inset="-3 0 0 0"
-			font-size=18
+			font-size=60
 			textcolor="Text2"
 			font-family=basefont
 		     	render_bg
@@ -97,22 +137,31 @@
     		}     
 	}
 
-	layout
-	{
-		region { name=body margin=10 width=max height=max }
-		place { region=body control=headerlabel width=max }
-		
-		place 
-		{ 
-			region=body
-			y=25 
-			width=max
-			height=72
-			control=listplayingnow,listplayever
-			dir=down
-			spacing=0
-			margin=0
+	layout {
+		region { name=body width=max dir=down}
+		region { region=body name=title dir=down margin=16 }
+		region { region=body name=friendviewbody dir=down  start=title y=64 }
+		region { region=body name=friendviewbutton start=friendviewbody dir=down align=bottom }
+
+		// TODO: 游戏详情 好友 layout
+		place { 
+			region=title
+			control=headerlabel
 		}
-		place {	region=body control=viewall align=bottom margin-bottom=5 }
+		place { 
+			region=friendviewbody
+			width=max
+			dir=down
+			height=100
+			control=listplayingnow,listplayever
+			margin=16
+		}
+		place {
+			region=friendviewbody
+			control=viewall
+			align=bottom
+			margin-bottom=16
+			margin-left=8
+		}
 	}
 }

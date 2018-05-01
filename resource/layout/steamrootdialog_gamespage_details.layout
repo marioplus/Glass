@@ -17,7 +17,7 @@
 		gametitleheader { controlname="CDetailsGameTitleHeaderPanel" zpos="1" }
 		gamesubheader { controlname="CDetailsGameSubHeaderPanel" zpos="2" }
 		
-		linkslabel { controlname="Label" labeltext="#Steam_Links" style="rightcolumnheadertext" } 
+		linkslabel { controlname="Label" labeltext="#Steam_Links" style="rightcolumnheadertext"} 
 		sendguestpasslink { controlname="URLLabel" labeltext="#steam_send_guestpass" style="rightcolumnlink" tabposition=7 command="SendGuestPass" }
 		achievementslink { controlname="URLLabel" labeltext="#Steam_Achievements" style="rightcolumnlink" }
 		forumlink { controlname="URLLabel" labeltext="#Steam_Forums" style="rightcolumnlink" }
@@ -177,13 +177,10 @@
 
 		rightcolumnheadertext
 		{
-			inset="0 0 0 0"
 			font-family=basefont
 			font-weight=700
-			font-size=17
+			font-size=14
 			textcolor=label2
-			padding-top=12
-			padding-left=10
 		}
 		
 		// TODO: 游戏详情 连接 连接二字 style
@@ -220,14 +217,9 @@
 		
 		rightcolumntag
 		{
-			inset="-9 0 0 0"
-			font-size=15
-			font-style=normal
+			font-size=14
 			textcolor=Label
-			padding-left=10
-			padding-top=0
 			font-family=basefont
-			padding-bottom=0
 		}
 		
 		DetailsBorderPanel
@@ -250,10 +242,10 @@
 	{
 		// TODO: 游戏详情 layout
 		region	{ name="list" width=300 height=max margin-bottom=0 }
-		region	{ name="details" y=1 x=300 width=max height=max overflow=scroll-vertical margin-left=16}
-		region	{ name="headertext" 	region=details width=max height=max }
-		region	{ name="rightcolumn" 	region=details y=400 height=max width=max margin-right=0 overflow=allow-vertical }
-		region  { name="detailsbody" 	region=details y=600 height=max width=max overflow=allow-vertical }
+		region	{ name="details" x=300 width=max height=max overflow=scroll-vertical}
+		region	{ name="headertext" 	region=details width=max height=315}
+		region	{ name="rightcolumn" 	region=details y=315 width=max }
+		region  { name="detailsbody" 	region=details y=350 height=max width=max overflow=allow-vertical }
 
 		// Empty list text, which goes across regions
 		place	{ control=emptylisttext x=0 y=0 width=max height=max margin=0 }
@@ -267,13 +259,10 @@
 		{ 
 			control=welcomedetails,rentaldetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody
+			spacing=50
 			dir=down
 			width=max
-			margin-right=10
-			margin-top=0
-			margin-left=5
-			spacing=20
-			margin-bottom=10 
+			margin=16
 		}
 
 		
@@ -284,7 +273,7 @@
 		place { 
 			region=details
 			control=headerimageb
-			width=1156
+			width=1000
 			height=350
 			align=top-center
 		}
@@ -295,7 +284,25 @@
 		// TODO: 游戏详情右侧的 链接和类型 layout
 		place { 
 			// control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,tagslabel,*taglink,edittagslink
-			control=linkslabel,storelink
+			control=linkslabel
+			region=rightcolumn 
+			dir=right
+			align=top-center
+			margin-left=-80
+		}
+		place { 
+			// control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,tagslabel,*taglink,edittagslink
+			control=tagslabel,storelink
+			region=rightcolumn
+			start=linkslabel
+			dir=right
+			align=left
+			spacing=10
+		}
+		place { 
+			width=0
+			height=0
+			control=sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,*taglink,edittagslink
 			region=rightcolumn 
 			dir=right
 			align=left

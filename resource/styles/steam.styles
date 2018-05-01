@@ -12,6 +12,7 @@ steam.styles
     myNone = "201 76 109 50"
 
     myBackground = "38 50 56 255"  // 主背景
+    // myBackground = "238 238 238 255"  // 主背景
     myDeputybackground = "25 34 39 255" // 副背景
     myDivider = "16 21 24 255" // 分割线
     
@@ -219,7 +220,7 @@ steam.styles
     "ClayKeyFocus"      "92 92 92 255"
     "ClayMouseDown"     "85 85 85 255"
     "ClayDisabledText"    "134 134 134 255"
-    "ClayLightGreen"    "173 181 168 255" // frame button (close X) etc
+    "ClayLightGreen"    "173 181 168 255" // frame blueclose X) etc
     "ClayDimLightGreen"   "166 172 162 255" // frame button and title without focus etc
     "LightClayBG"     "104 106 101 255" // property sheet interior, active tab
     "LightClayButtonBG"   "125 128 120 255" // buttons on property sheet interior, active tab
@@ -382,7 +383,29 @@ steam.styles
 		{
 	      image="graphics/icon_right_hover"    
 		}
-		
+    
+    viewallbutton {
+      font-size=16
+      font-weight=600
+      textcolor=myTest
+      bgcolor=none
+      render {}
+      render_bg {}
+      padding=8
+    }
+    viewallbutton:hover {
+      bgcolor=none
+      render {}
+      render_bg {
+        0="fill(x0+1, y0+1, x1-1, y1-1, myNone)"
+
+        1="fill(x0+1, y0, x1-1, y0+1, myNone)"//top
+        1="fill(x0+1, y1-1, x1-1, y1, myNone)"//bottom
+        1="fill(x0, y0+1, x0+1, y1-1, myNone)"//left
+        1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
+      }
+    }
+
 	  Button
 	  {     
 		font-family=basefont
@@ -3228,27 +3251,39 @@ steam.styles
       image="graphics/icon_button_stop_disabled"
     }
     
-  
+  //T ODO: 游戏详情 好友 style
 	gamedetails-headerlabel
 	{
-		font-size="17"
+		font-size=30
 		font-style="normal"
 		font-family=basefont
 		font-weight=700
 		textcolor="Text"
-		font-style="uppercase;"
 	}
 
 	gamedetails-headerlabel-red
 	{
-		font-size="17"
-		font-style="normal"
+		font-size=30
 		font-family=basefont
 		font-weight=700
 		textcolor="GameDetailsRed"
-		font-style="uppercase;"
 	}
- 
+  gamedetails-headerlabel-green
+  {
+    font-size=30
+    textcolor="GameDetailsGreen"
+    font-family=basefont
+    font-weight=700
+  }
+
+  gamedetails-headerlabel-blue
+  {
+    font-size=30
+    textcolor="GameDetailsBlue"
+    font-family=basefont
+    font-weight=700
+  }
+
  	"html-findbar"
  	{
 		font-family=basefont
@@ -3293,25 +3328,6 @@ steam.styles
 		      }     	
 	}
 		
-	gamedetails-headerlabel-green
-	{
-		font-size="17"
-		font-style="normal"
-		textcolor="GameDetailsGreen"
-		font-family=basefont
-		font-weight=700
-		font-style="uppercase;"
-	}
-
-	gamedetails-headerlabel-blue
-	{
-		font-size="17"
-		font-style="normal"
-		textcolor="GameDetailsBlue"
-		font-family=basefont
-		font-weight=700
-		font-style="uppercase;"
-	}
 	
 	// styles for text used in RichText controls in various places
 	// TODO: 控制台字体
