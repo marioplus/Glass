@@ -9,7 +9,7 @@
 
 	colors
 	{
-		GameDetailsCommunityFiles.ExtraVerticalSpacing "60"
+		GameDetailsCommunityFiles.ExtraVerticalSpacing "0"
 		GameDetailsCommunityFiles.PanelSpacing "25"
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
@@ -31,7 +31,7 @@
 
 	layout
 	{
-		region { name=body margin=10 width=max height=max }
+		region { name=body width=max height=max }
 
 		place
 		{
@@ -44,7 +44,13 @@
 			margin=0
 		}		
 		
-		place { region=body control=viewall align=bottom margin-bottom=5 }
+		place { 
+			region=body
+			control=viewall
+			align=bottom
+			margin-bottom=16
+			margin-left=8
+		}
 
 	}
 }

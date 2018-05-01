@@ -9,27 +9,40 @@
 	
 	colors
 	{
-		WorkshopDetailsPanel.ExtraVerticalSpacing "140"
-		WorkshopDetailsPanel.ExtraHorizontalSpacing "203"
-		RichText.InsetX "2"
-		RichText.InsetY "2" 		
+		WorkshopDetailsPanel.ExtraVerticalSpacing "350"
+		WorkshopDetailsPanel.ExtraHorizontalSpacing "500"
+		RichText.InsetX "16"
+		RichText.InsetY "250" 		
 	}
 	
 	styles
 	{
 		workshop_description
 		{
-			textcolor="Label"
-			selectedtextcolor="Label"	
-			render_bg {}
-			font-size=15
-			font-family=basefont
+			textcolor=white
+			font-weight=700
+			font-size=20
+			render_bg {
+				0="image(x0+2,y0+2,x1-2,y1-2, graphics/workshop_banner)"
+				
+				// 0="fill(x0+2,y0+2,x1-2,y0+58, myGameDetailsChildPanel.title)"
+
+
+				1="image(x0-3,y1-2,x0+2,y1+4, graphics/material/buttons/blue/bottomleft)"
+				2="image_tiled(x0+2,y1-2,x1-2,y1+4, graphics/material/buttons/blue/bottommiddle)"
+				3="image(x1-2,y1-2,x1+3,y1+2, graphics/material/buttons/blue/bottomright)"
+				4="image_tiled(x0-3,y0+2,x0+2,y1-2, graphics/material/buttons/blue/leftmiddle)"
+				5="image_tiled(x1-2,y0+2,x1+3,y1-2, graphics/material/buttons/blue/rightmiddle)"
+				6="image(x0-3,y0-2,x0+2,y0+2, graphics/material/buttons/blue/topleft)"
+				7="image_tiled(x0+2,y0-2,x1-2,y0+2, graphics/material/buttons/blue/topmiddle)"
+				8="image(x1-2,y0-2,x1+3,y0+2, graphics/material/buttons/blue/topright)"
+			}
 		}
 	}
 
 	layout
 	{
-		place { region=body control=workshop_description x=0 y=60 width=200 height=80 }
-		place { region=body control=workshop_banner x=1 y=0 width=200 height=52 align=left }
+		place { region=body control=workshop_description x=0 y=0 width=max height=max }
+		place { region=body control=workshop_banner x=1 y=0 width=0 height=0 align=left }
 	}
 }
