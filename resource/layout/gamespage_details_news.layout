@@ -14,22 +14,35 @@
 		// This is needed to determine how much space is needed veritically for the header and button
 		// in addition to the autocomputed height for the *newsitem panels, adjust it if you change vertical
 		// spacing of this controls layout.
-		GameDetailsNewsContainer.ExtraVerticalSpacing "64"
+		GameDetailsNewsContainer.ExtraVerticalSpacing "130"
 	}
 
 	styles
 	{
 		newsdetails 
 		{ 
-			bgcolor=BackgroundStart
+			bgcolor=none
+			render_bg {
+				0="fill(x0+2,y0+2,x1-2,y1-2, myGameDetailsChildPanel.content)"
+				0="fill(x0+2,y0+2,x1-2,y0+58, myGameDetailsChildPanel.title)"
+
+				1="image(x0-3,y1-2,x0+2,y1+4, graphics/material/buttons/blue/bottomleft)"
+				2="image_tiled(x0+2,y1-2,x1-2,y1+4, graphics/material/buttons/blue/bottommiddle)"
+				3="image(x1-2,y1-2,x1+3,y1+2, graphics/material/buttons/blue/bottomright)"
+				4="image_tiled(x0-3,y0+2,x0+2,y1-2, graphics/material/buttons/blue/leftmiddle)"
+				5="image_tiled(x1-2,y0+2,x1+3,y1-2, graphics/material/buttons/blue/rightmiddle)"
+				6="image(x0-3,y0-2,x0+2,y0+2, graphics/material/buttons/blue/topleft)"
+				7="image_tiled(x0+2,y0-2,x1-2,y0+2, graphics/material/buttons/blue/topmiddle)"
+				8="image(x1-2,y0-2,x1+3,y0+2, graphics/material/buttons/blue/topright)"
+		      }	
 		}
 	}
 
 	layout
 	{
-		region { name=body margin=10 width=max height=max }
-		place { region=body control=headerlabel width=max }
-		place { region=body y=22 y=0 control=*newsitem dir=down width=max }
-		place { region=body align=bottom control=viewall margin-bottom=5 }
+		region { name=body margin=0 width=max height=max }
+		place { region=body control=headerlabel width=max margin=16 }
+		place { region=body y=80 control=*newsitem dir=down width=max }
+		place { region=body align=bottom control=viewall margin-bottom=16 margin-left=8 }
 	}
 }

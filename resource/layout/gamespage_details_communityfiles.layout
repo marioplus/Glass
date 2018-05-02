@@ -20,7 +20,7 @@
 	{
 		communityfilesdetails 
 		{ 
-			bgcolor=BackgroundStart
+			bgcolor=none
 		}
 		
 		infolabel
@@ -40,7 +40,6 @@
 			control=workshopdetails,*communityfile
 			dir=right
 			spacing=16
-			margin=0
 		}		
 		
 		place { 

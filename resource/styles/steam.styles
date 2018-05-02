@@ -11,8 +11,8 @@ steam.styles
     myTest = "201 76 109 255"
     myNone = "201 76 109 50"
 
-    myBackground = "38 50 56 255"  // 主背景
-    // myBackground = "238 238 238 255"  // 主背景
+    // myBackground = "38 50 56 255"  // 主背景
+    myBackground = "0 188 212 255"  // 主背景
     myDeputybackground = "25 34 39 255" // 副背景
     myDivider = "16 21 24 255" // 分割线
     

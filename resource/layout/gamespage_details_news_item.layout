@@ -12,7 +12,7 @@
 		// The extra space needed vertical beyond the autocomputed size of the blurb contents
 		// this is used in code to make the vertical size of the panel fit the title/author/morelink
 		// and should be updated if you change vertical padding/margins/layout.
-		GameDetailsNewsItem.ExtraVerticalSpacing "76"
+		GameDetailsNewsItem.ExtraVerticalSpacing "116"
 
 		// Override base style rich text x inset inside this control
 		RichText.InsetX "0"
@@ -23,7 +23,7 @@
 		title_label
 		{
 			font-size="17"
-			textcolor="Text"
+			textcolor=black
 			font-weight=800
 		}
 
@@ -31,6 +31,13 @@
 		{
 			font-size=14
 			textcolor="label2"
+			bgcolor=none
+			padding-left=10
+			render_bg {
+				0="fill(x0+3, y0+9, x0+5, y0+10, black)"
+				0="fill(x0+2, y0+10, x0+6, y0+12, black)"
+				0="fill(x0+3, y0+12, x0+5, y0+13, black)"
+			}
 		}
 
 		newsitem_body
@@ -64,29 +71,33 @@
 			selectedtextcolor="Label"	
 		}
 		
-		more_link
-		{
-			font-size=15
-			font-style="underline"
-			font-weight=400
+		more_link {
 			font-family=basefont
-			textcolor="label"
-			selectedtextcolor="Label"	
-		}
-		
-		more_link:hover
-		{
-			font-style="underline"
-			textcolor="text"
-		}
+			font-size=15
+			font-weight=400
+			textcolor=myTest
+			font-style=normal
+			padding=8
+			bgcolor=none
+		  }
+		  more_link:hover {
+			render_bg {
+			  0="fill(x0+1, y0+1, x1-1, y1-1, myNone)"
+	  
+			  1="fill(x0+1, y0, x1-1, y0+1, myNone)"//top
+			  1="fill(x0+1, y1-1, x1-1, y1, myNone)"//bottom
+			  1="fill(x0, y0+1, x0+1, y1-1, myNone)"//left
+			  1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
+			}
+		  }
 	}
 
 	layout
 	{
 		region { name=body margin=0 width=max }
-		place { region=body control=newsitem_title x=0 y=0 width=max height=24 }
-		place { region=body y=17 control=newsitem_dateandauthor width=max height=24 }
-		place { region=body y=36 control=newsitem_body width=max }
-		place { region=body control=newsitem_more align=bottom margin-bottom=26 }
+		place { region=body control=newsitem_title x=16 y=0 width=max height=24 }
+		place { region=body x=16 y=32 control=newsitem_dateandauthor width=max height=24 }
+		place { region=body x=16 y=56 control=newsitem_body width=max }
+		place { region=body control=newsitem_more align=bottom margin-bottom=25 margin-left=8}
 	}
 }
