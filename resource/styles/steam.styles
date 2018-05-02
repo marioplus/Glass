@@ -23,8 +23,8 @@ steam.styles
     myTest = "201 76 109 255"
     myNone = "201 76 109 50"
 
-    myBackground = "38 50 56 255"  // 主背景
-    // myBackground = "0 188 212 255"  // 主背景
+    // myBackground = "38 50 56 255"  // 主背景
+    myBackground = "253 253 253 255"  // 主背景
     myDeputybackground = "25 34 39 255" // 副背景
     myDivider = "16 21 24 255" // 分割线
     
@@ -2096,26 +2096,21 @@ steam.styles
   // 滚动条
 	ScrollBar
 	{
-		inset="0 0 0 0"
+		inset="0 -16 0 -16"
 	}
     
-    ScrollBarButton.up
-    {
-		bgcolor=none
-		inset="-1 2 0 0"
-		//image="graphics/icon_up_default"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonface )"
-		}
+    ScrollBarButton.up {
+		  bgcolor=none
+		  //inset="-1 2 0 0"
+		  //image="graphics/icon_up_default"
+		  render_bg {}
 		
     }
     
     ScrollBarButton.up:hover
     {
 		bgcolor=none
-		inset="-1 2 0 0"
+		//inset="-1 2 0 0"
 		//image="graphics/icon_up_hover"
 		render_bg
 		{
@@ -2126,7 +2121,7 @@ steam.styles
     
     ScrollBarButton.up:active
     {
-		inset="-1 2 0 0"
+		//inset="-1 2 0 0"
 		//image="graphics/icon_up_hover"
 		render_bg
 		{
@@ -2306,14 +2301,9 @@ steam.styles
     
     ScrollBarSlider // gutter
     {
-		bgcolor="none"
-		render{ }
-		render_bg
-		{
-
-			//background fill
-		  //2="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
-		}
+      bgcolor="none"
+      render  {}
+      render_bg {}
     }
     
     ScrollBarSliderHoriz // gutter

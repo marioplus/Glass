@@ -383,13 +383,15 @@
 
 				2="fill( x0, y1-21, x1, y1-20, myDivider )"
 				2="fill( x0, y1-20, x1, y1, myDeputybackground )"
-
+				
+				10="image( x0, y0,  x1-500, y1, graphics/t)"
 				// TODO: 主菜单背景 style
 				3="image( x0+10, y0+40,  x0+40,  y0+70,  graphics/icon_store)"
 				3="image( x0+10, y0+90,  x0+40,  y0+120, graphics/icon_library)"
 				3="image( x0+10, y0+140, x0+40,  y0+170, graphics/icon_community)"
 				3="image( x0+10, y0+190,  x0+40, y0+220, graphics/icon_center)"
 				3="image( x0+10, y0+240,  x0+40, y0+270, graphics/icon_console)"
+
 			}
 		}		
 

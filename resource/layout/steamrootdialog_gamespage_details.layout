@@ -172,6 +172,9 @@
 		headerimage 
 		{ 
 			bgcolor=none
+			render_bg {
+				//0="image( x0 , y0 , x1, y1, graphics/t )"
+			}
 			
 		}
 
@@ -273,10 +276,15 @@
 		place { 
 			region=details
 			control=headerimageb
-			width=1000
+			width=0
 			height=350
-			align=top-center
 		}
+		// place { 
+		// 	region=details
+		// 	control=headerimagea
+		// 	height=350
+		// 	align=top-center
+		// }
 		// Header text
 		place 	{ control=gametitleheader region=headertext width=max height=150 } // TODO: 游戏图标和名字 layout
 		place	{ control=gamesubheader region=headertext 	width=max height=350 } // TODO: 开始游戏按钮 和游戏时间信息 layout
