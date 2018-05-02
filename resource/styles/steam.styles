@@ -7,12 +7,24 @@ steam.styles
 
     myFont="Iomanoid"
     myLaunchFont="HuJingLi-Mao"
+
+    myPrimary=         "0 137 123 255" // #00897b"
+    myPrimaryLight=    "78 186 170 255" // #4ebaaa"
+    myPrimartDark=     "0 91 79 255" // #005b4f"
+    myPrimaryText=     "224 242 241 255" // #e0f2f1"
+    mySeconday=        "67 160 71 255" // #43a047"
+    mySecondayLight=   "118 210 117 255" // #76d275"
+    mySecondayDark=    "0 112 26 255" // #00701a"
+    mySecondayText=    "231 250 240 255" // #e7faf0"
+
+
+
   
     myTest = "201 76 109 255"
     myNone = "201 76 109 50"
 
-    // myBackground = "38 50 56 255"  // 主背景
-    myBackground = "0 188 212 255"  // 主背景
+    myBackground = "38 50 56 255"  // 主背景
+    // myBackground = "0 188 212 255"  // 主背景
     myDeputybackground = "25 34 39 255" // 副背景
     myDivider = "16 21 24 255" // 分割线
     
