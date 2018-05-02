@@ -16,14 +16,27 @@
 
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
-		GameDetailsDLC.ExtraVerticalSpacing "200"
+		GameDetailsDLC.ExtraVerticalSpacing "500"
 	}
 
 	styles
 	{
 		dlcdetails 
 		{ 
-			bgcolor=BackgroundStart
+			bgcolor=none
+			render_bg {
+				0="fill(x0+2,y0+2,x1-2,y1-2, myGameDetailsChildPanel.content)"
+				0="fill(x0+2,y0+2,x1-2,y0+58, myGameDetailsChildPanel.title)"
+
+				1="image(x0-3,y1-2,x0+2,y1+4, graphics/material/buttons/blue/bottomleft)"
+				2="image_tiled(x0+2,y1-2,x1-2,y1+4, graphics/material/buttons/blue/bottommiddle)"
+				3="image(x1-2,y1-2,x1+3,y1+2, graphics/material/buttons/blue/bottomright)"
+				4="image_tiled(x0-3,y0+2,x0+2,y1-2, graphics/material/buttons/blue/leftmiddle)"
+				5="image_tiled(x1-2,y0+2,x1+3,y1-2, graphics/material/buttons/blue/rightmiddle)"
+				6="image(x0-3,y0-2,x0+2,y0+2, graphics/material/buttons/blue/topleft)"
+				7="image_tiled(x0+2,y0-2,x1-2,y0+2, graphics/material/buttons/blue/topmiddle)"
+				8="image(x1-2,y0-2,x1+3,y0+2, graphics/material/buttons/blue/topright)"
+		      }	
 		}
 
 		bodycontent
@@ -48,6 +61,7 @@
 
 		"mostrecenttime"
 		{
+			font-size=0
 			padding-top=3
 			minimum-width=256
 		}
@@ -55,14 +69,14 @@
 
 	layout
 	{
-		region { name=body margin=10 width=max height=max }
-		place { region=body control=headerlabel width=max }
-		place { region=body y=26 control=latestimage width=257 height=120 }
-		place { region=body y=26 control=overlayimage width=257 height=120 }
-		place { region=body y=159 width=257 control=latesttimelabel }
+		region { name=body margin=0 width=max height=max }
+		place { region=body x=16 y=16 control=headerlabel width=max }
+		place { region=body y=26 control=latestimage width=0 height=0 }
+		place { region=body y=26 control=overlayimage width=0 height=0 }
+		place { width=0 height=0 control=latesttimelabel }
 		place { region=body width=max control=dlclist }
-		place { region=body y=26 control=latestimage,dlclist dir=right height=120 spacing=9 }
-		place { region=body y=156 control=latesttimelabel,moredlc dir=right spacing=10 }
+		place { region=body y=80 control=latestimage,dlclist dir=right height=300 spacing=0 marign-left=16 margin-right=16 }
+		place { region=body control=moredlc align=bottom margin-top=16 margin-left=8 }
 	}
 
 }

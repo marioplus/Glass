@@ -45,7 +45,7 @@
 	{
 		region { name=body margin=0 width=max height=max }
 
-		place { region=body control=headerlabel x=16 width=max margin=16 }
+		place { region=body control=headerlabel x=16 y=16 width=max }
 		place { region=body control=screenshotsarea  x=16 dir=down y=80 width=max spacing=16}
 
 		place { region=body control=viewall align=bottom margin-left=8 margin-bottom=16}
