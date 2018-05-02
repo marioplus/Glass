@@ -16,7 +16,7 @@
 
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
-		GameDetailsDLC.ExtraVerticalSpacing "500"
+		GameDetailsDLC.ExtraVerticalSpacing "260"
 	}
 
 	styles
@@ -75,8 +75,8 @@
 		place { region=body y=26 control=overlayimage width=0 height=0 }
 		place { width=0 height=0 control=latesttimelabel }
 		place { region=body width=max control=dlclist }
-		place { region=body y=80 control=latestimage,dlclist dir=right height=300 spacing=0 marign-left=16 margin-right=16 }
-		place { region=body control=moredlc align=bottom margin-top=16 margin-left=8 }
+		place { region=body x=2 y=58 control=dlclist  height=200 margin-right=2 }
+		place { region=body control=moredlc align=right margin-top=8 margin-right=8 }
 	}
 
 }
