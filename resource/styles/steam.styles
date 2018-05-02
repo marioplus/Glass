@@ -450,9 +450,9 @@ steam.styles
     }
 
     Button {
-      font-size=20
+      font-family=basefont
+      font-size=16
       font-weight=600
-      font=basefont
       textcolor=myTest
       padding=8
       bgcolor=none
