@@ -467,10 +467,10 @@ steam.styles
         1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
       }
     }
-    // Button:focus {}
-    // Button:active {}
-    // Button:selected {}
-    // Button:disabled {} 
+    Button:focus {}
+    Button:active {}
+    Button:selected {}
+    Button:disabled {} 
        
     CFriendsListSectionAffordance
     {     
