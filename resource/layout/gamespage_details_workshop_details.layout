@@ -10,7 +10,7 @@
 	colors
 	{
 		WorkshopDetailsPanel.ExtraVerticalSpacing "350"
-		WorkshopDetailsPanel.ExtraHorizontalSpacing "500"
+		WorkshopDetailsPanel.ExtraHorizontalSpacing "990"
 		RichText.InsetX "16"
 		RichText.InsetY "250" 		
 	}
@@ -20,7 +20,7 @@
 		workshop_description
 		{
 			textcolor=white
-			font-weight=700
+			font-weight=max
 			font-size=20
 			render_bg {
 				0="image(x0+2,y0+2,x1-2,y1-2, graphics/workshop_banner)"

@@ -10,7 +10,8 @@
 	colors
 	{
 		GameDetailsCommunityFiles.ExtraVerticalSpacing "0"
-		GameDetailsCommunityFiles.PanelSpacing "25"
+		GameDetailsCommunityFiles.ExtraHorizontalSpacing "0"
+		GameDetailsCommunityFiles.PanelSpacing "0"
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
 	}
@@ -36,11 +37,9 @@
 		place
 		{
 			region=body
-			width=max
-			y=10
 			control=workshopdetails,*communityfile
 			dir=right
-			spacing=8
+			spacing=16
 			margin=0
 		}		
 		

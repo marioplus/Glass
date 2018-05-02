@@ -394,64 +394,65 @@ steam.styles
 		}
     
     	 
-    // "Page Button"
-    // {     
-    //   render_bg
-    //   {
-    //     // background fill
-    //     0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
-    //   }
-    // }
-    // "Page Button:hover"
-    // {   
-    //   textcolor="TextHover"
-    //   render_bg
-    //   {     
-    //     // background fill
-    //     0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
-    //   }
-    // }
-    // "Page Button:active"
-    // {
-    //    textcolor="TextHover"
-    //    render_bg
-    //   {     
-    //     // background fill
-    //     0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
-    //   }
-    // }
-    // "Page Button:focus"
-    // {
-    //   textcolor="TextHover"
-    //   render_bg
-    //   {     
-    //     0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
-    //   }
-    // }
-    // "Page Button:selected"
-    // {
-    //   textcolor="TextHover"
-    //   render_bg
-    //   {     
-    //     // background fill
-    //     0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
-    //   }
-    // }
+    "Page Button"
+    {     
+      render_bg
+      {
+        // background fill
+        0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
+      }
+    }
+    "Page Button:hover"
+    {   
+      textcolor="TextHover"
+      render_bg
+      {     
+        // background fill
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+      }
+    }
+    "Page Button:active"
+    {
+       textcolor="TextHover"
+       render_bg
+      {     
+        // background fill
+        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
+      }
+    }
+    "Page Button:focus"
+    {
+      textcolor="TextHover"
+      render_bg
+      {     
+        0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
+      }
+    }
+    "Page Button:selected"
+    {
+      textcolor="TextHover"
+      render_bg
+      {     
+        // background fill
+        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
+      }
+    }
 
     
-    // "Page Button:disabled"
-    // {     
-		// 	textcolor="LabelDisabled"
-    //   render_bg
-    //   {
-		// 		// background fill
-    //     0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
-    //   }   
-    // }
+    "Page Button:disabled"
+    {     
+			textcolor="LabelDisabled"
+      render_bg
+      {
+				// background fill
+        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
+      }   
+    }
 
     Button {
       font-size=20
       font-weight=600
+      font=basefont
       textcolor=myTest
       padding=8
       bgcolor=none
@@ -466,10 +467,10 @@ steam.styles
         1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
       }
     }
-    Button:focus {}
-    Button:active {}
-    Button:selected {}
-    Button:disabled {} 
+    // Button:focus {}
+    // Button:active {}
+    // Button:selected {}
+    // Button:disabled {} 
        
     CFriendsListSectionAffordance
     {     
