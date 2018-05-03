@@ -153,13 +153,18 @@ steam.styles
     TitleBarFocus="14 31 56 80"
     MenuBG="68 68 68 255"
     
-    Focus0="23 51 77 255" // used in window frame borders 
-    Focus="25 55 84 255" // background color of any selected menu or list item
-    Focus2="21 70 107 255" 	// background color of view buttons and anything else in focus that needs more 'punch'
-    Focus3="82 82 82 255" 	// background color of highlighted friends 
-    Focus4="67 158 191 255"   // bright cyan used in progress bars   
+    // Focus0="23 51 77 255" // used in window frame borders 
+    // Focus="25 55 84 255" // background color of any selected menu or list item
+    // Focus2="21 70 107 255" 	// background color of view buttons and anything else in focus that needs more 'punch'
+    // Focus3="82 82 82 255" 	// background color of highlighted friends 
+    // Focus4="67 158 191 255"   // bright cyan used in progress bars   
+    Focus0=none // used in window frame borders 
+    Focus=none // background color of any selected menu or list item
+    Focus2=none 	// background color of view buttons and anything else in focus that needs more 'punch'
+    Focus3=none 	// background color of highlighted friends 
+    Focus4=none   // bright cyan used in progress bars   
     
-    FocusGrid="85 117 161 240"  	// background color of any grid item
+    FocusGrid=none 	// background color of any grid item
     Highlight="16 53 82 120" 	// same as focus
     
     Highlight1="92 193 229 255"    // installing hover color
