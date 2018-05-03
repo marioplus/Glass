@@ -14,7 +14,7 @@
 	colors
 	{
 		// Extra spacing beyond the flowing elements to account for header and button at the bottom
-		GameDetailsScreenshots.ExtraVerticalSpacing "170"
+		GameDetailsScreenshots.ExtraVerticalSpacing "190"
 
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
@@ -42,9 +42,9 @@
 	{
 		region { name=body margin=0 width=max height=max }
 
-		place { region=body control=headerlabel x=16 y=16 width=max }
-		place { region=body control=screenshotsarea  x=16 dir=down y=80 width=max spacing=16}
+		place { region=body control=headerlabel margin=28 width=max }
+		place { region=body control=screenshotsarea  x=28 dir=down y=80 width=max spacing=16}
 
-		place { region=body control=viewall align=bottom margin-left=8 margin-bottom=16}
+		place { region=body control=viewall align=bottom margin-left=20 margin-bottom=28}
 	}
 }

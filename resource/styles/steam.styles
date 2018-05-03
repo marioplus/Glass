@@ -46,12 +46,22 @@ steam.styles
     myLaunchBtn=myBackground
 
     // 游戏详情子面板
-    myGameDetailsChildPanel.title="235 235 235 255"
-    myGameDetailsChildPanel.content="255 255 255 255"
+    myGameDetailsChildPanel.title="129 212 250 255"
+    myGameDetailsChildPanel.content="144 202 249 255"
 
     // 成就进度条
     myAchievementsProgressBar.all=myNone
     myAchievementsProgressBar.get=myTest
+
+    // 按钮
+    myBtnBG=none
+    myBtnBG.hover="225 245 254 50"
+    myBtnBG.active="129 212 250 50"
+    myBtnBG.disabled="0 0 0 50"
+    myBtnText="144 202 249 255"
+    myBtnText.hover="144 202 249 255"
+    myBtnText.active="225 245 254 255"
+    myBtnText.disabled="255 255 255 255"
 
 
 
@@ -465,24 +475,53 @@ steam.styles
       font-family=basefont
       font-size=16
       font-weight=600
-      textcolor=myTest
+      textcolor=myBtnText
       padding=8
       bgcolor=none
-    }
-    Button:hover {
       render_bg {
-        0="fill(x0+1, y0+1, x1-1, y1-1, myNone)"
+        0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG)"
 
-        1="fill(x0+1, y0, x1-1, y0+1, myNone)"//top
-        1="fill(x0+1, y1-1, x1-1, y1, myNone)"//bottom
-        1="fill(x0, y0+1, x0+1, y1-1, myNone)"//left
-        1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
+        1="fill(x0+1, y0, x1-1, y0+1, myBtnBG)"//top
+        1="fill(x0+1, y1-1, x1-1, y1, myBtnBG)"//bottom
+        1="fill(x0, y0+1, x0+1, y1-1, myBtnBG)"//left
+        1="fill(x1-1, y0+1, x1, y1-1, myBtnBG)"//right
       }
     }
+    Button:hover {
+      textcolor=myBtnText.hover
+      render_bg {
+        0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.hover)"
+
+        1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.hover)"//top
+        1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.hover)"//bottom
+        1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.hover)"//left
+        1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.hover)"//right
+      }
+    }
+    Button:active {
+      textcolor=myBtnText.active
+      render_bg {
+        0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.active)"
+
+        1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.active)"//top
+        1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.active)"//bottom
+        1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.active)"//left
+        1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.active)"//right
+      }
+    }
+    Button:disabled {
+      textcolor=myBtnText.disabled
+      render_bg {
+        0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.disabled)"
+
+        1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.disabled)"//top
+        1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.disabled)"//bottom
+        1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.disabled)"//left
+        1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.disabled)"//right
+      }
+    } 
     Button:focus {}
-    Button:active {}
     Button:selected {}
-    Button:disabled {} 
        
     CFriendsListSectionAffordance
     {     
@@ -1101,9 +1140,6 @@ steam.styles
       selectedbgcolor="Focus"
       shadowtextcolor="TextDisabled"	// the color of disabled line items
       inset="0 -1 1 1"
-      bgcolor=myNone
-      render {}    
-      render_bg {}
 	  }
       
     "Page ListPanel"
@@ -3185,37 +3221,32 @@ steam.styles
       image="graphics/icon_button_stop_disabled"
     }
     
-  //T ODO: 游戏详情 好友 style
-	gamedetails-headerlabel
-	{
+  //T ODO: 游戏详情 面板 标题 style
+	gamedetails-headerlabel	{
 		font-size=30
-		font-style="normal"
-		font-family=basefont
-		font-weight=700
-		textcolor="Text"
+    font-weight=700
+    font-family=basefont
+    textcolor=myGameDetailsChildPanel.title
 	}
 
-	gamedetails-headerlabel-red
-	{
+	gamedetails-headerlabel-red	{
 		font-size=30
-		font-family=basefont
-		font-weight=700
-		textcolor="GameDetailsRed"
-	}
-  gamedetails-headerlabel-green
-  {
-    font-size=30
-    textcolor="GameDetailsGreen"
-    font-family=basefont
     font-weight=700
+    font-family=basefont
+    textcolor=myGameDetailsChildPanel.title
+	}
+  gamedetails-headerlabel-green {
+    font-size=30
+    font-weight=700
+    font-family=basefont
+    textcolor=myGameDetailsChildPanel.title
   }
 
-  gamedetails-headerlabel-blue
-  {
+  gamedetails-headerlabel-blue {
     font-size=30
-    textcolor="GameDetailsBlue"
-    font-family=basefont
     font-weight=700
+    font-family=basefont
+    textcolor=myGameDetailsChildPanel.title
   }
 
  	"html-findbar"

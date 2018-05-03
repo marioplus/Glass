@@ -36,22 +36,22 @@
      		
 		}
 
-		mostrecent_label
-		{
-			font-size=16
-			textcolor="Text"
-			font-weight=400
+		mostrecent_label {
+			font-size=18
+			textcolor=myGameDetailsChildPanel.content
+			padding-bottm=10
 		}
 		
-		mostrecent_name
-		{
-			font-size=16
-			textcolor="Text"
+		mostrecent_name {
+			font-size=18
+			textcolor=myGameDetailsChildPanel.content
+			padding-bottm=10
 		}
 
-		mostrecent_unlockedsofar
-		{
-			font-size=15
+		mostrecent_unlockedsofar {
+			font-size=18
+			textcolor=myGameDetailsChildPanel.content
+			padding-bottm=10
 		}
 
 		// TODO: 成就进度条 style
@@ -65,19 +65,19 @@
 
 	layout
 	{
-		region { name=body margin=16 width=max height=max }
+		region { name=body margin-top=12 width=max height=max }
 
 		// TODO: 最近获得的成就 layout
 		place { region=body control=mostrecent_label }
-		place { region=body control=mostrecent_name x=90}
-		region { name=mostrecent_image_box region=body y=20 }
+		place { region=body control=mostrecent_name x=110 }
+		region { name=mostrecent_image_box region=body y=26 }
 		place { region=mostrecent_image_box control=mostrecent_background 	width=80 height=80 }
 		place { region=mostrecent_image_box control=mostrecent_image 		width=64 height=64 y=8 x=3}
 		
 		// TODO: 成就进度条 layout
 		region { name=mostrecent_progressbar_box region=body y=132}
 		place { region=mostrecent_progressbar_box control=mostrecent_unlockedsofar }
-		place { region=mostrecent_progressbar_box control=progressbackground 	x=0		y=26 	height=10 width=max }
-		place { region=mostrecent_progressbar_box control=progressbarimage 		x=0		y=26 	height=10 }
+		place { region=mostrecent_progressbar_box control=progressbackground 	x=0		y=30 	height=10 width=max }
+		place { region=mostrecent_progressbar_box control=progressbarimage 		x=0		y=30 	height=10 }
 	}
 }

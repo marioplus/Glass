@@ -11,7 +11,7 @@
 	{
 		WorkshopDetailsPanel.ExtraVerticalSpacing "350"
 		WorkshopDetailsPanel.ExtraHorizontalSpacing "990"
-		RichText.InsetX "16"
+		RichText.InsetX "28"
 		RichText.InsetY "250" 		
 	}
 	
@@ -23,6 +23,9 @@
 			font-weight=max
 			font-size=20
 			render_bg {
+				0="image(x0+18, y0+18, x1-18, y1-18, graphics/workshopbg )"
+				// 1="fill(x0+18, y0+18, x1-18, y1-18, myTest)"
+				
 				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
 				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
 				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"

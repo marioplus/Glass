@@ -32,12 +32,10 @@
 			minimum-height="100"
 		}
 
-		infolabel
-		{
-
-			font-size=16
-			textcolor=Text
-		}
+		infolabel {
+			font-size=18
+			textcolor=myGameDetailsChildPanel.content
+		}	
 
 		achievementlabelmore
 		{
@@ -76,13 +74,8 @@
 
 	layout
 	{
-		region {
-			name=body
-			width=max
-			height=max
-			margin-left=16
-		}
-		region { name=images region=body x=0 y=36 margin=2 width=max height=48 }
+		region { name=body width=max height=max }
+		region { name=images region=body x=0 y=46 width=max height=58 }
 
 		
 		place { region=body control=imageexplanation y=16 }

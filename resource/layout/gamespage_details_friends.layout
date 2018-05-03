@@ -11,7 +11,7 @@
 	}
 
 	colors {
-		GameDetailsFriends.ExtraVerticalSpacing=130
+		GameDetailsFriends.ExtraVerticalSpacing=166
 		c012="0 0 0 30"
 		c014="0 0 0 35"
 		c02="0 0 0 50"
@@ -29,36 +29,6 @@
 		friendsdetails {
 			bgcolor=none
 			render_bg {
-				//x y r c
-				//0 2px 2px 0 rgba(0,0,0,0.14)
-				//0 1px 5px 0 rgba(0,0,0,0.12)
-				//0 3px 1px -2px rgba(0,0,0,0.2)
-				// 0="gradient_horizontal( x0, y0, x1, y1, r, g )"
-
-				//left
-				// 0="gradient_horizontal	( x0, 		y0, 	x0+3, 	y1, 	none, 		c012 )"
-				// //top
-				// 0="gradient				( x0+3,		y0, 	x1, 	y0+3, 	none, 		c012 )"
-				// //right
-				// 0="gradient_horizontal	( x1-3, 	y0+3, 	x1, 	y1-3, 	c014,		none )"
-				// //bottom
-				// //  0="gradient				( x0+3, 	y1-3, 	x1, 	y1, 	c014,		none )"graphics/shadows/shadow_bottom
-				//  0="image_proportional			( x0+7, 	y1-9, 	x1-9, 	y1, 	graphics/shadows/bottom)"
-
-				// 0="fill					( x0+7, 	y0+7, 	x1-9, 	y1-9, 	h)"
-				//0="fill(x0+2,y0+2,x1-2,y1-2, myGameDetailsChildPanel.content)"
-				
-				//0="fill(x0+2,y0+2,x1-2,y0+58, myGameDetailsChildPanel.title)"
-
-
-				// 1="image(x0-3,y1-2,x0+2,y1+4, graphics/material/buttons/blue/bottomleft)"
-				// 2="image_tiled(x0+2,y1-2,x1-2,y1+4, graphics/material/buttons/blue/bottommiddle)"
-				// 3="image(x1-2,y1-2,x1+3,y1+2, graphics/material/buttons/blue/bottomright)"
-				// 4="image_tiled(x0-3,y0+2,x0+2,y1-2, graphics/material/buttons/blue/leftmiddle)"
-				// 5="image_tiled(x1-2,y0+2,x1+3,y1-2, graphics/material/buttons/blue/rightmiddle)"
-				// 6="image(x0-3,y0-2,x0+2,y0+2, graphics/material/buttons/blue/topleft)"
-				// 7="image_tiled(x0+2,y0-2,x1-2,y0+2, graphics/material/buttons/blue/topmiddle)"
-				// 8="image(x1-2,y0-2,x1+3,y0+2, graphics/material/buttons/blue/topright)"
 				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
 				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
 				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
@@ -147,7 +117,7 @@
 
 	layout {
 		region { name=body width=max dir=down}
-		region { region=body name=title dir=down margin=16 }
+		region { region=body name=title dir=down margin=28 }
 		region { region=body name=friendviewbody dir=down y=64 }
 
 		// TODO: 游戏详情 好友 layout
@@ -161,14 +131,14 @@
 			dir=down
 			height=100
 			control=listplayingnow,listplayever
-			margin=16
+			margin=28
 		}
 		place {
 			region=friendviewbody
 			control=viewall
 			align=bottom
-			margin-bottom=16
-			margin-left=8
+			margin-bottom=28
+			margin-left=20
 		}
 	}
 }

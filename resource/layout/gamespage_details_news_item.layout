@@ -23,27 +23,26 @@
 		title_label
 		{
 			font-size="17"
-			textcolor=black
+			textcolor=myGameDetailsChildPanel.content
 			font-weight=800
 		}
 
 		date_and_author
 		{
 			font-size=14
-			textcolor="label2"
+			textcolor=myGameDetailsChildPanel.content
 			bgcolor=none
 			padding-left=10
 			render_bg {
-				0="fill(x0+3, y0+9, x0+5, y0+10, black)"
-				0="fill(x0+2, y0+10, x0+6, y0+12, black)"
-				0="fill(x0+3, y0+12, x0+5, y0+13, black)"
+				0="fill(x0+3, y0+9, x0+5, y0+10, myGameDetailsChildPanel.content)"
+				0="fill(x0+2, y0+10, x0+6, y0+12, myGameDetailsChildPanel.content)"
+				0="fill(x0+3, y0+12, x0+5, y0+13, myGameDetailsChildPanel.content)"
 			}
 		}
 
 		newsitem_body
 		{
-			textcolor="Label"
-			selectedtextcolor="Label"	
+			textcolor=myGameDetailsChildPanel.content
 			render_bg {}
 			font-size=15
 			font-family=basefont
@@ -67,27 +66,46 @@
 		"newsitem_body bold"
 		{
 			font-weight=1000
-			textcolor="Label"
+			textcolor=myGameDetailsChildPanel.content
 			selectedtextcolor="Label"	
 		}
 		
 		more_link {
-			font-family=basefont
-			font-size=15
-			font-weight=400
-			textcolor=myTest
-			font-style=normal
 			padding=8
+			font-size=16
+			font-weight=500
+			textcolor=myBtnText
+			font-family=basefont
 			bgcolor=none
+			render_bg {
+			0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG)"
+	
+			1="fill(x0+1, y0, x1-1, y0+1, myBtnBG)"//top
+			1="fill(x0+1, y1-1, x1-1, y1, myBtnBG)"//bottom
+			1="fill(x0, y0+1, x0+1, y1-1, myBtnBG)"//left
+			1="fill(x1-1, y0+1, x1, y1-1, myBtnBG)"//right
+			}
 		  }
 		  more_link:hover {
+			textcolor=myBtnText.hover
 			render_bg {
-			  0="fill(x0+1, y0+1, x1-1, y1-1, myNone)"
+			  0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.hover)"
 	  
-			  1="fill(x0+1, y0, x1-1, y0+1, myNone)"//top
-			  1="fill(x0+1, y1-1, x1-1, y1, myNone)"//bottom
-			  1="fill(x0, y0+1, x0+1, y1-1, myNone)"//left
-			  1="fill(x1-1, y0+1, x1, y1-1, myNone)"//right
+			  1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.hover)"//top
+			  1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.hover)"//bottom
+			  1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.hover)"//left
+			  1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.hover)"//right
+			}
+		  }
+		  more_link:active {
+			textcolor=myBtnText.active
+			render_bg {
+			  0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.active)"
+	  
+			  1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.active)"//top
+			  1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.active)"//bottom
+			  1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.active)"//left
+			  1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.active)"//right
 			}
 		  }
 	}
@@ -95,9 +113,9 @@
 	layout
 	{
 		region { name=body margin=0 width=max }
-		place { region=body control=newsitem_title x=16 y=0 width=max height=24 }
-		place { region=body x=16 y=32 control=newsitem_dateandauthor width=max height=24 }
-		place { region=body x=16 y=56 control=newsitem_body width=max }
-		place { region=body control=newsitem_more align=bottom margin-bottom=25 margin-left=8}
+		place { region=body control=newsitem_title x=28 y=0 width=max height=24 }
+		place { region=body x=28 y=32 control=newsitem_dateandauthor width=max height=24 }
+		place { region=body x=28 y=56 control=newsitem_body width=max }
+		place { region=body control=newsitem_more align=bottom margin-bottom=25 margin-left=20}
 	}
 }

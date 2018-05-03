@@ -16,7 +16,7 @@
 
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
-		GameDetailsDLC.ExtraVerticalSpacing "260"
+		GameDetailsDLC.ExtraVerticalSpacing "340"
 	}
 
 	styles
@@ -67,13 +67,17 @@
 	layout
 	{
 		region { name=body margin=0 width=max height=max }
-		place { region=body x=16 y=16 control=headerlabel width=max }
+
+		place { region=body margin=28 control=headerlabel width=max }
+
 		place { region=body y=26 control=latestimage width=0 height=0 }
 		place { region=body y=26 control=overlayimage width=0 height=0 }
 		place { width=0 height=0 control=latesttimelabel }
+
 		place { region=body width=max control=dlclist }
-		place { region=body x=2 y=58 control=dlclist  height=200 margin-right=2 }
-		place { region=body control=moredlc align=right margin-top=8 margin-right=8 }
+		place { region=body x=28 y=80 control=dlclist  height=159 margin-right=28}
+
+		place { region=body control=moredlc align=bottom margin-left=20 margin-bottom=28 }
 	}
 
 }

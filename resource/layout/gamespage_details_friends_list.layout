@@ -49,17 +49,16 @@
     		}     
 	     
 		
-		infolabel
-		{
-			font-size=16
-			textcolor=Label
+		infolabel {
+			font-size=18
+			textcolor=myGameDetailsChildPanel.content
 		}	
 	}
 
 	layout
 	{
 		region { name=body margin=0 width=max height=max }
-		region { name=images region=body x=0 y=20 margin=2 width=max }
+		region { name=images region=body x=0 y=30 margin=0 width=max }
 
 
 		place 

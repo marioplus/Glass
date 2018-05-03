@@ -265,7 +265,7 @@
 			spacing=30
 			dir=down
 			width=max
-			margin=16
+			margin=0
 		}
 
 		
