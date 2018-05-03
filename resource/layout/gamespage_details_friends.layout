@@ -60,7 +60,7 @@
 				// 7="image_tiled(x0+2,y0-2,x1-2,y0+2, graphics/material/buttons/blue/topmiddle)"
 				// 8="image(x1-2,y0-2,x1+3,y0+2, graphics/material/buttons/blue/topright)"
 				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
-				2="image_tiled(x0+18, y0, x1-18,y0+18, graphics/shadows/top)"
+				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
 				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
 				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
 				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
