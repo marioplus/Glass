@@ -384,7 +384,7 @@
 				2="fill( x0, y1-21, x1, y1-20, myDivider )"
 				2="fill( x0, y1-20, x1, y1, myDeputybackground )"
 				
-				10="image( x0, y0, x1, y1, graphics/bg)"
+				10="image( x0, y0, x1, y1, graphics/bg/bg)"
 				// TODO: 主菜单背景 style
 				3="image( x0+10, y0+40,  x0+40,  y0+70,  graphics/icon_store)"
 				3="image( x0+10, y0+90,  x0+40,  y0+120, graphics/icon_library)"
@@ -1114,8 +1114,8 @@
 		place { control="add_game" align=bottom region=bottom height=0 width=0}
 
 		place { control="FriendPanel" height=48 width=48 region=bottom align=left margin-left=5}
-		place { control="view_friends" height=62 y=12 region=bottom align=right dir=right margin-right=56 }
-		place { control="online_friends" height=12 y=38 region=bottom align=right dir=right margin-right=56 }
+		place { control="view_friends" height=62 y=12 width=0 region=bottom align=right dir=right margin-right=56 }
+		place { control="online_friends" height=12 y=38 width=0 region=bottom align=right dir=right margin-right=56 }
 	
  		// the title bar is missing, so increase the size of the grip
 		place { control="FriendPanelBorder" region=bottom align=top-center margin=2 width=40 height=40 }

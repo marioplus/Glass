@@ -23,7 +23,7 @@
 			font-weight=max
 			font-size=20
 			render_bg {
-				0="image(x0+18, y0+18, x1-18, y1-18, graphics/workshopbg )"
+				0="image(x0+24, y0+24, x1-24, y1-24, graphics/workshopbg )"
 				// 1="fill(x0+18, y0+18, x1-18, y1-18, myTest)"
 				
 				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
