@@ -476,7 +476,7 @@ steam.styles
       font-size=16
       font-weight=600
       textcolor=myBtnText
-      padding=8
+      padding=0
       bgcolor=none
       render_bg {
         0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG)"
@@ -2278,7 +2278,7 @@ steam.styles
 		render_bg 
 		{
 			// center fill
-			0="fill( x0+3, y0, x1, y1, myScrollBarBg )"
+			//0="fill( x0+3, y0, x1, y1, myScrollBarBg )"
 		}
     }
        

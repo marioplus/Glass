@@ -195,13 +195,14 @@
 				// background fill
 				// TODO: 搜索框背景 style
 				// 0="fill( x0+10, y0, x0 + 290, y1, clientgrouper )"
-				0="fill( x0+10, y0, x0+11, y1, mySearchBorder )"
+				// 0="fill( x0+10, y0, x0+11, y1, mySearchBorder )"
 
-				0="fill( x0+11, y0, x0+289, y0+1, mySearchBorder )"
-				0="fill( x0+11, y0+1, x0+289, y1-1, mySearchBackground )"
-				0="fill( x0+11, y1-1, x0+289, y1, mySearchBorder )"
+				// 0="fill( x0+11, y0, x0+289, y0+1, mySearchBorder )"
+				// 0="fill( x0+11, y0+1, x0+289, y1-1, mySearchBackground )"
+				// 0="fill( x0+11, y1-1, x0+289, y1, mySearchBorder )"
 
-				0="fill( x0+289, y0, x0+290, y1, mySearchBorder )"
+				// 0="fill( x0+289, y0, x0+290, y1, mySearchBorder )"
+				0="image(x0, y0, x1, y1, graphis/searchBar)"
 			}
 			
 		}
