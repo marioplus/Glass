@@ -50,10 +50,9 @@
 		DownloadsPageStyle
 		{
 
-			bgcolor=none
+			bgcolor=myTest
 			render
 			{
-
 			}			
 		}
 		ListPanelStyle

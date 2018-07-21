@@ -159,14 +159,14 @@
 			style="WebPanelStyle"
 		}
 
-		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=0 group=library align=right }
+		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=1  group=library align=right zpos="-1"}
 		
 		// TODO: 搜索框字符 图标 controls
 		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
-		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
+		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=library zpos="-1" }
 
 		label_library_zoom { ControlName=Label labelText="#steam_library_zoom"	style="NavLabelZoom" group=zoom  }
-		library_zoom	   { ControlName=Slider showbar="1" showticks="0" style=zoomslider group=zoom zpos="4" }
+		library_zoom	   { ControlName=Slider showbar="1" showticks="0" style=zoomslider group=zoom zpos="-1" }
 		label_zoom_separator { ControlName=Label labelText="  |  " style="LibrarySeparator" group=zoom }
 		
 		label_library_view          { ControlName=Label labelText="#steam_library_views" style="NavLabelView" 			group=views }
@@ -894,7 +894,7 @@
  	
 		place { control="library_search"  width=112}	
 
-		region {name="subnavbar" x=50 y=40 width=max heigth=25}
+		region {name="subnavbar" x=50 y=40 width=288 heigth=25}
 
 		// TODO: 搜索框背景 区域
 		place { control="subnavgroup_library" align=top-center height=30 width=max region="subnavbar" }
@@ -902,7 +902,8 @@
 		// TODO: 搜索框图标和文字
 		place [!$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 margin-top=7 margin-left=19 region="subnavbar" }
 		place  [$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 region="subnavbar" }
-		place { control="library_filters" margin-top=5 margin-left=250 align=left spacing=1 region="subnavbar" }
+		// TODO: 被干掉的搜索选项
+		// place { control="library_filters" margin-top=5 align=right spacing=1  region="subnavbar" }
  
 		place { control="library_zoom" width=82 height=20 }
 	    

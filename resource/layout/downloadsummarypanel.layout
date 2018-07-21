@@ -130,8 +130,20 @@
 	{
 		CDownloadSummaryPanel
 		{
-			bgcolor=panelBackground
-			inset="0	0 0 0"
+			// bgcolor=panelBackground
+			bgcolor="0 200 100 255"
+			inset="0 0 0 0"
+			
+			render_bg {
+				// 1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				// 2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				// 3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				// 4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				// 5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				// 6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				// 7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				// 8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
+			}
 	  	}
 	   
 		throttleLabel
