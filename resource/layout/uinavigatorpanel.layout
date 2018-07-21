@@ -903,7 +903,7 @@
 		place [!$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 margin-top=7 margin-left=19 region="subnavbar" }
 		place  [$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 region="subnavbar" }
 		// TODO: 被干掉的搜索选项
-		// place { control="library_filters" margin-top=5 align=right spacing=1  region="subnavbar" }
+		place { control="library_filters" margin-top=5 align=right spacing=1 width=0 region="subnavbar" }
  
 		place { control="library_zoom" width=82 height=20 }
 	    
