@@ -82,7 +82,7 @@
 
 	layout
 	{
-		region { name=main x=0 y=0 margin=5 }
+		region { name=main x=50 y=0 margin=5 }
 		place { control="downloadsummarypanel,panel_list" dir=down region=main width=max height=max spacing=0 }
 	}
 }
