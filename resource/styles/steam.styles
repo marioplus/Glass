@@ -63,8 +63,18 @@ steam.styles
     myBtnText.active="225 245 254 255"
     myBtnText.disabled="255 255 255 255"
 
-    //游戏列表
+    // 游戏列表
     mGameListGrapText="0 176 255 255"
+
+    // 下载页面
+    // 下载详情
+    myDownloadSummary.title="129 212 250 255"
+    myDownloadSummary.content="144 202 249 255"
+    myDownloadSummary.speed="255 255 255 255"
+    // myDownloadSummary.disk="129 212 250 255"
+    // myDownloadSummary.net="7 168 39 100"
+    myDownloadSummary.disk="7 168 39 255"
+    myDownloadSummary.net="129 212 250 50"
 
 
 

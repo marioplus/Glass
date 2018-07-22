@@ -130,19 +130,16 @@
 	{
 		CDownloadSummaryPanel
 		{
-			// bgcolor=panelBackground
-			bgcolor="0 200 100 255"
-			inset="0 0 0 0"
-			
+			// bgcolor=panelBackground			
 			render_bg {
-				// 1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
-				// 2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
-				// 3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
-				// 4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
-				// 5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
-				// 6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
-				// 7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
-				// 8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
 			}
 	  	}
 	   
@@ -150,8 +147,7 @@
 		{
 			bgcolor	   none
 			font-size   "15"
-			textcolor   "label2"
-			padding-top	"0"
+			textcolor=myDownloadSummary.content
 			font-style="uppercase"
 	    } 
 		throttleValue
@@ -170,16 +166,17 @@
 		bigtext
 		{
 		 font-family=basefont
-		 font-size=17
+		 font-size=30
+		 font-weight=700
 		 font-style="uppercase"
-		 textcolor="text"
+		 textcolor="myDownloadSummary.title"
 		}
 		
 		bigtextNonUpper
 		{
 		 font-family=basefont
 		 font-size=17
-		 textcolor="text"
+		 textcolor=myDownloadSummary.speed
 		}		
 		
 		bigtextlabel 
@@ -187,7 +184,7 @@
 		 font-family=basefont
 		 font-size=17
 		 font-style="uppercase"
-		 textcolor="label2"
+		 textcolor=myDownloadSummary.content
 		}
 		
 		bigtextHeader 
@@ -209,180 +206,99 @@
 		
 		PauseButton
 		{   
-	
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="Text"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none
-	
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause )"
-			}
 			render_bg
 			{
-				// background fill
-				0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonface2, propertysheetbg	)"   		
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install )"
 			}
 		}
 	   
 		PauseButton:Hover
 		{	  
-			inset="23 0	0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="TextHover"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none   
-		   
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause_hover )"
-			}
 			render_bg
 			{
-				// background fill
-		 		0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonfaceactive, propertysheetbg	)"  
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_hover )"
 			}	   
 		}
 			
 		ResumeButton
 		{	  
-
-			inset="23 0	0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="Text"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none
-
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install )"
-			}
 			render_bg
 			{
-				// background fill
-	 			0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonface2, propertysheetbg	)"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
 			}
 		}
 	   
 		ResumeButton:Hover
 		{	  
-			inset="23 0	0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="TextHover"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none   
-		   
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_hover	)"
-			}
 			render_bg
 			{
-				// background fill
-		 		0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonfaceactive, propertysheetbg	)"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_hover )"
 			}	   
 		}
-		  
-		NetGraphPanel
-		{
-			bgcolor   "none"	
-			textcolor "highlight5"
-			render_bg
-			{
-				// no background
-				// 0="fill( x0, y0, x1,	y1, red	)"
-			}
-			render
-			{
-				0="fill( x0, y0, x0+50,	y1, panelBackground	)"
-				1="gradient_horizontal( x0+50, y0, x0+100, y1, panelBackground,	panelBackgroundTransparent )"
-			}
-		}
-		
+		  		
 		DiscGraphPanel
 		{
-			bgcolor   "none"	
-			textcolor="green7"
-			render_bg
-			{
-				// no background
-				// 0="fill( x0, y0, x1,	y1, red	)"
-			}
-			render
-			{
-				0="fill( x0, y0, x0+50,	y1, panelBackground	)"
-				1="gradient_horizontal( x0+50, y0, x0+100, y1, panelBackground,	panelBackgroundTransparent )"
-			}
+			textcolor=myDownloadSummary.disk
+			bgcolor=none
 		}
-		
 		DiskLegendPanel
 		{
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0, x1,y1, green7 )"
-			}
+			render_bg { 0="fill( x0, y0, x1,y1, myDownloadSummary.disk )" }
 		}
-		
+		NetGraphPanel
+		{
+			textcolor=myDownloadSummary.net
+			bgcolor=none
+		}
 		NetLegendPanel
 		{
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0, x1,y1, highlight5 )"
-			}
+			render_bg { 0="fill( x0, y0, x1,y1, myDownloadSummary.net )" }
 		}
 	}
 	
 	layout
 	{
+		region { name=body width=max height=max margin=25 }
+		// 大标题
+		place { region=body control="header" align=topleft }
+		// 当前、峰值、下载总量、磁盘使用量
+		region { region=body name=download_dateil start="header" width=max y=50 }
+		place { region=download_dateil control="download_rate_value,download_rate"            spacing=4 y=0 }
+		place { region=download_dateil control="peak_download_rate_value, peak_download_rate" spacing=4 y=20 }
+		place { region=download_dateil control="total_downloaded_value, total_downloaded"     spacing=4 y=40 }
+		place { region=download_dateil control="disk_status_value, disk_status_label"         spacing=4 y=60 }
 		
-		//set aside some room for the	header section
-		region { name=head	dir=down x=10 y=10 height=max	width=max	margin-right=0	}
-		
-		region { name=legend align=right width=90 margin-top=60	}
-		
-		region { name=left_column x=0	y=21	 width=max  region=head }
-		region { name=middle_column x=200 y=0 width=max  region=head }
-		
+
 		// graph
-		place { control="net_graphpanel" region=head x=182 y=0 width="max" height="104" margin-right=112 }				   
-		place { control="disc_graphpanel" region=head x=182 y=0 width="max" height="104" margin-right=112 }
-		
-		// graph legend
-		place { control="net_legend_panel" region=legend y=3 x=0 width=9 height=9 }
-		place { control="net_legend_label" region=legend y=1 x=12 }
-		
-		place { control="disk_legend_panel" region=legend y=16 x=0  width=9 height=9 }
-		place { control="disk_legend_label" region=legend y=14 x=12 }
-					
-		// put NETWORK	USAGE in the top left
-		place { control="header"	region=head dir=down x=0	y=0	}
-		
-		// top right
-		place { control="pauseresumeallbutton" region=head align=right margin-right=10	margin-top=0 }
-		
-		// three rows of network	usage underneath the header
-		place { region=left_column  control="download_rate_value,download_rate" spacing=4 }
-		place { region=left_column  control="peak_download_rate_value, peak_download_rate" spacing=4 y=22 align=top }
-		place { region=left_column  control="total_downloaded_value, total_downloaded" spacing=4 y=44	align=top	}
-		place { region=left_column  control="disk_status_value, disk_status_label" spacing=4 y=66 align=top	}
-		
+		region { region=body name=graphpanel width=max height=600 y=200 }
+		place { region=graphpanel control="net_graphpanel" width=max height=max }
+		place { region=graphpanel control="disc_graphpanel" width=max height=max }
+		// 暂停、开始...按钮
+		place { region=graphpanel control="pauseresumeallbutton" align="top-center" y=264  width=72 height=72 }
+
 		// throttling info
 		place { region=middle_column controls="blackout_label, blackout_value" spacing=4 }
-		place { region=middle_column control="throttling_label" start=blackout_label dir=down margin-top=4 }
-		place { region=middle_column control="throttling_value" start=throttling_label dir=right margin-left=4 }
-		
+
+
+		// 图例
+		region { region=body name=legend align=bottom height=30 margin-top=-25 width=max }
+		region { region=legend name=net_legend width=max  height=13 }
+		region { region=legend name=disk_legend width=max height=13 y=20 }
+		place { region=net_legend  control="net_legend_panel"  region=legend x=0  y=2 width=9 height=9 }
+		place { region=net_legend  control="net_legend_label"  region=legend x=15 y=0 }
+		place { region=disk_legend control="disk_legend_panel" region=legend x=0  y=2 width=9 height=9 }
+		place { region=disk_legend control="disk_legend_label" region=legend x=15 y=0 }
+
+		// 限速提示
+		place { region=body control="throttling_label, throttling_value" align=bottom spacing=4 }
 		
 	}
 }

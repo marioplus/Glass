@@ -50,7 +50,7 @@
 		DownloadsPageStyle
 		{
 
-			bgcolor=myTest
+			bgcolor=none
 			render
 			{
 			}			
@@ -58,7 +58,7 @@
 		ListPanelStyle
 		{
 			inset = "0 0 0 0"
-			bgcolor=clientbg
+			bgcolor=none
 			font-family=basefont
 			font-size=14
 			font-weight=400
@@ -73,15 +73,16 @@
 			render_bg 
 			{	
 				// background gradient
-				0="gradient( x0, y0, x1, y0 + 149, dialogbg, AlmostBlack )"
-				1="fill( x0, y0 + 149, x1, y1, AlmostBlack )" 
+				// 0="gradient( x0, y0, x1, y0 + 149, dialogbg, AlmostBlack )"
+				1="fill( x0, y0, x1, y1, myNone )" 
 			}
 		}	
 	}
 
 	layout
 	{
-		region { name=main x=50 y=0 margin=5 }
-		place { control="downloadsummarypanel,panel_list" dir=down region=main width=max height=max spacing=0 }
+		region { name=main x=50 y=0 width=max height=max }
+		place { region=main control="downloadsummarypanel" width=300 height=max}
+		place { region=main control="panel_list" width=max width=max height=max margin-left=326 }
 	}
 }

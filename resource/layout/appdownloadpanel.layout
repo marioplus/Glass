@@ -56,10 +56,19 @@
 		
 		panelStyleHighlight
 		{
+			
 			render_bg
 			{
-				0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
-				2="image( x0, y0 - 55, x1, y1+8, graphics/clienttexture2b)"
+				// 0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
+				// 2="image( x0, y0 - 55, x1, y1+8, graphics/clienttexture2b)"
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
 			}			
 		}
 
@@ -332,12 +341,12 @@
 	layout
 	{
 		region { name="bottom" y=75 height=60 width=400 }
-		  
-		region { name="column1" x=0 width=200 }
+		
+		region { name="column1" x=0 width=200   }
 		region { name="column2" x=210 width=max }
 		region { name="column3" x=500 width=max }
 		region { name="column4" x=700 width=max overflow=allow-horizontal }
-		
+
 		// left column
 		place { control="spacer" }
 		place { control="gameimage" start=spacer dir=down margin-left=8 width=192 height=85 }
