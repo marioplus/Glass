@@ -71,10 +71,13 @@ steam.styles
     myDownloadSummary.title="129 212 250 255"
     myDownloadSummary.content="144 202 249 255"
     myDownloadSummary.speed="255 255 255 255"
-    // myDownloadSummary.disk="129 212 250 255"
-    // myDownloadSummary.net="7 168 39 100"
     myDownloadSummary.disk="7 168 39 255"
     myDownloadSummary.net="129 212 250 50"
+    myDownload.section="129 212 250 255"
+    myDownload.type="129 212 250 255"
+    myDownload.label="144 202 249 255"
+    myDownload.value="255 255 255 255"
+
 
 
 
@@ -2010,15 +2013,18 @@ steam.styles
          	
     ProgressBar
     {
-		textcolor="highlight5a"
+    // textcolor="highlight5a"
+		textcolor="103 192 103 150"
 		bgcolor="none"
 		render
 		{
+      // 1="image_tiled(x0, y0, x1, y1, graphics/download/progress)"
 			// lines around
-		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
-		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
-		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+		// 1="fill( x0 , y0 , x1 , y1, ButtonBorder )"  // top
+		// 2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+		// 3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+    // 4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+    
 		}   
 	}
     

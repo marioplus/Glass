@@ -6,15 +6,15 @@
 		appdownloadpanel	{	tall="110"	style=panelStyle }
 
 		// image
-		spacer			{ controlname="Panel" }
-		gameimage		{ controlname="ImagePanel" zpos="1" style="gameImagePanel" }		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
-		workshopbanner		{ controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }  
+		spacer			    { controlname="Panel" }
+		gameimage		    { controlname="ImagePanel" zpos="1" style="gameImagePanel" }		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
+		// workshopbanner		{ controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }  
 		
 		// left-mid column
-		namelabel	{ controlname="Label"	labelText="#steam_downloads_gamename" style="ModuleHeading" }
-		dashlabel	{ controlname="Label"	labelText=""	}
+		namelabel	        { controlname="Label"	labelText="#steam_downloads_gamename" style="ModuleHeading" }
+		dashlabel	        { controlname="Label"	labelText=""}
 		launchbutton		{ controlname="Button"	style="DetailsLaunchButton"	labelText="#Steam_LaunchGame" zpos="1" }
-		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="ShowWhileDownloading" style="SlimProgressBar" }
+		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="ShowWhileDownloading"}
 		settingslink		{ controlname="URLlabel"	style="settingslink" }
 
 		// right-mid column
@@ -42,25 +42,33 @@
 	
 	colors
 	{
-		dark_blue_grad = "12 27 38 255"
-		light_blue_grad = "32 72 102 255"
+		dark_blue_grad = "7 168 39 255"
+		light_blue_grad = "128 18 164 255"
 	}
 	
 	styles
 	{
-		panelStyle
+		panelStyle 
 		{
-			bgcolor=none
-			
+			minimum-height=300
+			render_bg
+			{
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
+			}
 		}
 		
 		panelStyleHighlight
 		{
-			
+			minimum-height=350
 			render_bg
 			{
-				// 0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
-				// 2="image( x0, y0 - 55, x1, y1+8, graphics/clienttexture2b)"
 				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
 				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
 				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
@@ -107,9 +115,6 @@
 			font-style=normal
 			textcolor="text"
 			font-family=basefont
-			padding-left=0
-			padding-top=0
-			padding-bottom=0
 		}
 		
 		settingslink:hover
@@ -118,9 +123,6 @@
 			font-style=normal
 			textcolor="white"
 			font-family=basefont
-			padding-left=0
-			padding-top=0
-			padding-bottom=0
 		}
 
 		settingslink:disabled
@@ -133,13 +135,19 @@
 			textcolor=TextHover
 		}
 		
+		label 
+		{
+			bgcolor=none
+			font-size=17
+			textcolor=myDownload.value
+		}
+
 		label2
 		{
-			bgcolor			none
-			font-size		"14"
-			textcolor		"label2"
-			padding-top		"0"
-			font-style="uppercase"
+			bgcolor=none
+			font-size=17
+			textcolor=myDownload.label
+			font-style=uppercase
 		}
 		
 		label3
@@ -153,22 +161,20 @@
 
 		ModuleHeading
 		{
-			font-family	basefont
-			bgcolor="none"
-			font-size	"18"
-			textcolor	"text"
-			padding-top	"0"
-			font-weight	"700"
+			font-family=basefont
+			bgcolor=none
+			font-size=18
+			font-weight=700
+			textcolor=myDownload.label
 		}	
 		
 		ModuleHeading2
 		{
-			font-family	basefont
-			bgcolor="none"
-			font-size	"18"
-			textcolor	"label"
-			padding-top	"0"
-			font-weight	"400"
+			font-family=basefont
+			bgcolor=none
+			font-size=30
+			font-weight=700
+			textcolor=myDownload.type
 		}								
 		
 		panelBgColorActive
@@ -193,134 +199,78 @@
 		
 		gameImagePanelHighlight
 		{   
-			inset="0 0 0 0"
 			bgcolor=none
 			render_bg	
 			{
-				0="image( x0 - 8, y0 - 3, x1 + 8, y1 + 0, graphics/downloads_bg )"
+				0="image( x0, y0, x1, y1, graphics/download_downloading )"
 			}		
-			padding "4"
-		}					
+		}	
+						
 		DetailsLaunchButton
 		{   
-
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="white"
-			font-style="uppercase"
+			textcolor=none
 			bgcolor=none
-
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
-			}
 			render_bg
 			{
-				// background fill
-				0="gradient( x0, y0-1, x1, y1, launch1, launch2 )"
-
-
-		
-			}	
+				1="image( x0, y0, x1, y1, graphics/download_play )"
+			}
 		}
-	
 		DetailsLaunchButton:Hover
 		{   
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="white"
-			font-style=uppercase
-			bgcolor=none   
-
-			render
-			{
-				0="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
-			}
+			textcolor=none
+			bgcolor=none
 			render_bg
 			{
-				// background fill
-				0="gradient( x0, y0-1, x1, y1, launch0, launch2 )"
-
-
+				1="image( x0, y0, x1, y1, graphics/download_play )"
 			}	
 		}
-		
 		DetailsLaunchButton:Disabled
 		{   
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="LabelDisabled"
-			font-style=uppercase
-			bgcolor=none   
-
-			render
+			textcolor=none
+			bgcolor=none
+			render_bg
 			{
 				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 			}
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0-1, x1, y1, buttonfacedisabled )"
-
-			}
 		}
-
-		
 				
 		topOfQueueButton
 		{   
-		
-			inset="30 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="Text"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none
-
-			render
+			render_bg
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_topofqueue )"
+				1="image( x0, y0, x1, y1, graphics/download/top_of_queue )"
+			}
+		}
+		topOfQueueButton:Hover
+		{   
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0, x1, y1, graphics/download/top_of_queue_hover )"
 			}
 		}			
 		
 		SmRemoveButton
 		{   
-		
-			inset="0 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="Text"
-			font-style=uppercase
+			textcolor=none
 			bgcolor=none
-
-			render
+			render_bg
 			{
-				1="image( x0 + 5, y0 + 4, x1, y1, graphics/icon_close )"
+				1="image( x0, y0, x1, y1, graphics/download/remove )"
 			}
 		}
 		
 		SmRemoveButton:Hover
 		{   
-			inset="0 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="TextHover"
-			font-style=uppercase
-			bgcolor=none   
-			render
+			textcolor=none
+			bgcolor=none
+			render_bg
 			{
-				1="image( x0 + 5, y0 + 4, x1, y1, graphics/icon_close_hover )"
+				1="image( x0, y0, x1, y1, graphics/download/remove_hover )"
 			}
-
 		}
 		
 		
@@ -329,48 +279,56 @@
 		{
 			render_bg
 			{
-				0="fill( x0, y0, x1, y1, black )"
-			}
-			render
-			{
-			}    
+				// 1="image_tiled(x0, y0, x1, y1 graphics/download/progress)"
+				// 1="image(x0, y0, x1, y1 graphics/download/progress)"
+				// 1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				// 2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				// 3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				// 4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				// 5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				// 6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				// 7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				// 8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
+			}   
 		}
 	} 
 
 
 	layout
 	{
-		region { name="bottom" y=75 height=60 width=400 }
-		
-		region { name="column1" x=0 width=200   }
-		region { name="column2" x=210 width=max }
-		region { name="column3" x=500 width=max }
-		region { name="column4" x=700 width=max overflow=allow-horizontal }
+		region { name=body control="panelStyleHighlight" width=max height=max margin=25 }
 
-		// left column
-		place { control="spacer" }
-		place { control="gameimage" start=spacer dir=down margin-left=8 width=192 height=85 }
-		place { control="workshopbanner" margin-left=8 margin-top=82 width=192 height=26 } 
-		
-		// left-mid column
-		place { control="namelabel" region="column2" margin-top=16 margin-left=0 }
-		place { control="launchbutton" region=column2 start=namelabel dir=down margin-top=10 }
-		place { control="downloadprogressbar" region=column2 start=launchbutton margin-top=5 dir=down spacing=10 height=3 width=150 }
-		place { control="settingslink" region=column2 start=downloadprogressbar dir=down margin-top=5 margin-left=0 }
+		place { region=body control="updatetypelabel" width=max margin-right=150 }
+		place { region=body control="namelabel"    y=70 }
+		place { region=body control="settingslink" start="namelabel" y=4 x=10 }// 启用自动更新
 
-		// right-mid column
-		place { control="downloadtotallabel,downloadtotalfield" region="column3" x=0 align=top margin-top=43 spacing=6 }
-		place { control="starttimelabel,starttimefield" 				region="column3" x=0 align=top margin-top=63 spacing=6 }
-		place { control="timecompletedlabel,timecompletedfield" region="column3" x=0 align=top margin-top=63 spacing=6 }
-		place { control="pausereasonlabel,pausereasonfield" 		region="column3" x=0 align=top margin-top=63 spacing=6 }
-		place { control="timeremaininglabel,timeremainingfield" region="column3" x=0 align=top margin-top=83 spacing=6 }
-				
-		// right column
-		place { control="updatetypelabel" region="column4" spacing=10 margin-top=22 align=right margin-right=16 }
-		place { control="topofqueuebutton,removefromqueuebutton" region="column4" height=22 width=26 dir=right spacing=10 margin-top=50 align=right margin-right=16 }
-		place { control="newslink" region="column4" spacing=10 margin-top=80 align=right	margin-right=16 }
+		region {region=body name=game_dateil width=max y=100 width=190 height=76 }
+		// 游戏对应的图标是 184x70
+		place { region=game_dateil control="gameimage"       width=190 height=76 }
 
-		// put the buttons along the bottom
 		
+
+		region { region=body name=download_dateil width=500 y=230 }
+		place { region=download_dateil control="downloadtotallabel,downloadtotalfield" spacing=6 y=0 }
+		place { region=download_dateil control="starttimelabel,starttimefield"         spacing=6 y=25 }
+		place { region=download_dateil control="timecompletedlabel,timecompletedfield" spacing=6 y=25 }
+		place { region=download_dateil control="pausereasonlabel,pausereasonfield" 	   spacing=6 y=25 }
+		place { region=download_dateil control="timeremaininglabel,timeremainingfield" spacing=6 y=50 }
+
+
+		region { region=body name=button_group width=max y=45 }
+		place { region=button_group control="launchbutton" align=right width=170 height=170 }
+
+		// 查看更新
+		region { region=body name=new_panel  width=max height=14 align=bottom } 
+		place {  region=new_panel control="newslink" align=right }
+
+		place { region=body control="downloadprogressbar" height=max width=max}
+
+		place { control="removefromqueuebutton,"                              align=right width=29 height=29 y=20 margin-right=15}
+		place { control="topofqueuebutton," end-right="removefromqueuebutton" align=right width=29 height=29 y=20 margin-right=0}
+
+		// place { control="spacer" }
+		place { control="workshopbanner" margin-left=8 margin-top=82 width=0 height=0 } 
 	}
 }

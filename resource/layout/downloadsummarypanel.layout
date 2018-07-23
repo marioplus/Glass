@@ -210,7 +210,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install )"
+				1="image( x0, y0, x1, y1, graphics/icon_install )"
 			}
 		}
 	   
@@ -220,7 +220,7 @@
 			bgcolor=none   
 			render_bg
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_hover )"
+				1="image( x0, y0, x1, y1, graphics/icon_install_hover )"
 			}	   
 		}
 			
@@ -230,7 +230,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
+				1="image( x0, y0, x1, y1, graphics/icon_play )"
 			}
 		}
 	   
@@ -240,7 +240,7 @@
 			bgcolor=none   
 			render_bg
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_hover )"
+				1="image( x0, y0, x1, y1, graphics/icon_play_hover )"
 			}	   
 		}
 		  		
@@ -251,7 +251,7 @@
 		}
 		DiskLegendPanel
 		{
-			render_bg { 0="fill( x0, y0, x1,y1, myDownloadSummary.disk )" }
+			render_bg { 0="fill( x0, y0, x1, y1, myDownloadSummary.disk )" }
 		}
 		NetGraphPanel
 		{
@@ -260,7 +260,7 @@
 		}
 		NetLegendPanel
 		{
-			render_bg { 0="fill( x0, y0, x1,y1, myDownloadSummary.net )" }
+			render_bg { 0="fill( x0, y0, x1, y1, myDownloadSummary.net )" }
 		}
 	}
 	
