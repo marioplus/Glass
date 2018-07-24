@@ -51,8 +51,6 @@
 				// bgfill
 				
 				0="gradient( x0 + 12 , y1 - 47, x1 - 18, y1 - 20, launch1, launch2 )"		
-
-
      		 }			
 		}	
 
