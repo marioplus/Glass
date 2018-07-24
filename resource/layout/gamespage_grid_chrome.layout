@@ -50,98 +50,52 @@
 			{
 				// bgfill
 				
-				0="gradient( x0 + 12 , y1 - 47, x1 - 18, y1 - 20, launch1, launch2 )"		
+				// 0="gradient( x0 + 12 , y1 - 47, x1 - 18, y1 - 20, launch1, launch2 )"	
      		 }			
 		}	
-
-
 		GridNavDivider
 		{
-			textcolor="launch1"
-			bgcolor="none"
-			font-family=basefont
-			font-weight=700
-			inset="1 1 0 0 "
-			// modified font size
-			font-size=15	
+			textcolor=none
+			bgcolor=none
 		}
-		
 		CUILaunchButton
-		{   
-
-
-      font-family=basefont
-      font-size=16
-      font-weight=400
-      textcolor="white"
-      font-style=uppercase
-      bgcolor=none   
-      padding-left=23
-      padding-top=1
-      render
-      {
-       	1="image( x0, y0 + 1, x1, y1, graphics/icon_play )"
-      }
-
-      
+		{
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0 + 1, x1, y1, graphics/icon_play )"
+			}
 		}
-		
 		CUILaunchButton:Hover
 		{   
-
-
-      font-family=basefont
-      font-size=16
-      font-weight=400
-      textcolor="white"
-      font-style=uppercase
-      padding-top=1
-      bgcolor=none   
-      
-      render
-      {
-       	1="image( x0, y0 + 1, x1, y1, graphics/icon_play )"
-      }
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0 + 1, x1, y1, graphics/icon_play_hover )"
+			}
 		}
 	
-			CUIDetailsButton
+		CUIDetailsButton
 		{   
-
-
-      font-family=basefont
-      font-size=16
-      font-weight=400
-      textcolor="white"
-      font-style=uppercase
-      bgcolor=none   
-      padding-left=22
-      padding-top=1
-      
-      render
-      {
-       	1="image( x0, y0 + 1, x1, y1, graphics/icon_details )"
-      }
-      
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0 + 1, x1, y1, graphics/icon_dateils )"
+			}
 		}
-		
 		CUIDetailsButton:Hover
 		{   
-
-
-      font-family=basefont
-      font-size=16
-      font-weight=400
-      textcolor="white"
-      font-style=uppercase
-      bgcolor=none   
-      padding-top=1
-      render
-      {
-       	1="image( x0, y0 + 1, x1, y1, graphics/icon_details )"
-      }
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0 + 1, x1, y1, graphics/icon_dateils )"
+			}
 		}
-	
-
+		
 		"GameItem_Updating CUINavButton:hover"
 		{
 			textcolor="Text"
@@ -151,16 +105,11 @@
 	
 	layout
 	{
-		region { name="actions" align=bottom width=max height=50 x=0 y=210 margin-bottom=0}
+		// region { name="actions" align=bottom width=max height=50 x=0 y=210 margin-bottom=0}
 		
-		place
-		{
-			control=chromeborder	region=actions			x=0 y=0 width=max height=max
-		}
+		place { control=chromeborder	region=actions			x=0 y=0 width=max height=max }
 
-		place
-		{
-			control="launch,divider,details"	region="actions"		align=top-center spacing=7 margin-bottom=18 margin-left=0 margin-top=8
-		}
+		place { control="details" align=right margin=15 }
+		place {	control="launch"  align=top-center margin-right=36 margin-top=46 }
 	}
 }
