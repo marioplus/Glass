@@ -2958,16 +2958,12 @@ steam.styles
       font-size=14 [$OSX]
       textcolor="label"
       selectedtextcolor="TextSelected"
-      
-      render
-			{				
-
-			}
+      bgcolor=none
 			render_bg 
 			{				
 				// background gradient        
 				// 1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
-				1="fill( x0, y0, x1, y1, myBackground )"
+				// 1="fill( x0, y0, x1, y1, MyTest )"
 			}
     }
     
