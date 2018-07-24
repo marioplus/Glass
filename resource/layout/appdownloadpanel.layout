@@ -212,7 +212,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0, y0, x1, y1, graphics/download_play )"
+				1="image( x0, y0, x1, y1, graphics/download/play )"
 			}
 		}
 		DetailsLaunchButton:Hover
@@ -221,16 +221,16 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0, y0, x1, y1, graphics/download_play )"
+				1="image( x0, y0, x1, y1, graphics/download/play_hover )"
 			}	
 		}
-		DetailsLaunchButton:Disabled
+		DetailsLaunchButton:Active
 		{   
 			textcolor=none
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
+				1="image( x0, y0, x1, y1, graphics/download/play_active )"
 			}
 		}
 				
@@ -325,8 +325,9 @@
 
 		place { region=body control="downloadprogressbar" height=max width=max}
 
-		place { control="removefromqueuebutton,"                              align=right width=29 height=29 y=20 margin-right=15}
-		place { control="topofqueuebutton," end-right="removefromqueuebutton" align=right width=29 height=29 y=20 margin-right=0}
+		region { name=btn_righttop_group align=right width=max height=29 y=20 margin-right=15 }
+		place { region=btn_righttop_group control="removefromqueuebutton,"                              align=right width=29 }
+		place { region=btn_righttop_group control="topofqueuebutton," end-right="removefromqueuebutton" align=right width=29 }
 
 		// place { control="spacer" }
 		place { control="workshopbanner" margin-left=8 margin-top=82 width=0 height=0 } 
