@@ -23,16 +23,29 @@
 
 # 看看效果
 
+## 清晰背景
 
-[![Pt6yCj.png](https://s1.ax1x.com/2018/07/25/Pt6yCj.png)](https://imgchr.com/i/Pt6yCj)
+![PtIALd.png](https://s1.ax1x.com/2018/07/26/PtIALd.png)
 
-[![Pt6gvq.png](https://s1.ax1x.com/2018/07/25/Pt6gvq.png)](https://imgchr.com/i/Pt6gvq)
+![PtIeot.png](https://s1.ax1x.com/2018/07/26/PtIeot.png)
 
-[![Pt668s.png](https://s1.ax1x.com/2018/07/25/Pt668s.png)](https://imgchr.com/i/Pt668s)
+![PtIZdI.png](https://s1.ax1x.com/2018/07/26/PtIZdI.png)
 
-[![Pt6c2n.png](https://s1.ax1x.com/2018/07/25/Pt6c2n.png)](https://imgchr.com/i/Pt6c2n)
+![PtIVeA.png](https://s1.ax1x.com/2018/07/26/PtIVeA.png)
 
-[![Pt6r5Q.png](https://s1.ax1x.com/2018/07/25/Pt6r5Q.png)](https://imgchr.com/i/Pt6r5Q)
+## 模糊背景
+
+![PtIlQg.png](https://s1.ax1x.com/2018/07/26/PtIlQg.png)
+
+![PtI3Lj.png](https://s1.ax1x.com/2018/07/26/PtI3Lj.png)
+
+![PtI1yQ.png](https://s1.ax1x.com/2018/07/26/PtI1yQ.png)
+
+![PtIQSS.png](https://s1.ax1x.com/2018/07/26/PtIQSS.png)
+
+# 其他背景
+
+![PtIksH.jpg](https://s1.ax1x.com/2018/07/26/PtIksH.jpg)
 
 
 # 怎么使用
