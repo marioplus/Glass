@@ -2,8 +2,7 @@
 {
 	controls
 	{
-		"GamesList"
-		{
+		"GamesList" {
 			tabposition=1
 		}
 	}
@@ -12,11 +11,90 @@
 	{
 		ListPanel.PostSectionLeading	12
 	}	
+
+	styles {
+		CGamesListPanel {
+			// L T R B
+			inset="18 18 36 36"
+			bgcolor=none
+			render_bg {
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
+			}
+		}
+
+		Label {
+			textcolor=mGameListGrapText
+			selectedtextcolor="Text"
+			bgcolor=none
+			font-size=14
+			font-weight=400
+			render_bg {}
+		}
+
+		ListPanelSectionHeader {
+			inset="0 0 0 0"
+			textcolor=mGameListGrapText
+			minimum-height=30
+			font-size=16
+			font-style="uppercase"
+			bgcolor=none
+			render_bg {}
+		} 
+		ListPanelSectionHeader:hover {    
+			textcolor=texthover
+		} 
+
+		// 列表头
+		ListPanelColumnheader {
+			inset="0 0 0 0"
+			font-family=basefont
+			font-size=20
+			minimum-height=35
+			font-weight=700
+			textcolor=mGameListGrapText
+			font-style="uppercase"
+			bgcolor=none
+			render {}
+			render_bg {}
+		}
+		// ListPanelColumnHeader:hover{
+		// 	textcolor="Texthover"
+		// }
+		
+		ListPanelColumnSelectButton {
+			inset="-3 3 0 0"
+			render {
+				0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
+			}   
+			render_bg {
+				1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
+			}
+		}
+		ListPanelColumnSelectButton:hover {
+			inset="-3 3 0 0"
+			render {
+				0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
+			}
+		}
+		ListPanelColumnSelectButton:selected {
+			inset="-3 3 0 0"
+			render {
+				0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
+			}
+		}
+	}
 	
 	layout
 	{
 		// content pages 列表视图
-		place { control="GamesList" 		width=max height=max x=50 }
+		place { control="GamesList" width=max height=max x=50 }
 
 	}
 
