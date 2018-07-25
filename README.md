@@ -11,26 +11,18 @@
 这是一个自制的steam皮肤，由于有很多玻璃效果，我叫它**Glass**。
 
 # 看看效果
-![CtUHv6.png](https://s1.ax1x.com/2018/05/04/CtUHv6.png)
-
-![CtULDO.png](https://s1.ax1x.com/2018/05/04/CtULDO.png)
-
-![CtUqKK.png](https://s1.ax1x.com/2018/05/04/CtUqKK.png)
 
 
-# 其他背景
+[![Pt6yCj.png](https://s1.ax1x.com/2018/07/25/Pt6yCj.png)](https://imgchr.com/i/Pt6yCj)
 
-![CtU7gx.png](https://s1.ax1x.com/2018/05/04/CtU7gx.png)
+[![Pt6gvq.png](https://s1.ax1x.com/2018/07/25/Pt6gvq.png)](https://imgchr.com/i/Pt6gvq)
 
-![CtUvUH.png](https://s1.ax1x.com/2018/05/04/CtUvUH.png)
+[![Pt668s.png](https://s1.ax1x.com/2018/07/25/Pt668s.png)](https://imgchr.com/i/Pt668s)
 
-![CtUjVe.png](https://s1.ax1x.com/2018/05/04/CtUjVe.png)
+[![Pt6c2n.png](https://s1.ax1x.com/2018/07/25/Pt6c2n.png)](https://imgchr.com/i/Pt6c2n)
 
-![CtUObD.png](https://s1.ax1x.com/2018/05/04/CtUObD.png)
+[![Pt6r5Q.png](https://s1.ax1x.com/2018/07/25/Pt6r5Q.png)](https://imgchr.com/i/Pt6r5Q)
 
-![CtUx5d.png](https://s1.ax1x.com/2018/05/04/CtUx5d.png)
-
-![CtaSPA.png](https://s1.ax1x.com/2018/05/04/CtaSPA.png)
 
 # 怎么使用
 
@@ -42,16 +34,16 @@
 
 ## 安装
 
-解压**Glass 0.5.zip**，解压后的文件夹丢到你的steam皮肤文件夹中，路径大概是这样的**x:\steam\skin\**。完成后他看起来应该是这样的:**x:\steam\skin\Glass 0.5**。
+解压 **Glass.zip**，解压后的文件夹丢到你的steam皮肤文件夹中，路径大概是这样的**x:\steam\skin\**。完成后他看起来应该是这样的:**x:\steam\skin\Glass**。
 
-安装**Glass 0.5\resource\fonts**文件夹中的**iomanoid.ttf**和**Microsoft YaHei Mono.ttf**两个字体。
+安装 **Glass\resource\fonts** 文件夹中的 **iomanoid.ttf** 和 **Microsoft YaHei Mono.ttf** 两个字体。
 
-启动你的steam，在设置中更换皮肤为Glass 0.5。
+启动你的steam，在设置中更换皮肤为Glass。
 
-什么？你不知道怎么换皮肤？如果我是你的话，我会在**设置**-**界面**中好好看看。
+什么？你不知道怎么换皮肤？如果我是你的话，我会在 **设置**-**界面** 中好好看看。
 
 ## 如何更换背景
-我自己做了好几张背景吧，想更换其他的背景，只需要将**Glass 0.5\graphics\bg\\**中任意一个**tga**文件改为**bg.tga**即可，与**tga**文件同名的**png**文件是预览图。
+我自己做了好几张背景吧，想更换其他的背景，只需要将 **Glass\graphics\bg\\** 中任意一个 **tga** 文件改为 **bg.tga** 即可，与 **tga** 文件同名的 **png** 文件是预览图。
 
 不过我不建议直接改名，在改名之前应该先复制一张。
 
@@ -60,18 +52,18 @@
 
 找到自己心爱的图片后，你需要在ps中打开这张图片，**滤镜**-**模糊**-**高斯模糊**，调成模糊程度，直到自己满意。推荐15~25.
 
-然后保存为**tga**格式！然后保存为**tga**格式！然后保存为**tga**格式！
+然后保存为 **tga** 格式！然后保存为 **tga** 格式！然后保存为 **tga** 格式！
 
-之后替换**Glass 0.5\graphics\bg\bg.tga**就ok了。
+之后替换 **Glass\graphics\bg\bg.tga** 就ok了。
 
 # 目前已知问题
-+ 随处可见的开始按钮
++ ~~随处可见的开始按钮~~
 
 # 更新计划
-+ 处理下载页面
++ ~~处理下载页面~~
++ ~~处理控制台页面~~
++ ~~处理卡片视图页面~~
 + 整合菜单steam、好友、视图、游戏、帮助为一个菜单，菜单使用steam logo代替文字
-+ 处理控制台页面
-+ 处理卡片视图页面
 + 处理好友列表
 + 处理聊天面板
 + 处理游戏中显示页面
@@ -88,7 +80,10 @@
     8. 小技♂巧
 
 # 目前进度
-~~懒癌ing~~
++ 2018/7/25
+    + 处理下载页面
+    + 处理控制台页面
+    + 调整所有游戏展示页面，让左侧的菜单按钮显示出来，不过列表视图依然丑爆
 
 # 彩蛋
 这套皮肤中其实有一个彩蛋的，就是不知道大家找不找得到了（~~此处脑滑稽计表情~~）。
@@ -96,4 +91,4 @@
 # FQA
 1.更换完皮肤steam打不开，或者打开卡死。
 
-点开解压的**Glass 0.5**文件夹，看看里面是不是还有一个**Glass 0.5**。这是解压的时候带了一个文件夹，请确保点开**Glass 0.5**，出现的是**graphics**、**resource**和**README.md**。
+点开解压的 **Glass** 文件夹，看看里面是不是还有一个 **Glass**。这是解压的时候带了一个文件夹，请确保点开 **Glass**，出现的是 **graphics**、**resource** 和 **README.md**。
