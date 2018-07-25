@@ -83,7 +83,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0, y0 + 1, x1, y1, graphics/icon_dateils )"
+				1="image( x0, y0 + 1, x1, y1, graphics/icon_details )"
 			}
 		}
 		CUIDetailsButton:Hover
@@ -92,7 +92,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0, y0 + 1, x1, y1, graphics/icon_dateils )"
+				1="image( x0, y0 + 1, x1, y1, graphics/icon_details )"
 			}
 		}
 		
