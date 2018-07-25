@@ -121,7 +121,7 @@
 			inset="2 0 0 0"
 			textcolor=mGameListGrapText
 			minimum-height=30
-			font-size=18
+			font-size=16
 			bgcolor=none
 			render_bg {}
 		} 

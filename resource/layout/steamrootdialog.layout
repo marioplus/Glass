@@ -838,7 +838,7 @@
 		place { control="UIStatusPanel" width=0 height=0 align=bottom  margin-bottom=18 }
 		
 		// TODO:　顶部菜单 steam 视图 好友 style
-		place [!$OSX] { control="MenuBar" x=14 y=3 }
+		place [!$OSX] { control="MenuBar" x=12 y=3 }
 
 		// place 
 		// { 
