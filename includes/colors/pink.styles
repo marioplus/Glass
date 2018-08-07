@@ -1,0 +1,19 @@
+"includes/colors/pink.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              pink-500
+    myPrimaryLight=         pink-300
+    myPrimaryDark=          pink-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         pink-a50
+    myPrimaryLightAlpha=    pink-a100
+    myPrimaryDarkAlpha=     pink-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}

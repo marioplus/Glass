@@ -1,0 +1,19 @@
+"includes/colors/green.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              green-500
+    myPrimaryLight=         green-300
+    myPrimaryDark=          green-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         green-a50
+    myPrimaryLightAlpha=    green-a100
+    myPrimaryDarkAlpha=     green-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}

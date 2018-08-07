@@ -1,0 +1,19 @@
+"includes/colors/cyan.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              cyan-500
+    myPrimaryLight=         cyan-300
+    myPrimaryDark=          cyan-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         cyan-a50
+    myPrimaryLightAlpha=    cyan-a100
+    myPrimaryDarkAlpha=     cyan-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}

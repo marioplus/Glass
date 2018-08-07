@@ -30,7 +30,7 @@
 		}
 
 		Label {
-			textcolor=mGameListGrapText
+			textcolor=myGamesPageListSectionHeaderText
 			selectedtextcolor="Text"
 			bgcolor=none
 			font-size=14
@@ -40,7 +40,7 @@
 
 		ListPanelSectionHeader {
 			inset="0 0 0 0"
-			textcolor=mGameListGrapText
+			textcolor=myGamesPageListSectionHeaderText
 			minimum-height=30
 			font-size=16
 			font-style="uppercase"
@@ -58,7 +58,7 @@
 			font-size=20
 			minimum-height=35
 			font-weight=700
-			textcolor=mGameListGrapText
+			textcolor=myGamesPageListSectionHeaderText
 			font-style="uppercase"
 			bgcolor=none
 			render {}

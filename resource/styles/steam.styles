@@ -63,7 +63,7 @@ steam.styles
 
     // 成就进度条
     myAchievementsProgressBar.get=myPrimary
-    myAchievementsProgressBar.all="225 245 254 50"
+    myAchievementsProgressBar.all=myPrimaryAlpha
 
     // 按钮
     myBtnBG="0 0 0 0"
@@ -93,6 +93,7 @@ steam.styles
     myDownloadSummary.speed=myWhite
     myDownloadSummary.disk="7 168 39 255"
     myDownloadSummary.net="129 212 250 50"
+    myDownloadProgressBar=myPrimaryDarkAlpha
     myDownload.section=myPrimary
     myDownload.type=myPrimary
     myDownload.label=myPrimaryLight
@@ -2032,7 +2033,7 @@ steam.styles
     ProgressBar
     {
     // textcolor="highlight5a"
-		textcolor="103 192 103 150"
+		textcolor=myDownloadProgressBar
 		bgcolor="none"
 		render
 		{

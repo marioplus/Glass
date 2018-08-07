@@ -1,0 +1,19 @@
+"includes/colors/deep_purple.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              deep-purple-500
+    myPrimaryLight=         deep-purple-300
+    myPrimaryDark=          deep-purple-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         deep-purple-a50
+    myPrimaryLightAlpha=    deep-purple-a100
+    myPrimaryDarkAlpha=     deep-purple-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}

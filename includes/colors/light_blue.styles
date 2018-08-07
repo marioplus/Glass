@@ -1,0 +1,19 @@
+"includes/colors/light_blue.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              light-blue-500
+    myPrimaryLight=         light-blue-300
+    myPrimaryDark=          light-blue-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         light-blue-a50
+    myPrimaryLightAlpha=    light-blue-a100
+    myPrimaryDarkAlpha=     light-blue-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}

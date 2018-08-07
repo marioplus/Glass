@@ -1,26 +1,46 @@
 "includes/colors.styles" {
-include "includes/matelial_colors.styles"
 
-  colors {
-    myPrimary=              light-blue-500
-    myPrimaryLight=         light-blue-300
-    myPrimaryDark=          light-blue=700
-    myDisabled=             grey-700
-    myPrimaryAlpha=         light-blue-500
-    myPrimaryLightAlpha=    yellow-300
-    myPrimartDarkAlpha=     cyan-500
-    // myPrimaryText=     
-    // mySeconday=        
-    // mySecondayLight=   
-    // mySecondayDark=    
-    // mySecondayText=    
+    // 除了你想要使用的颜色，其他的 include 前面应该有 // 来注释他们
+    // 此文件中只能有一条 include 前面没有 //
+    // 此文件中只能有一条 include 前面没有 //
+    // 此文件中只能有一条 include 前面没有 //
 
-    myNone="0 0 0 0"
-    myWhite="255 255 255 255"
-    myBlack="0 0 0 255"
+    // 红色
+    // include "includes/colors/red.styles"
+    // 粉红色
+    // include "includes/colors/pink.styles"
+    // 紫色
+    // include "includes/colors/purple.styles"
+    // 深紫色
+    // include "includes/colors/deep_purple.styles"
+    // 靛青色
+    // include "includes/colors/indigo.styles"
+    // 蓝色
+    // include "includes/colors/blue.styles"
+    // 浅蓝色
+    // include "includes/colors/light_blue.styles"
+    // 青色
+    include "includes/colors/cyan.styles"
+    // 深青色
+    // include "includes/colors/teal.styles"
+    // 绿色
+    // include "includes/colors/green.styles"
+    // 浅绿色
+    // include "includes/colors/light_green.styles"
+    // 青柠色
+    // include "includes/colors/lime.styles"
+    // 黄色
+    // include "includes/colors/yellow.styles"
+    // 琥珀色
+    // include "includes/colors/amber.styles"
+    // 橙色
+    // include "includes/colors/orange.styles"
+    // 深橙色
+    // include "includes/colors/deep_orange.styles"
+    // 棕色
+    // include "includes/colors/brown.styles"
 
-
-    myTest = pink-500
-    myNone = "201 76 109 50"
-  }
+    // 自定义颜色 留给你的颜色不多了
+    // includes/colors/custom_color.styles 中会有详细的描述
+    // include "includes/colors/custom_color.styles"
 }

@@ -1,0 +1,19 @@
+"includes/colors/purple.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              purple-500
+    myPrimaryLight=         purple-300
+    myPrimaryDark=          purple-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         purple-a50
+    myPrimaryLightAlpha=    purple-a100
+    myPrimaryDarkAlpha=     purple-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}

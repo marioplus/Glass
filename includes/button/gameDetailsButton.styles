@@ -1,0 +1,60 @@
+"includes/button/gameDetailsButton.styles" {
+    colors{
+    }
+    styles {
+        "CGamesPage_Details_Friends Button" {
+            minimum-height=30
+            // font-family=basefont
+            // font-size=16
+            // font-weight=600
+            // textcolor=red-500
+            // padding=0
+            // bgcolor=green-500
+            // render_bg {
+
+            //     0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG)"
+            
+            //     1="fill(x0+1, y0, x1-1, y0+1, myBtnBG)"//top
+            //     1="fill(x0+1, y1-1, x1-1, y1, myBtnBG)"//bottom
+            //     1="fill(x0, y0+1, x0+1, y1-1, myBtnBG)"//left
+            //     1="fill(x1-1, y0+1, x1, y1-1, myBtnBG)"//right
+
+            //     2="fill(x0, y0, x1, y1 red-500)"
+            // }
+        }
+        //  Button:hover {
+        //     textcolor=myBtnText.hover
+        //     render_bg {
+        //         0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.hover)"
+            
+        //         1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.hover)"//top
+        //         1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.hover)"//bottom
+        //         1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.hover)"//left
+        //         1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.hover)"//right
+        //     }
+        // }
+        // Button:active {
+        //     textcolor=myBtnText.active
+        //     render_bg {
+        //         0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.active)"
+            
+        //         1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.active)"//top
+        //         1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.active)"//bottom
+        //         1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.active)"//left
+        //         1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.active)"//right
+        //    }
+        // }
+        //   Button:disabled {
+        //     textcolor=myBtnText.disabled
+        //     render_bg {
+        //         0="fill(x0+1, y0+1, x1-1, y1-1, myBtnBG.disabled)"
+            
+        //         1="fill(x0+1, y0, x1-1, y0+1, myBtnBG.disabled)"//top
+        //         1="fill(x0+1, y1-1, x1-1, y1, myBtnBG.disabled)"//bottom
+        //         1="fill(x0, y0+1, x0+1, y1-1, myBtnBG.disabled)"//left
+        //         1="fill(x1-1, y0+1, x1, y1-1, myBtnBG.disabled)"//right
+        //     }
+        // }
+        // Button:focus {}
+        // Button:selected {}
+    }

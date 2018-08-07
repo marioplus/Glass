@@ -1,0 +1,19 @@
+"includes/colors/yellow.styles" {
+include "includes/colors/matelial_colors.styles"
+
+  colors {
+    myPrimary=              yellow-500
+    myPrimaryLight=         yellow-300
+    myPrimaryDark=          yellow-700
+    myDisabled=             grey-700
+
+    myPrimaryAlpha=         yellow-a50
+    myPrimaryLightAlpha=    yellow-a100
+    myPrimaryDarkAlpha=     yellow-a150
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+  }
+}
