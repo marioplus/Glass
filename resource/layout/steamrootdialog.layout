@@ -224,6 +224,18 @@
 		// 	}
 		// }		
 
+		view_friends {
+			textcolor=none
+			bgcolor=none
+			render_bg {
+				0="image( x0, y0,  x1,  y1,  graphics/view_friends)"
+			}
+		}
+		view_friends:hover {
+			render_bg {
+				0="image( x0, y0,  x1,  y1,  graphics/view_friends_hover)"
+			}
+		}
 	
 
 
@@ -884,7 +896,7 @@
 		place { control="add_game" align=bottom region=bottom height=0 width=0}
 
 		place { control="FriendPanel" height=48 width=48 region=bottom align=left margin-left=5}
-		place { control="view_friends" height=62 y=12 width=0 region=bottom align=right dir=right margin-right=56 }
+		place { control="view_friends" height=50 width=50 y=12 x=5 region=bottom align=left dir=right margin-right=56 }
 		place { control="online_friends" height=12 y=38 width=0 region=bottom align=right dir=right margin-right=56 }
 	
  		// the title bar is missing, so increase the size of the grip

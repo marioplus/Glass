@@ -65,6 +65,9 @@ steam.styles
     myAchievementsProgressBar.get=myPrimary
     myAchievementsProgressBar.all=myPrimaryAlpha
 
+    // DLC 列表头
+    myGameDetailsDLCHeader=myPrimary
+
     // 按钮
     myBtnBG="0 0 0 0"
     myBtnBG.hover="225 245 254 50"
@@ -1459,21 +1462,18 @@ steam.styles
 		font-family=basefont
 		font-size=18
 		font-weight=600
-    textcolor=black
+    textcolor=myWhite
 		font-style="uppercase"
-		bgcolor="none"
+		bgcolor=myGameDetailsDLCHeader
 		render_bg    
 		{
 			// fill
-			0="fill (x0, y0 + 1, x1, y1, myTest )" // bg fill
+			// 0="fill (x0, y0 + 1, x1, y1, myTest )" // bg fill
 		}   
 	}
 
    
-    "Csteamrootdialog ListPanelColumnHeader:hover"
-    {
-		textcolor="TextHover"
-    }
+    "Csteamrootdialog ListPanelColumnHeader:hover" {}
     
    	"Csteamrootdialog ListPanelSectionCollapser"
 	{

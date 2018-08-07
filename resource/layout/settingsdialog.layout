@@ -19,7 +19,7 @@
 			bgcolor=dialogbg
 			render_bg
 			{     
-      	 0="gradient_horizontal( x0 + 10, y0 + 32, x1 - 10, y0 + 33, ButtonBorderDisabled, propertysheetbg )"     
+      	 		0="gradient_horizontal( x0 + 10, y0 + 32, x1 - 10, y0 + 33, ButtonBorderDisabled, propertysheetbg )"     
 			}
 
 		}
