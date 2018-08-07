@@ -62,6 +62,7 @@
 
 		CGamesListPanel
 		{
+			text=myTest
 			render_bg { }
 		}
 
@@ -87,17 +88,13 @@
 		// Some overrides for our listpanel
 		"GamesPage_Details ListPanel"
 		{
+			// 游戏列表间距
+			padding-left=18
+			padding-right=2
 			bgcolor="none"
 			render_bg {}
 			render {}
 		}
-
-		"GamesPage_Details ListPanel"
-			{
-				// 游戏列表间距
-				padding-left=18
-				padding-right=2
-			}
 		
 		"GamesPage_Details ListPanelInterior"
 		{
@@ -119,7 +116,7 @@
 		ListPanelSectionHeader
 		{     
 			inset="2 0 0 0"
-			textcolor=mGameListGrapText
+			textcolor=myGamesPageListSectionHeaderText
 			minimum-height=30
 			font-size=16
 			bgcolor=none
@@ -141,7 +138,8 @@
 			render {}
 			render_bg 
 			{
-				0="gradient_horizontal( x0+1, y0+2, x1, y1 + 1, ButtonFace, none )"
+
+				0="fill( x0+1, y0+2, x1, y1 + 1, ButtonFace )"
 			}
 
 		}
@@ -190,31 +188,31 @@
 			font-size=14
 			font-family=basefont
 			font-weight=700
-			textcolor=myTest
+			textcolor=myGameDetailsLabel
 		}
 		rightcolumnheadertext-green {
 			font-size=14
 			font-family=basefont
 			font-weight=700
-			textcolor=myTest
+			textcolor=myGameDetailsLabel
 		}
 		rightcolumnheadertext-blue {
 			font-size=14
 			font-family=basefont
 			font-weight=700
-			textcolor=myTest
+			textcolor=myGameDetailsLabel
 		}
 
 		rightcolumnlink {
 			font-size=14
-			textcolor=Text
+			textcolor=myRightColumnLink
 			font-family=basefont
 		}
 		rightcolumnlink:hover {
-			textcolor=White
+			textcolor=myRightColumnLink.hover
 		}
 		rightcolumnlink:disabled {
-			textcolor=TextDisabled
+			textcolor=myRightColumnLink.disabled
 		}
 		
 		rightcolumntag

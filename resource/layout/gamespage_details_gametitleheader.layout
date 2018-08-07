@@ -24,7 +24,7 @@
 			padding-bottom=0
 			padding-top=70
 			font-size=60
-			textcolor=Text
+			textcolor=myGameName
 			font-family=myFont
 			// font-style="uppercase"
 			font-weight=700 

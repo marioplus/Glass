@@ -1,27 +1,28 @@
 steam.styles
 {
-  colors
-  {
+  include "includes/colors.styles"
+  include "includes/background.layout"
+  colors {
     // colors section can include colors in "R G B A" form, or references to already defined colors;
     // it can also include just general settings controls can pull from for extra customization
 
     myFont="Iomanoid"
     myLaunchFont="HuJingLi-Mao"
 
-    myPrimary=         "0 137 123 255" // #00897b"
-    myPrimaryLight=    "78 186 170 255" // #4ebaaa"
-    myPrimartDark=     "0 91 79 255" // #005b4f"
-    myPrimaryText=     "224 242 241 255" // #e0f2f1"
-    mySeconday=        "67 160 71 255" // #43a047"
-    mySecondayLight=   "118 210 117 255" // #76d275"
-    mySecondayDark=    "0 112 26 255" // #00701a"
-    mySecondayText=    "231 250 240 255" // #e7faf0"
+    // myPrimary=         "0 137 123 255" // #00897b"
+    // myPrimaryLight=    "78 186 170 255" // #4ebaaa"
+    // myPrimaryDark=     "0 91 79 255" // #005b4f"
+    // myPrimaryText=     "224 242 241 255" // #e0f2f1"
+    // mySeconday=        "67 160 71 255" // #43a047"
+    // mySecondayLight=   "118 210 117 255" // #76d275"
+    // mySecondayDark=    "0 112 26 255" // #00701a"
+    // mySecondayText=    "231 250 240 255" // #e7faf0"
 
 
 
   
-    myTest = "201 76 109 255"
-    myNone = "201 76 109 50"
+    // myTest = "201 76 109 255"
+    // myNone = "201 76 109 50"
 
     myBackground = "38 50 56 255"  // 主背景
     // myBackground = "0 95 99 255"  // 主背景
@@ -42,41 +43,60 @@ steam.styles
     myHerderImage=myDivider
     myHerderImage1=myDivider
 
+    // 游戏名称
+    myGameName=myPrimaryLight
+
     // 开始游戏按钮
     myLaunchBtn=myBackground
+    // 开始游戏下面的三行
+    myGameDetailsLabel=myPrimary
+    myGameDetailsValue=myPrimaryLight
+    // 右侧的链接
+    myRightColumnLink=myPrimaryLight
+    myRightColumnLink.hover=myPrimaryDark
+    myRightColumnLink.disabled=myDisabled
+    
 
     // 游戏详情子面板
-    myGameDetailsChildPanel.title="129 212 250 255"
-    myGameDetailsChildPanel.content="144 202 249 255"
+    myGameDetailsChildPanel.title=myPrimary
+    myGameDetailsChildPanel.content=myPrimaryLight
 
     // 成就进度条
-    myAchievementsProgressBar.all=myNone
-    myAchievementsProgressBar.get=myTest
+    myAchievementsProgressBar.get=myPrimary
+    myAchievementsProgressBar.all="225 245 254 50"
 
     // 按钮
     myBtnBG="0 0 0 0"
     myBtnBG.hover="225 245 254 50"
     myBtnBG.active="129 212 250 50"
     myBtnBG.disabled="0 0 0 50"
-    myBtnText="144 202 249 255"
-    myBtnText.hover="144 202 249 255"
-    myBtnText.active="225 245 254 255"
-    myBtnText.disabled="255 255 255 255"
+    myBtnText=myPrimary
+    myBtnText.hover=myPrimaryLight
+    myBtnText.active=myPrimaryDark
+    myBtnText.disabled=myDisabled
 
     // 游戏列表
-    mGameListGrapText="0 176 255 255"
+    // 列表组文字颜色
+    myGamesPageListSectionHeaderText=myPrimary
+    // 列表项文字颜色
+    myGamesPageListColumnText=myWhite
+    myGamesPageListColumnText.hover=myPrimary
+    myGamesPageListColumnText.active=myPrimary
+    myGamesPageListColumnText.disable=myDisabled
+
+
 
     // 下载页面
     // 下载详情
-    myDownloadSummary.title="129 212 250 255"
-    myDownloadSummary.content="144 202 249 255"
-    myDownloadSummary.speed="255 255 255 255"
+    myDownloadSummary.title=myPrimary
+    myDownloadSummary.content=myPrimaryLight
+    myDownloadSummary.speed=myWhite
     myDownloadSummary.disk="7 168 39 255"
     myDownloadSummary.net="129 212 250 50"
-    myDownload.section="129 212 250 255"
-    myDownload.type="129 212 250 255"
-    myDownload.label="144 202 249 255"
-    myDownload.value="255 255 255 255"
+    myDownload.section=myPrimary
+    myDownload.type=myPrimary
+    myDownload.label=myPrimaryLight
+    myDownload.value=myWhite
 
 
 
@@ -399,7 +419,6 @@ steam.styles
 
 		dd_texture_bottom "16 16 16 255"
  }
-  
   styles
 	  {
 		downarrow
@@ -1189,23 +1208,20 @@ steam.styles
 	  	bgcolor="none"
       font-size=15
       font-weight=400
-      textcolor="Text"
-      selectedtextcolor="textselected"
-      selectedbgcolor="myGameListItemSelected"
-      shadowtextcolor="TextDisabled"
+      textcolor=myPrimary
+      selectedtextcolor=myPrimary
+      // selectedbgcolor="myGameListItemSelected"
+      // selectedbgcolor=blue-500
+      shadowtextcolor=myPrimary
       inset="0 -1 1 1"
       render_bg {
-        // background gradient        
-        // 0="gradient( x0, y0, x1, y0 + 432, dialogbg, almostblack )"
-        // 1="fill( x0, y0 + 432, x1, y1, almostblack )"
-        // 2="gradient( x0, y0, x1, y0 + 31, dialogbgFade1, dialogbgFade2 )"
-
+          // 0="fill( x0, y0 , x0+5, y1, bule-500 )"
         }
     }
   
     "GameItem_Uninstalled"
     {
-      textcolor="labeldisabled"
+      textcolor=myGamesPageListColumnText.disable
       selectedtextcolor="label"
     }
     "GameItem_Uninstalled:hover"
@@ -1216,14 +1232,14 @@ steam.styles
  
     "GameItem_Installed"
     {
-      textcolor="text"
-      selectedtextcolor="white"
+      textcolor="white"
+      selectedtextcolor=myGamesPageListColumnText.active
     }
       
     "GameItem_Installed:hover"
     {
-      textcolor="white"
-      selectedtextcolor="white"
+      textcolor=myGamesPageListColumnText.active
+      selectedtextcolor=myGamesPageListColumnText.active
     }
     
     "GameItem_Running"
@@ -1240,7 +1256,7 @@ steam.styles
     
     "GameItem_Shortcut"
     {
-      textcolor="text"
+      textcolor=myGamesPageListColumnText.active
       selectedtextcolor="white"
     }
       
@@ -2022,7 +2038,7 @@ steam.styles
 		{
       // 1="image_tiled(x0, y0, x1, y1, graphics/download/progress)"
 			// lines around
-		// 1="fill( x0 , y0 , x1 , y1, ButtonBorder )"  // top
+		// 1="fill( x0 , y0 , x1 , y1, 255,55,52,255 )"  // top
 		// 2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
 		// 3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
     // 4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right

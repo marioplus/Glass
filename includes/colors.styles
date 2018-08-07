@@ -1,0 +1,26 @@
+"includes/colors.styles" {
+include "includes/matelial_colors.styles"
+
+  colors {
+    myPrimary=              light-blue-500
+    myPrimaryLight=         light-blue-300
+    myPrimaryDark=          light-blue=700
+    myDisabled=             grey-700
+    myPrimaryAlpha=         light-blue-500
+    myPrimaryLightAlpha=    yellow-300
+    myPrimartDarkAlpha=     cyan-500
+    // myPrimaryText=     
+    // mySeconday=        
+    // mySecondayLight=   
+    // mySecondayDark=    
+    // mySecondayText=    
+
+    myNone="0 0 0 0"
+    myWhite="255 255 255 255"
+    myBlack="0 0 0 255"
+
+
+    myTest = pink-500
+    myNone = "201 76 109 50"
+  }
+}
