@@ -18,9 +18,9 @@
     // 蓝色
     // include "includes/colors/blue.styles"
     // 浅蓝色
-    // include "includes/colors/light_blue.styles"
+    include "includes/colors/light_blue.styles"
     // 青色
-    include "includes/colors/cyan.styles"
+    // include "includes/colors/cyan.styles"
     // 深青色
     // include "includes/colors/teal.styles"
     // 绿色
