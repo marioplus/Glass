@@ -7,6 +7,7 @@ steam.styles
     // it can also include just general settings controls can pull from for extra customization
 
     myFont="Iomanoid"
+    // myFont="Microsoft YaHei"
     myLaunchFont="HuJingLi-Mao"
 
     // myPrimary=         "0 137 123 255" // #00897b"

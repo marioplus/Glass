@@ -8,8 +8,8 @@
 		// image
 		spacer			    { controlname="Panel" }
 		gameimage		    { controlname="ImagePanel" zpos="1" style="gameImagePanel" }		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
-		// workshopbanner		{ controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }  
-		
+		// workshopbanner		{ controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }
+
 		// left-mid column
 		namelabel	        { controlname="Label"	labelText="#steam_downloads_gamename" style="ModuleHeading" }
 		dashlabel	        { controlname="Label"	labelText=""}
@@ -28,7 +28,7 @@
 		timecompletedfield	{ controlname="Label"	labelText="%time_completed%"  style="label" group="ShowWhenComplete" }
 		pausereasonlabel	{ controlname="Label"	labelText="#steam_downloads_pausedreason" style="label2" group="ShowWhenPaused" }
 		pausereasonfield	{ controlname="Label"	labelText="" style="label3" group="ShowWhenPaused" }
-		
+
 
 		// right column
 		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 tooltiptext="" }
@@ -36,48 +36,48 @@
 		topofqueuebutton	{ controlname="Button" style="topOfQueueButton" tooltiptext="#steam_downloads_topofqueue" group="HideOnCompletion" }
 		newslink			{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
 
-	
-		
-	} 
-	
+
+
+	}
+
 	colors
 	{
 		dark_blue_grad = "7 168 39 255"
 		light_blue_grad = "128 18 164 255"
 	}
-	
+
 	styles
 	{
-		panelStyle 
+		panelStyle
 		{
 			minimum-height=300
 			render_bg
 			{
-				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/left_top)"
 				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
-				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/right_top)"
 				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
-				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/right_bottom)"
 				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
-				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/left_bottom)"
 				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
 			}
 		}
-		
+
 		panelStyleHighlight
 		{
 			minimum-height=350
 			render_bg
 			{
-				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/left_top)"
 				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
-				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/right_top)"
 				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
-				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/right_bottom)"
 				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
-				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/left_bottom)"
 				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
-			}			
+			}
 		}
 
 		links
@@ -91,7 +91,7 @@
 			padding-top=0
 			padding-bottom=0
 		}
-		
+
 		links:hover
 		{
 			font-size=14
@@ -108,7 +108,7 @@
 		{
 			textcolor="TextDisabled"
 		}
-		
+
 		settingslink
 		{
 			font-size=14
@@ -116,7 +116,7 @@
 			textcolor="text"
 			font-family=basefont
 		}
-		
+
 		settingslink:hover
 		{
 			font-size=14
@@ -134,8 +134,8 @@
 		{
 			textcolor=TextHover
 		}
-		
-		label 
+
+		label
 		{
 			bgcolor=none
 			font-size=17
@@ -149,7 +149,7 @@
 			textcolor=myDownload.label
 			font-style=uppercase
 		}
-		
+
 		label3
 		{
 			bgcolor			none
@@ -166,8 +166,8 @@
 			font-size=18
 			font-weight=700
 			textcolor=myDownload.label
-		}	
-		
+		}
+
 		ModuleHeading2
 		{
 			font-family=basefont
@@ -175,39 +175,39 @@
 			font-size=30
 			font-weight=700
 			textcolor=myDownload.type
-		}								
-		
+		}
+
 		panelBgColorActive
 		{
 			bgcolor=		"clientbg"
 		}
 
-				
-				
-				
+
+
+
 		gameImagePanel
-		{   
+		{
 			inset="0 0 0 0"
 			render_bg
 			{
 			}
 			render
 			{
-				
+
 			}
 		}
-		
+
 		gameImagePanelHighlight
-		{   
+		{
 			bgcolor=none
-			render_bg	
+			render_bg
 			{
 				0="image( x0, y0, x1, y1, graphics/download_downloading )"
-			}		
-		}	
-						
+			}
+		}
+
 		DetailsLaunchButton
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -216,16 +216,16 @@
 			}
 		}
 		DetailsLaunchButton:Hover
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
 			{
 				1="image( x0, y0, x1, y1, graphics/download/play_hover )"
-			}	
+			}
 		}
 		DetailsLaunchButton:Active
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -233,9 +233,9 @@
 				1="image( x0, y0, x1, y1, graphics/download/play_active )"
 			}
 		}
-				
+
 		topOfQueueButton
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -244,17 +244,17 @@
 			}
 		}
 		topOfQueueButton:Hover
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
 			{
 				1="image( x0, y0, x1, y1, graphics/download/top_of_queue_hover )"
 			}
-		}			
-		
+		}
+
 		SmRemoveButton
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -262,9 +262,9 @@
 				1="image( x0, y0, x1, y1, graphics/download/remove )"
 			}
 		}
-		
+
 		SmRemoveButton:Hover
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -272,26 +272,22 @@
 				1="image( x0, y0, x1, y1, graphics/download/remove_hover )"
 			}
 		}
-		
-		
-		
+
 		SlimProgressBar
 		{
 			render_bg
 			{
-				// 1="image_tiled(x0, y0, x1, y1 graphics/download/progress)"
-				// 1="image(x0, y0, x1, y1 graphics/download/progress)"
-				// 1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				// 1="image(x0, y0, x0+18, y0+18, graphics/shadows/left_top)"
 				// 2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
-				// 3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				// 3="image(x1-18, y0, x1, y0+18, graphics/shadows/right_top)"
 				// 4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
-				// 5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				// 5="image(x1-18, y1-18, x1, y1, graphics/shadows/right_bottom)"
 				// 6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
-				// 7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				// 7="image(x0, y1-18, x0+18, y1, graphics/shadows/left_bottom)"
 				// 8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
-			}   
+			}
 		}
-	} 
+	}
 
 
 	layout
@@ -306,7 +302,7 @@
 		// 游戏对应的图标是 184x70
 		place { region=game_dateil control="gameimage"       width=190 height=76 }
 
-		
+
 
 		region { region=body name=download_dateil width=500 y=230 }
 		place { region=download_dateil control="downloadtotallabel,downloadtotalfield" spacing=6 y=0 }
@@ -320,7 +316,7 @@
 		place { region=button_group control="launchbutton" align=right width=170 height=170 }
 
 		// 查看更新
-		region { region=body name=new_panel  width=max height=14 align=bottom } 
+		region { region=body name=new_panel  width=max height=14 align=bottom }
 		place {  region=new_panel control="newslink" align=right }
 
 		place { region=body control="downloadprogressbar" height=max width=max}
@@ -330,6 +326,6 @@
 		place { region=btn_righttop_group control="topofqueuebutton," end-right="removefromqueuebutton" align=right width=29 }
 
 		// place { control="spacer" }
-		place { control="workshopbanner" margin-left=8 margin-top=82 width=0 height=0 } 
+		place { control="workshopbanner" margin-left=8 margin-top=82 width=0 height=0 }
 	}
 }

@@ -22,7 +22,7 @@
     // 青色
     // include "includes/colors/cyan.styles"
     // 深青色
-    // include "includes/colors/teal.styles"
+     include "includes/colors/teal.styles"
     // 绿色
     // include "includes/colors/green.styles"
     // 浅绿色
@@ -34,7 +34,7 @@
     // 琥珀色
     // include "includes/colors/amber.styles"
     // 橙色
-    // include "includes/colors/orange.styles"
+     include "includes/colors/orange.styles"
     // 深橙色
     // include "includes/colors/deep_orange.styles"
     // 棕色

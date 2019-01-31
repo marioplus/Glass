@@ -1,9 +1,9 @@
 "resource/layout/gamespage_details_friends.layout" {
 	// include "includes/button/gameDetailsButton.styles"
-	
+
 	controls {
 		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails"}
-		
+
 		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
 		listplayingnow	{ controlname="CGamesPage_Details_Friends_List" }
 		listplayever	{ controlname="CGamesPage_Details_Friends_List" }
@@ -30,13 +30,13 @@
 		friendsdetails {
 			bgcolor=none
 			render_bg {
-				1="image(x0, y0, x0+18, y0+18, graphics/shadows/topleft)"
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/left_top)"
 				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
-				3="image(x1-18, y0, x1, y0+18, graphics/shadows/topright)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/right_top)"
 				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
-				5="image(x1-18, y1-18, x1, y1, graphics/shadows/bottomright)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/right_bottom)"
 				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
-				7="image(x0, y1-18, x0+18, y1, graphics/shadows/bottomleft)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/left_bottom)"
 				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
 
 			}
@@ -46,8 +46,8 @@
 		{
 			font-size=16
 			textcolor=Label
-		}	
-		
+		}
+
 		friendlabelmore
 		{
 			inset="-3 0 0 0"
@@ -58,13 +58,13 @@
 		     	{
 			        // background fill
 			        0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonface2, propertysheetbg )"
-		                
+
 			        // lines around
 			        1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonface2 )"  // top
 			        2="fill( x0 + 2, y1 - 1, x1 - 5, y1, buttonface2 )"  // bottom
 			        3="fill( x0 + 0, y0 + 3, x0 + 1, y1 - 2, buttonface2 )"  // left
 			        4="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 2, buttonface2 )"  // right
-		
+
 			        // single pixel fills in the corners
 			        5="fill( x0 + 1, y0 + 2, x0 + 4, y0 + 3, buttonface2 )"
 			        6="fill( x1 - 5, y0 + 2, x1 - 4, y0 + 3, buttonface2 )"
@@ -78,10 +78,10 @@
 			16="fill( x1 - 5, y0 + 1, x1 - 4, y0 + 2, ButtonBorderDisabled2 )"
 			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
 			18="fill( x1 - 5, y1 - 1, x1 - 4, y1, ButtonBorderDisabled2 )"
-			        
+
     			}
-    		}   
-    		   
+    		}
+
 		friendlabelmore:hover
 		{
 			inset="-3 0 0 0"
@@ -92,13 +92,13 @@
 		    	 {
 		      	  	// background fill
 		       		0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonfaceactive, propertysheetbg )"
-		                
+
 			        // lines around
 			        1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonborderactive )"  // top
 			        2="fill( x0 + 2, y1 - 1, x1 - 5, y1, buttonborderactive )"  // bottom
 			        3="fill( x0 + 0, y0 + 3, x0 + 1, y1 - 2, buttonborderactive )"  // left
 			        4="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 2, buttonborderactive )"  // right
-		
+
 			        // single pixel fills in the corners
 			        5="fill( x0 + 1, y0 + 2, x0 + 2, y0 + 3, buttonborderactive )"
 			        6="fill( x1 - 5, y0 + 2, x1 - 4, y0 + 3, buttonborderactive )"
@@ -113,7 +113,7 @@
 			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
 			18="fill( x1 - 5, y1 - 1, x1 - 4, y1, ButtonFace2 )"
     			}
-    		}     
+    		}
 	}
 
 	layout {
@@ -122,11 +122,11 @@
 		region { region=body name=friendviewbody dir=down y=64 }
 
 		// TODO: 游戏详情 好友 layout
-		place { 
+		place {
 			region=title
 			control=headerlabel
 		}
-		place { 
+		place {
 			region=friendviewbody
 			width=max
 			dir=down
