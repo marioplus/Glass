@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            font-family: "Microsoft YaHei Mono", Consolas, monospace;
+            padding: 0;
+            margin: 0;
+            color: var(--tcolor);
+        }
+
+        :root {
+            --color1: #263238;
+            --color2: #192227;
+            --color3: #101518;
+            --bcolor: #1f4d57;
+            --tcolor: #4cd0e1;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        #topNav {
+            height: 30px;
+            background: var(--color2);
+        }
+
+        #bottomMenu {
+            height: 20px;
+            background: var(--color2);
+        }
+
+        #content {
+            height: calc(100% - 30px - 20px - 2px);
+            border: solid var(--color3);
+            border-width: 1px 0;
+            background: var(--color1);
+        }
+
+        #content > div {
+            float: left;
+            height: 100%;
+        }
+
+        #leftMenu {
+            width: 50px;
+            background: var(--color2);
+        }
+
+        #gameList {
+            width: 300px;
+            background: var(--color2);
+            border: solid var(--color3);
+            border-width: 0 1px;
+        }
+
+        #gameDetail {
+            width: calc(100% - 300px - 50px - 2px);;
+            overflow-y: auto;
+        }
+
+        #gameDetail > div {
+            width: 100%;
+        }
+
+        /*游戏标题*/
+        #detailHeader {
+            text-align: center;
+            color: var(--tcolor);
+        }
+
+        #detailHeader > h1 {
+            font-family: "Iomanoid", Consolas, monospace;
+            font-size: 45px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 50px 0;
+        }
+
+        #detailHeader > div:nth-child(2) {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            margin: 0 auto;
+            /*background: #27b5f5;*/
+            font-size: 40px;
+            color: white;
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+        }
+
+        .headerDetail {
+            margin-top: 40px;
+            display: inline-block;
+            max-width: 300px;
+            font-size: 12px;
+        }
+
+        .headerDetail p {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .headerDetail:nth-child(1) p {
+            font-weight: bold;
+        }
+
+        .headerDetail:nth-child(1) {
+            text-align: right;
+        }
+
+        .headerDetail:nth-child(2) {
+            text-align: left;
+        }
+
+        /* 好友 */
+        .panel {
+            width: calc(100% - 16px * 2 * 2);
+            border-radius: 3px;
+            margin: 48px auto;
+            padding: 16px;
+            overflow: hidden;
+            /*box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);*/
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2);
+        }
+
+        .panel > .title {
+            margin-bottom: 36px;
+        }
+
+        .panel > .desc {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .panel .avatar {
+            display: inline-block;
+        }
+
+        .panel .avatar > div {
+            display: inline-block;
+        }
+
+        .panel .avatar div:nth-child(1) div {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border-radius: 3px;
+            border: 3px solid green;
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+        }
+
+        .panel .moreBtn {
+            position: relative;
+            right: -3px;
+            bottom: 15px;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background: rebeccapurple;
+            border-radius: 3px;
+            color: white;
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+        }
+
+        .panel .viewAll {
+            font-size: 12px;
+            height: 36px;
+            line-height: 36px;
+            display: inline-block;
+            border-radius: 3px;
+            padding: 0 16px;
+        }
+
+        .panel .viewAll:hover {
+            background: var(--bcolor);
+        }
+
+    </style>
+</head>
+<body>
+<div id="topNav"></div>
+<div id="content">
+    <div id="leftMenu"></div>
+    <div id="gameList"></div>
+    <div id="gameDetail">
+        <div id="detailHeader">
+            <h1>Counter-Strike: Global Offensive</h1>
+            <div>↓</div>
+            <div>
+                <div class="headerDetail">
+                    <p>您已经玩了</p>
+                    <p>最后运行于</p>
+                    <p>链接类型</p>
+                </div>
+                <div class="headerDetail">
+                    <p>1377&nbsp;小时</p>
+                    <p>2019/1/20</p>
+                    <p>商店页面</p>
+                </div>
+            </div>
+        </div>
+        <div id="friend">
+            <div class="panel">
+                <h1 class="title">好友</h1>
+                <p class="desc">您有 28 位好友玩过 Counter-strike: Global Offensive</p>
+                <div class="avatar">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="moreBtn">+19</div>
+                </div>
+                <div><a class="viewAll">查看玩过此游戏的好友</a></div>
+            </div>
+        </div>
+        <div class="achievement">
+            <div class="panel"></div>
+        </div>
+        <div class="news">
+            <div class="panel"></div>
+        </div>
+    </div>
+</div>
+<div id="bottomMenu"></div>
+</body>
+</html>
