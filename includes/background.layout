@@ -12,11 +12,12 @@
 				2="fill( x0+51, y0+31, x0+351, y1-21, myDeputybackground )"
 				2="fill( x0+351, y0+31, x0+352, y1-21, myDivider )"
 
-				3="fill( x0+352, y0+31, x1, y1-21, myBackground )"
 
 				2="fill( x0, y1-21, x1, y1-20, myDivider )"
 				2="fill( x0, y1-20, x1, y1, myDeputybackground )"
 
+				// 3="fill( x0+51, y0+31, x1, y1-21, myBackground )"
+				3="fill( x0+352, y0+31, x1, y1-21, myBackground )"
                 // 背景图片
 				10="image( x0, y0, x1, y1, graphics/bg/bg)"
 

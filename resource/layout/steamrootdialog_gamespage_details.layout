@@ -4,20 +4,20 @@
 	{
 		GamesList
 		{
-			tabposition=1 
+			tabposition=1
 		}
-		
+
 		DetailsBorder { controlname=Panel style="DetailsBorderPanel" zpos="-1" }
 
-		// TODO: 游戏预览图 controls 
+		// TODO: 游戏预览图 controls
 		headerimagea { controlname="ImagePanel" style="headerimage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
 		headerimageb { controlname="ImagePanel" style="headerimage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
 
 		// Header text labels
 		gametitleheader { controlname="CDetailsGameTitleHeaderPanel" zpos="1" }
 		gamesubheader { controlname="CDetailsGameSubHeaderPanel" zpos="2" }
-		
-		linkslabel { controlname="Label" labeltext="#Steam_Links" style="rightcolumnheadertext"} 
+
+		linkslabel { controlname="Label" labeltext="#Steam_Links" style="rightcolumnheadertext"}
 		sendguestpasslink { controlname="URLLabel" labeltext="#steam_send_guestpass" style="rightcolumnlink" tabposition=7 command="SendGuestPass" }
 		achievementslink { controlname="URLLabel" labeltext="#Steam_Achievements" style="rightcolumnlink" }
 		forumlink { controlname="URLLabel" labeltext="#Steam_Forums" style="rightcolumnlink" }
@@ -32,7 +32,7 @@
 		guideslink { controlname="URLLabel" labeltext="#Steam_Guides" style="rightcolumnlink" }
 		supportlink { controlname="URLLabel" labeltext="#Steam_Support" style="rightcolumnlink" }
 		recommendlink { controlname="URLLabel" labeltext="#Steam_Game_RecommendGame" style="rightcolumnlink" }
-		editconfiglink { controlname="URLLabel" labeltext="#steam_editcontroller" style="rightcolumnlink" }	
+		editconfiglink { controlname="URLLabel" labeltext="#steam_editcontroller" style="rightcolumnlink" }
 
 
 		// Right column tags
@@ -59,7 +59,6 @@
 
 	styles
 	{
-
 		CGamesListPanel
 		{
 			text=myTest
@@ -95,33 +94,33 @@
 			render_bg {}
 			render {}
 		}
-		
+
 		"GamesPage_Details ListPanelInterior"
 		{
 			bgcolor="none"
 			inset="0 1 0 0"
 			render {}
-			render_bg {} 
+			render_bg {}
 		}
-		
+
 		"GamesPage_Details ListPanelInterior:scrollbar"
-			{     
+			{
 			inset="0 1 -2 0"
 			bgcolor=none
-			
+
 			render_bg {}
 			}
-			
+
 		// TODO: 游戏列表头
 		ListPanelSectionHeader
-		{     
+		{
 			inset="2 0 0 0"
 			textcolor=myGamesPageListSectionHeaderText
 			minimum-height=30
 			font-size=16
 			bgcolor=none
 			render_bg {}
-		} 
+		}
 
 		"GamesPage_Details ListPanelDragger"
 		{
@@ -136,14 +135,14 @@
 			font-size=14
 			inset="2 2 0 0"
 			render {}
-			render_bg 
+			render_bg
 			{
 
 				0="fill( x0+1, y0+2, x1, y1 + 1, ButtonFace )"
 			}
 
 		}
-		
+
 		"GamesPage_Details ListPanelColumnHeader" [$OSX]
 		{
 			bgcolor="none"
@@ -153,26 +152,26 @@
 
 
 		}
-		
-		"CGamesListPanel ListPanelColumnSelectButton"   
+
+		"CGamesListPanel ListPanelColumnSelectButton"
 		{
        		inset="-3 3 0 0"
         		render {
           		5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
-        		}   
+        		}
         		render_bg {
         			1="fill( x0 + 1, y0, x1 - 1, y1, none )"
         		}
 		}
-		
+
 		// TODO: 游戏预览图样式
-		headerimage 
-		{ 
+		headerimage
+		{
 			bgcolor=none
 			render_bg {
 				//0="image( x0 , y0 , x1, y1, graphics/t )"
 			}
-			
+
 		}
 
 		rightcolumnheadertext
@@ -182,7 +181,7 @@
 			font-size=14
 			textcolor=label2
 		}
-		
+
 		// TODO: 游戏详情 连接 连接二字 style
 		rightcolumnheadertext-red {
 			font-size=14
@@ -214,19 +213,19 @@
 		rightcolumnlink:disabled {
 			textcolor=myRightColumnLink.disabled
 		}
-		
+
 		rightcolumntag
 		{
 			font-size=14
 			textcolor=Label
 			font-family=basefont
 		}
-		
+
 		DetailsBorderPanel
 		{
-			
+
 			bgcolor = none
-			render 
+			render
 			{
 				// background gradient
 				// 0="fill(x0, y0, x1, y1, myNone)"
@@ -253,49 +252,44 @@
 		// TODO: 左边游戏列表 layout
 		// Games list on left
 		place 	{ control=GamesList  margin-top=50 region=list width=max height=max }
-		
+
 		// Body contents
-		place 
-		{ 
+		place
+		{
 			control=welcomedetails,rentaldetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody
 			spacing=30
 			dir=down
 			width=max
-			margin=0
+			margin-left=25
 		}
 
-		
+
 		// Details border
 		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
 
 		// TODO: 游戏预览图 layout
-		place { 
+		place {
 			region=details
 			control=headerimageb
 			width=0
 			height=350
 		}
-		// place { 
-		// 	region=details
-		// 	control=headerimagea
-		// 	height=350
-		// 	align=top-center
-		// }
+
 		// Header text
 		place 	{ control=gametitleheader region=headertext width=max height=150 } // TODO: 游戏图标和名字 layout
 		place	{ control=gamesubheader region=headertext 	width=max height=350 } // TODO: 开始游戏按钮 和游戏时间信息 layout
-		
+
 		// TODO: 游戏详情右侧的 链接和类型 layout
-		place { 
+		place {
 			// control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,tagslabel,*taglink,edittagslink
 			control=linkslabel
-			region=rightcolumn 
+			region=rightcolumn
 			dir=right
 			align=top-center
 			margin-left=-80
 		}
-		place { 
+		place {
 			// control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,tagslabel,*taglink,edittagslink
 			control=tagslabel,storelink
 			region=rightcolumn
@@ -304,16 +298,16 @@
 			align=left
 			spacing=10
 		}
-		place { 
+		place {
 			width=0
 			height=0
 			control=sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,newslink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,editconfiglink,*taglink,edittagslink
-			region=rightcolumn 
+			region=rightcolumn
 			dir=right
 			align=left
 		}
 
-		
+
 	}
 
 }

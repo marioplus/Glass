@@ -8,8 +8,8 @@
 			style						ChromeBorderItem
 			mouseinputenabled			0
 		}
-		
-		
+
+
 		"launch"
 		{
 			zpos="1"
@@ -19,18 +19,18 @@
 			style						CUILaunchButton
 			command						launch
 		}
-		
-				
+
+
 		"divider"
 		{
 			zpos="1"
-			// 
+			//
 			ControlName					Label
 			labelText					"|"
 			style						GridNavDivider
 
 		}
-		
+
 		"details"
 		{
 			zpos="1"
@@ -45,14 +45,14 @@
 	{
 		ChromeBorderItem
 		{
-			
+
 			render
 			{
 				// bgfill
-				
-				// 0="gradient( x0 + 12 , y1 - 47, x1 - 18, y1 - 20, launch1, launch2 )"	
-     		 }			
-		}	
+
+				// 0="gradient( x0 + 12 , y1 - 47, x1 - 18, y1 - 20, launch1, launch2 )"
+     		 }
+		}
 		GridNavDivider
 		{
 			textcolor=none
@@ -68,7 +68,7 @@
 			}
 		}
 		CUILaunchButton:Hover
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -76,9 +76,9 @@
 				1="image( x0, y0 + 1, x1, y1, graphics/icon_play_hover )"
 			}
 		}
-	
+
 		CUIDetailsButton
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -87,7 +87,7 @@
 			}
 		}
 		CUIDetailsButton:Hover
-		{   
+		{
 			textcolor=none
 			bgcolor=none
 			render_bg
@@ -95,21 +95,22 @@
 				1="image( x0, y0 + 1, x1, y1, graphics/icon_details )"
 			}
 		}
-		
+
 		"GameItem_Updating CUINavButton:hover"
 		{
 			textcolor="Text"
 		}
 	}
 
-	
 	layout
 	{
 		// region { name="actions" align=bottom width=max height=50 x=0 y=210 margin-bottom=0}
-		
+
 		place { control=chromeborder	region=actions			x=0 y=0 width=max height=max }
 
-		place { control="details" align=right margin=15 }
-		place {	control="launch"  align=top-center margin-right=36 margin-top=46 }
+        // 卡片布局游戏详情按钮
+		place { control="details" align=right margin-right=-15 margin-top=5 }
+		// 卡片布局开始游戏按钮
+		place {	control="launch"  align=top-center margin-right=36 margin-top=30 }
 	}
 }

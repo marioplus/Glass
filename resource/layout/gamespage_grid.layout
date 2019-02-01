@@ -4,7 +4,7 @@
 	{
 		"grid"
 		{
-			"alignment"						"justify"		// left, right, justify 
+			"alignment"						"justify"		// left, right, justify
 			"interiorspacing"				18				// minimum interitem spacing, used for both x and y
 			"wheelpct"						50				// mouse wheel -> scroll this percent of an item's dy
 			"tabposition"					1
@@ -29,13 +29,13 @@
 	styles
 	{
 		WrapPanel
-		{			
+		{
 			bgcolor="none"
 			render_bg {
-				// background gradient        
+				// background gradient
 				//0="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 			}
-		}	
+		}
 
 		emptylisttext
 		{
@@ -43,7 +43,7 @@
 			font-size="15"
 			render_bg {}
 		}
-		
+
 
 		// GameItem_whatever suffix is computed on the fly. (not case sensitive.) possible values:
 		// shortcut
@@ -70,7 +70,7 @@
 
 	layout
 	{
-		place { control = grid x=50 y=0 width=max height=max  }
+		place { control = grid x=75 y=35 width=max height=max  }
 
 		place	{ control=emptylisttext x=0 y=0 margin=10 margin-top=9 width=max height=max }
 	}
