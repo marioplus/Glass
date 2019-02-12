@@ -1,8 +1,8 @@
 "includes/colors/matelial_colors.styles" {
     colors {
         // from http://www.designskilz.com/colors/pink
-        // var s = '';
-        // document.getElementsByClassName('colors')[0].childNodes.forEach((e, i) => { 
+        // let s = '';
+        // document.getElementsByClassName('colors')[0].childNodes.forEach((e, i) => {
         //     if (i % 2 !== 0) {
         //         const k= e.getAttribute('class');
         //         let v = e.childNodes[7].innerText;
@@ -16,6 +16,18 @@
         // 这里包含了我所有使用颜色，具体效果可在 includes/colors/material color.png 中查看
         // xxx-50 ~ xxx-900 为 Material Design 中的颜色值
         // xxx-a50、xxx-100、xxx-a150 为xxx-500 的alpha分别为50、100、150的时候的颜色
+
+        // 白色
+        white-1="255 255 255 255"
+        white-2="255 255 255 178" // 70%透明度
+        white-3="255 255 255 127" // 50%透明度
+        white-4="255 255 255 30" // 12%透明度
+
+        // 黑色
+        black-1="0 0 0 255"
+        black-2="0 0 0 221" // 87%透明度
+        black-3="0 0 0 96" // 38%透明度
+        black-4="0 0 0 30" // 12%透明度
 
         // 红色
         red-50="255 235 238 255"
@@ -32,7 +44,7 @@
         red-a100="244 67 54 100"
         red-a150="244 67 54 150"
 
-        // 粉红色 
+        // 粉红色
         pink-50="252 228 236 255"
         pink-100="248 187 208 255"
         pink-200="244 143 177 255"

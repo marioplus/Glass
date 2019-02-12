@@ -1,0 +1,18 @@
+"includes/colors/primary_text/orange.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myPrimary=              orange-500
+        myPrimaryLight=         orange-300
+        myPrimaryDark=          orange-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         orange-a50
+        myPrimaryLightAlpha=    orange-a100
+        myPrimaryDarkAlpha=     orange-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+    }
+}

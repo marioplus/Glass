@@ -1,0 +1,18 @@
+"includes/colors/primary_text/red.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myPrimary=              red-500
+        myPrimaryLight=         red-300
+        myPrimaryDark=          red-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         red-a50
+        myPrimaryLightAlpha=    red-a100
+        myPrimaryDarkAlpha=     red-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+    }
+}

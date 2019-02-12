@@ -1,0 +1,17 @@
+"includes/colors/primary_text/brown.styles" {
+    include "includes/colors/matelial_colors.styles"
+    colors {
+        myPrimary=              brown-500
+        myPrimaryLight=         brown-300
+        myPrimaryDark=          brown-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         brown-a50
+        myPrimaryLightAlpha=    brown-a100
+        myPrimaryDarkAlpha=     brown-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+    }
+}

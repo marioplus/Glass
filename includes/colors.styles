@@ -6,41 +6,45 @@
     // 此文件中只能有一条 include 前面没有 //
 
     // 红色
-    // include "includes/colors/red.styles"
+    // include "includes/colors/primary_text/red.styles"
     // 粉红色
-    // include "includes/colors/pink.styles"
+    // include "includes/colors/primary_text/pink.styles"
     // 紫色
-    // include "includes/colors/purple.styles"
+    // include "includes/colors/primary_text/purple.styles"
     // 深紫色
-    // include "includes/colors/deep_purple.styles"
+    // include "includes/colors/primary_text/deep_purple.styles"
     // 靛青色
-    // include "includes/colors/indigo.styles"
+    // include "includes/colors/primary_text/indigo.styles"
     // 蓝色
-    // include "includes/colors/blue.styles"
+    // include "includes/colors/primary_text/blue.styles"
     // 浅蓝色
-    // include "includes/colors/light_blue.styles"
+    // include "includes/colors/primary_text/light_blue.styles"
     // 青色
-    // include "includes/colors/cyan.styles"
+    // include "includes/colors/primary_text/cyan.styles"
     // 深青色
-     include "includes/colors/teal.styles"
+    include "includes/colors/primary_text/teal.styles"
     // 绿色
-    // include "includes/colors/green.styles"
+    // include "includes/colors/primary_text/green.styles"
     // 浅绿色
-    // include "includes/colors/light_green.styles"
+    // include "includes/colors/primary_text/light_green.styles"
     // 青柠色
-    // include "includes/colors/lime.styles"
+    // include "includes/colors/primary_text/lime.styles"
     // 黄色
-    // include "includes/colors/yellow.styles"
+    // include "includes/colors/primary_text/yellow.styles"
     // 琥珀色
-    // include "includes/colors/amber.styles"
+    // include "includes/colors/primary_text/amber.styles"
     // 橙色
-     include "includes/colors/orange.styles"
+    // include "includes/colors/primary_text/orange.styles"
     // 深橙色
-    // include "includes/colors/deep_orange.styles"
+    // include "includes/colors/primary_text/deep_orange.styles"
     // 棕色
-    // include "includes/colors/brown.styles"
+    // include "includes/colors/primary_text/brown.styles"
 
     // 自定义颜色 留给你的颜色不多了
-    // includes/colors/custom_color.styles 中会有详细的描述
-    // include "includes/colors/custom_color.styles"
+    // includes/colors/primary_text/custom_color.styles 中会有详细的描述
+    // include "includes/colors/primary_text/custom_color.styles"
+
+    //游戏列表颜色
+    // 暗色
+    // include "includes/colors/secondary_text/dark.styles"
 }

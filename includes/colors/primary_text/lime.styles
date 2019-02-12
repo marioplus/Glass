@@ -1,0 +1,18 @@
+"includes/colors/primary_text/lime.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myPrimary=              lime-500
+        myPrimaryLight=         lime-300
+        myPrimaryDark=          lime-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         lime-a50
+        myPrimaryLightAlpha=    lime-a100
+        myPrimaryDarkAlpha=     lime-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+    }
+}

@@ -1,0 +1,31 @@
+"includes/colors/primary_text/custom_color.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        // 每一个颜色通过这种方式定义
+        // 颜色名称="R ,G ,B, A" ，请注意，所有符号都应该是英文符号
+        yourCustomColor1="3 169 244 255"
+
+        // 颜色可以被继承，就像下面这样
+        yourCustomColor2=light-blue-300
+
+        // 如果你有仔细观察，就会发现 includes/colors/ 我所有使用的颜色 都被定义在 includes/colors/matelial_colors.styles 中
+        // 如果你不想自己定义颜色，你可以使用我定义的颜色
+        // 具体颜色是什么样子的，你可以在 includes/colors/material color.png 中查看
+        // 定义你自己的颜色时，颜色名称最好就上一个 your 以免其他地方已经有这个颜色的定义了
+
+        myPrimary=              yourCustomColor1
+        myPrimaryLight=         yourCustomColor2
+        myPrimaryDark=          light-blue-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         light-blue-a50
+        myPrimaryLightAlpha=    light-blue-a100
+        myPrimaryDarkAlpha=     light-blue-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+
+    }
+}

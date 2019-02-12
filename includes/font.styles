@@ -1,0 +1,9 @@
+"includes/font.styles" {
+    colors {
+        // 游戏名称字体
+        myGameNameFont="Iomanoid"
+
+        // 其他字体
+        myBaseFont="Microsoft YaHei Mono"
+    }
+}
