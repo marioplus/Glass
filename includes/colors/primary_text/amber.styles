@@ -1,0 +1,18 @@
+"includes/colors/primary_text/amber.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myPrimary=              amber-500
+        myPrimaryLight=         amber-300
+        myPrimaryDark=          amber-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         amber-a50
+        myPrimaryLightAlpha=    amber-a100
+        myPrimaryDarkAlpha=     amber-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+    }
+}

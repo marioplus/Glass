@@ -71,6 +71,7 @@
 		}
 		
 		more_link {
+			font-style=normal
 			padding=8
 			font-size=16
 			font-weight=500

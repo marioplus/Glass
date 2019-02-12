@@ -1,0 +1,18 @@
+"includes/colors/primary_text/teal.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myPrimary=              teal-500
+        myPrimaryLight=         teal-300
+        myPrimaryDark=          teal-700
+        myDisabled=             grey-700
+
+        myPrimaryAlpha=         teal-a50
+        myPrimaryLightAlpha=    teal-a100
+        myPrimaryDarkAlpha=     teal-a150
+
+        myNone="0 0 0 0"
+        myWhite="255 255 255 255"
+        myBlack="0 0 0 255"
+    }
+}
