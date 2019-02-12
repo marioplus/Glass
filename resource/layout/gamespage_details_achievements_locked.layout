@@ -41,27 +41,36 @@
 		{
 			inset="-3 0 0 0"
 			font-size=18
-			textcolor="Text2"
+			textcolor=myAllBtnText
 			font-family=basefont
-		     	render_bg
-		     	{
-			        // background fill
-			        0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, buttonface2, propertysheetbg )"        
-    			}
-    		}   
+			bgcolor=none
+			render_bg
+			{
+				// background fill
+				// 0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, buttonface2, propertysheetbg )"  
+				0="fill(x0+1, y0, x1-2, y0+1, myAllBtnBg)"
+				0="fill(x0+1, y1-2, x1-2, y1-1, myAllBtnBg)"
+				0="fill(x0, y0+1, x0+1, y1-2, myAllBtnBg)"
+				0="fill(x1-2, y0+1, x1-1, y1-2, myAllBtnBg)"
+
+				0="fill(x0+1, y0+1, x1-2, y1-2, myAllBtnBg)"
+			}
+    	}   
     		   
 		achievementlabelmore:hover
 		{
-			inset="-3 0 0 0"
-			font-size=18
-			textcolor="Text"
-			font-family=basefont
-		    	 render_bg
-		    	 {
-		      	  	// background fill
-		       		0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, buttonfaceactive, propertysheetbg )"
-    			}
-    		}     
+			textcolor=myAllBtnText.hover
+			bgcolor=none
+			render_bg
+			{
+				0="fill(x0+1, y0, x1-2, y0+1, myAllBtnBg.hover)"
+				1="fill(x0+1, y1-2, x1-2, y1-1, myAllBtnBg.hover)"
+				2="fill(x0, y0+1, x0+1, y1-2, myAllBtnBg.hover)"
+				3="fill(x1-2, y0+1, x1-1, y1-2, myAllBtnBg.hover)"
+
+				4="fill(x0+1, y0+1, x1-2, y1-2, myAllBtnBg.hover)"
+			}
+		}     
 
 		achievementimagebg
 		{

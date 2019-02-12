@@ -3,6 +3,7 @@ steam.styles
   include "includes/colors.styles"
   include "includes/background.layout"
   include "includes/font.styles"
+
   colors {
     // colors section can include colors in "R G B A" form, or references to already defined colors;
     // it can also include just general settings controls can pull from for extra customization
@@ -43,9 +44,17 @@ steam.styles
     myGameDetailsChildPanel.title=myPrimary
     myGameDetailsChildPanel.content=myPrimaryLight
 
-    // 成就进度条
-    myAchievementsProgressBar.get=myPrimary
-    myAchievementsProgressBar.all=myPrimaryAlpha
+    // 查看全部玩过此游戏的好友、查看全部成就
+      myAllBtnText=myPrimaryDark
+      myAllBtnText.hover=myPrimary
+      myAllBtnBg=myPrimary
+      myAllBtnBg.hover=myPrimaryDark
+
+    // 成就
+      // 进度条
+      myAchievementsProgressBar.get=myPrimary
+      myAchievementsProgressBar.all=myPrimaryAlpha
+
 
     // DLC 列表头
     myGameDetailsDLCHeader=myPrimary
@@ -61,28 +70,28 @@ steam.styles
     myBtnText.disabled=myDisabled
 
     // 游戏列表
-    // 列表组文字颜色
-    myGamesPageListSectionHeaderText=myPrimary
-    // 列表项文字颜色
-    myGamesPageListColumnText=myWhite
-    myGamesPageListColumnText.hover=myPrimary
-    myGamesPageListColumnText.active=myPrimary
-    myGamesPageListColumnText.disable=myDisabled
-
+      // 列表组文字颜色
+      myGamesPageListSectionHeaderText=myPrimary
+      // 列表项文字颜色
+      myGamesPageListColumnText=myWhite
+      myGamesPageListColumnText.hover=myPrimary
+      myGamesPageListColumnText.selected=myPrimary
+      myGamesPageListColumnText.install=myText21
+      myGamesPageListColumnText.un_install=myText22
 
 
     // 下载页面
-    // 下载详情
-    myDownloadSummary.title=myPrimary
-    myDownloadSummary.content=myPrimaryLight
-    myDownloadSummary.speed=myWhite
-    myDownloadSummary.disk="7 168 39 255"
-    myDownloadSummary.net="129 212 250 50"
-    myDownloadProgressBar=myPrimaryDarkAlpha
-    myDownload.section=myPrimary
-    myDownload.type=myPrimary
-    myDownload.label=myPrimaryLight
-    myDownload.value=myWhite
+      // 下载详情
+      myDownloadSummary.title=myPrimary
+      myDownloadSummary.content=myPrimaryLight
+      myDownloadSummary.speed=myWhite
+      myDownloadSummary.disk="7 168 39 255"
+      myDownloadSummary.net="129 212 250 50"
+      myDownloadProgressBar=myPrimaryDarkAlpha
+      myDownload.section=myPrimary
+      myDownload.type=myPrimary
+      myDownload.label=myPrimaryLight
+      myDownload.value=myWhite
 
 
 
@@ -115,8 +124,8 @@ steam.styles
     buttontextactive=Text
 
     // cool we can define font-families here as well
-    basefont=myBaseFont
-    basefont="Helvetica" [$OSX]
+    // basefont=myBaseFont
+    // basefont="Helvetica" [$OSX]
 
     // new control colors
     ButtonFace="102 102 102 200"
@@ -1187,7 +1196,7 @@ steam.styles
 		}
 	}
 
-    // TODO: 游戏列表样式
+    // TODO: 左侧游戏列表样式
     "CGamesListPanel"
 	{
       font-family=basefont
@@ -1207,49 +1216,49 @@ steam.styles
 
     "GameItem_Uninstalled"
     {
-      textcolor=myGamesPageListColumnText.disable
-      selectedtextcolor="label"
+      textcolor=myGamesPageListColumnText.un_install
+      selectedtextcolor=myGamesPageListColumnText.selected
     }
     "GameItem_Uninstalled:hover"
     {
-      textcolor="label"
-      selectedtextcolor="label"
+      textcolor=myGamesPageListColumnText.selected
+      selectedtextcolor=myGamesPageListColumnText.selected
     }
 
     "GameItem_Installed"
     {
-      textcolor="white"
-      selectedtextcolor=myGamesPageListColumnText.active
+      textcolor=myGamesPageListColumnText.install
+      selectedtextcolor=myGamesPageListColumnText.selected
     }
 
     "GameItem_Installed:hover"
     {
-      textcolor=myGamesPageListColumnText.active
-      selectedtextcolor=myGamesPageListColumnText.active
+      textcolor=myGamesPageListColumnText.selected
+      selectedtextcolor=myGamesPageListColumnText.selected
     }
 
     "GameItem_Running"
     {
-      textcolor="Friends.InGameColor"
+      textcolor=blue-500
       selectedtextcolor="white"
     }
 
     "GameItem_Running:hover"
     {
-      textcolor="white"
-      selectedtextcolor="white"
+      textcolor=myGamesPageListColumnText.selected
+      selectedtextcolor=myGamesPageListColumnText.selected
     }
 
     "GameItem_Shortcut"
     {
-      textcolor=myGamesPageListColumnText.active
+      textcolor=myGamesPageListColumnText.selected
       selectedtextcolor="white"
     }
 
     "GameItem_Shortcut:hover"
     {
-        textcolor="white"
-        selectedtextcolor="white"
+        textcolor=myGamesPageListColumnText.selected
+        selectedtextcolor=myGamesPageListColumnText.selected
     }
 
     "GameItem_Mod"
@@ -1260,8 +1269,8 @@ steam.styles
 
     "GameItem_Mod:hover"
     {
-        textcolor="white"
-        selectedtextcolor="white"
+        textcolor=myGamesPageListColumnText.selected
+        selectedtextcolor=myGamesPageListColumnText.selected
     }
 
     "GameItem_Updating"
@@ -2096,12 +2105,13 @@ steam.styles
 
     RichText
     {
-		textcolor="Text"
-		selectedtextcolor="TextSelected"
+		textcolor=myPrimary
+    selectedtextcolor=myPrimary
+    selectedbgcolor=myText21
 		font-family=basefont
 		font-size=14
 		font-weight=400
-		inset="-1 -1 0 0"
+		//inset="-1 -1 0 0"
 		render_bg
 		{
 		-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG )"
@@ -2124,8 +2134,8 @@ steam.styles
 	"RichText url"
 	{
 		font-size=14
-		textcolor="label"
-		selectedtextcolor="label"
+		// textcolor="label"
+		// selectedtextcolor=myPrimary
 		font-style=underline
 	}
 
