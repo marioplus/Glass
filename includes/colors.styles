@@ -1,5 +1,6 @@
 "includes/colors.styles" {
 
+    // 这色调
     // 除了你想要使用的颜色，其他的 include 前面应该有 // 来注释他们
     // 此文件中只能有一条 include 前面没有 //
     // 此文件中只能有一条 include 前面没有 //

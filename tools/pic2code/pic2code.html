@@ -61,7 +61,7 @@
 
                 alert(htmlStrArr.length)
 
-                // save('code.layout')
+                save('code.layout')
 
                 function save(filename) {
                     // 创建隐藏的可下载链接
@@ -409,12 +409,12 @@
 <div>
     <div id='btnGroup'>
         <button onclick="copyCode()">复制代码</button>
-        <button class="transformCode">转换图片</button>
+        <button class="transformCode" onclick="tranPic()">转换图片</button>
         <button class="transformPic">转换颜色</button>
         <button class="openPicker">颜色</button>
     </div>
     <div id='box'>
-        <textarea id='codeBox' placeholder="在这" {
+        <textarea id='codeBox' placeholder="在这">{
 	styles {
 		CSteamRootDialog {
 			bgcolor=none

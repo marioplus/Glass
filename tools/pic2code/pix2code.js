@@ -12,7 +12,7 @@ function copyCode() {
 
 // 拖拽事件初始
 function initDragAndDropEvent() {
-// 拖动图片
+    // 拖动图片
     let picBox = document.getElementById('picBox')
     //当进入
     picBox.addEventListener('dragenter', function () {
@@ -87,6 +87,71 @@ function initColorPicker() {
 // 将图片装换为代码
 function tranPic() {
 
+    const canvas = document.querySelector('#upload > canvas')
+    const w = canvas.width
+    const h = canvas.height
+
+    let blank = document.createElement('canvas')
+    blank.width = w
+    blank.height = h
+    if (canvas.toDataURL() === blank.toDataURL()) {
+        console.log('没有要转换图片')
+        return
+    }
+    const data = canvas.getContext('2d').getImageData(0, 0, w, h).data
+    const colorNames = new Map()
+    const colorStrs = [
+        'bg {',
+    ]
+    let pos = 0,
+        pPos = -4,
+        px = 0
+    for (let i = 0; i < h; i++) {
+        pos += 4
+        pPos += 4
+        px = 0
+        for (let j = 1; j < w; j++) {
+            const pRgba = `${data[pPos++]} ${data[pPos++]} ${data[pPos++]} ${data[pPos++]}`
+            const rgba = `${data[pos++]} ${data[pos++]} ${data[pos++]} ${data[pos++]}`
+            if (pRgba !== rgba || j === w - 1) {
+                if (!colorNames.has(rgba)) {
+                    colorNames.set(rgba, 'color' + (10000 + colorNames.size))
+                }
+                const name = colorNames.get(rgba)
+                const xp = 12, yp = 7
+                colorStrs.push(pix2code(pos, px + xp, i + yp, j + xp, i + 1 + yp, name))
+                px = j
+            }
+        }
+    }
+    colorStrs.push('}')
+
+    const tmpArray = [
+        'colors {'
+    ]
+    colorNames.forEach((k, v) => {
+        tmpArray.push(`\t${k} = "${v}"`)
+    })
+    tmpArray.push('}')
+    const content = `${tmpArray.join('\r\n')}\r\n${colorStrs.join('\r\n')}`
+    console.log(content)
+    // saveFile(content, 'pic.styles')
+
+    function randStr() {
+        return (((1 + Math.random()) * 0x10000000) | 0).toString(16).substring(1)
+    }
+
+    function pix2code(index, x1, y1, x2, y2, color) {
+        // let pixCodeArr = ['\t0="fill(x0+', '', ', y0+', '', ', x0+', '', ', y0+', '', ', ', '', ')"']
+        let pixCodeArr = ['\t', '', '="fill(x0+', '', ', y0+', '', ', x0+', '', ', y0+', '', ', ', '', ')"']
+        pixCodeArr[1] = index
+        pixCodeArr[3] = x1
+        pixCodeArr[5] = y1
+        pixCodeArr[7] = x2
+        pixCodeArr[9] = y2
+        pixCodeArr[11] = color
+        return pixCodeArr.join('')
+    }
 }
 
 // 将图片颜色

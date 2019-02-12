@@ -144,7 +144,7 @@
 	layout
 	{
 		region { name="background" x=0 y=0 width=1024 height=1024 }
-		region	{ name="list" y=2 x=1 width=275 height=max margin-bottom=0 }
+		region	{ name="list" y=60 x=10 width=275 height=max margin-bottom=0 }
 		region	{ name="details"
 			y=1 x=275 width=max height=max overflow=scroll-vertical 
 			margin-left=1 margin-top=1 margin-bottom=1 margin-right=-1 dir=down }
