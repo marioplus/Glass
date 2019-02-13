@@ -360,24 +360,19 @@
 		
 		MusicPlayerIcon
 		{
+			textcolor=none
+			font-size=0
 			bgcolor="none"
-			inset="-1 0 0 0"
-			render_bg={}
-			image="graphics/icon_music_player"
-			padding-left=0
-			padding-right=-1
-			padding-top=-1
+			render_bg={
+				0="image(x0,y0,x1,y1,graphics/icon_play_list)"
+			}
 		}
 		
 		MusicPlayerIcon:hover
 		{
 			bgcolor="none"
-			inset="-1 0 0 0"
 			render_bg={}
-			image="graphics/icon_music_player_hover"
-			padding-left=0
-			padding-right=-1
-			padding-top=-1
+			image="graphics/icon_play_list_hover"
 		}
 		
 		MusicPlayerIcon:selected
@@ -892,7 +887,7 @@
 		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
 		
 		place { control=MusicPage_Details width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
-		place { control="library_music_player_icon" align=right y=57 height=16 width=16 margin-right=10 }
+		place { control="library_music_player_icon" align=bottom y=-114 height=50 width=50 }
 	}
 
 }

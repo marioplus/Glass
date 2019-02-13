@@ -96,6 +96,16 @@ steam.styles
       myDownload.label=myPrimaryLight
       myDownload.value=myWhite
 
+  // 音乐
+    // 左侧列表
+    myMusicListText=myText21
+    myMusicListText.selected=myPrimary
+    // 右侧详情
+    myMusicDetailAlbum.title=myPrimary
+    myMusicDetailAlbum.artist=myPrimaryDark
+    myMusicDetailAlbum.track=myText22
+    myMusicDetailAlbum.track.hover=myPrimary
+
 
 
 

@@ -21,7 +21,6 @@ colors {
 	color10017 = "255 255 255 146"
 	color10018 = "255 255 255 195"
 	color10019 = "255 255 255 186"
-
 }
 
 	controls
@@ -118,7 +117,7 @@ colors {
 			padding-left=10
 			padding-right=10
 			font-size=36
-			textcolor=Text
+			textcolor=myMusicDetailAlbum.title
 			font-family=basefont
 			font-weight=600 
 			bgcolor=none
@@ -132,7 +131,7 @@ colors {
 			padding-right=10
 			padding-bottom=20
 			font-size=26
-			textcolor=Text
+			textcolor=myMusicDetailAlbum.artist
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none
@@ -156,7 +155,7 @@ colors {
 			padding-bottom=10
 			padding-top=0
 			font-size=15
-			textcolor=Text2
+			textcolor=myMusicDetailAlbum.track
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none
@@ -164,7 +163,7 @@ colors {
 		
 		TrackStyle:hover
 		{
-			textcolor="text"
+			textcolor=myMusicDetailAlbum.track.hover
 		}
 		
 		CoverStyle
@@ -207,66 +206,63 @@ colors {
 				// 1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 				
 			}
-			render_bg
-			{
+			render_bg {
 				0="gradient( x0, y0, x1, y1+1, launch1, launch2 )"
 				// background fill
-	8="fill(x0+12, y0+7, x0+13, y0+8, color10000)"
-	12="fill(x0+13, y0+7, x0+14, y0+8, color10001)"
-	40="fill(x0+14, y0+7, x0+21, y0+8, color10001)"
-	48="fill(x0+12, y0+8, x0+13, y0+9, color10002)"
-	52="fill(x0+13, y0+8, x0+14, y0+9, color10003)"
-	56="fill(x0+14, y0+8, x0+15, y0+9, color10004)"
-	60="fill(x0+15, y0+8, x0+16, y0+9, color10001)"
-	80="fill(x0+16, y0+8, x0+21, y0+9, color10001)"
-	88="fill(x0+12, y0+9, x0+13, y0+10, color10005)"
-	92="fill(x0+13, y0+9, x0+14, y0+10, color10006)"
-	96="fill(x0+14, y0+9, x0+15, y0+10, color10007)"
-	100="fill(x0+15, y0+9, x0+16, y0+10, color10008)"
-	104="fill(x0+16, y0+9, x0+17, y0+10, color10009)"
-	108="fill(x0+17, y0+9, x0+18, y0+10, color10001)"
-	120="fill(x0+18, y0+9, x0+21, y0+10, color10001)"
-	128="fill(x0+12, y0+10, x0+13, y0+11, color10010)"
-	132="fill(x0+13, y0+10, x0+14, y0+11, color10006)"
-	144="fill(x0+14, y0+10, x0+17, y0+11, color10011)"
-	148="fill(x0+17, y0+10, x0+18, y0+11, color10012)"
-	152="fill(x0+18, y0+10, x0+19, y0+11, color10013)"
-	156="fill(x0+19, y0+10, x0+20, y0+11, color10001)"
-	160="fill(x0+20, y0+10, x0+21, y0+11, color10001)"
-	168="fill(x0+12, y0+11, x0+13, y0+12, color10010)"
-	172="fill(x0+13, y0+11, x0+14, y0+12, color10006)"
-	192="fill(x0+14, y0+11, x0+19, y0+12, color10014)"
-	196="fill(x0+19, y0+11, x0+20, y0+12, color10015)"
-	200="fill(x0+20, y0+11, x0+21, y0+12, color10001)"
-	208="fill(x0+12, y0+12, x0+13, y0+13, color10016)"
-	212="fill(x0+13, y0+12, x0+14, y0+13, color10006)"
-	232="fill(x0+14, y0+12, x0+19, y0+13, color10014)"
-	236="fill(x0+19, y0+12, x0+20, y0+13, color10015)"
-	240="fill(x0+20, y0+12, x0+21, y0+13, color10001)"
-	248="fill(x0+12, y0+13, x0+13, y0+14, color10016)"
-	252="fill(x0+13, y0+13, x0+14, y0+14, color10006)"
-	264="fill(x0+14, y0+13, x0+17, y0+14, color10011)"
-	268="fill(x0+17, y0+13, x0+18, y0+14, color10017)"
-	272="fill(x0+18, y0+13, x0+19, y0+14, color10013)"
-	276="fill(x0+19, y0+13, x0+20, y0+14, color10001)"
-	280="fill(x0+20, y0+13, x0+21, y0+14, color10001)"
-	288="fill(x0+12, y0+14, x0+13, y0+15, color10018)"
-	292="fill(x0+13, y0+14, x0+14, y0+15, color10006)"
-	296="fill(x0+14, y0+14, x0+15, y0+15, color10007)"
-	300="fill(x0+15, y0+14, x0+16, y0+15, color10008)"
-	304="fill(x0+16, y0+14, x0+17, y0+15, color10009)"
-	308="fill(x0+17, y0+14, x0+18, y0+15, color10001)"
-	320="fill(x0+18, y0+14, x0+21, y0+15, color10001)"
-	328="fill(x0+12, y0+15, x0+13, y0+16, color10019)"
-	332="fill(x0+13, y0+15, x0+14, y0+16, color10003)"
-	336="fill(x0+14, y0+15, x0+15, y0+16, color10004)"
-	340="fill(x0+15, y0+15, x0+16, y0+16, color10001)"
-	360="fill(x0+16, y0+15, x0+21, y0+16, color10001)"
-	400="fill(x0+12, y0+16, x0+21, y0+17, color10001)"
-
-
-				}	
-			}
+				8="fill(x0+12, y0+7, x0+13, y0+8, color10000)"
+				12="fill(x0+13, y0+7, x0+14, y0+8, color10001)"
+				40="fill(x0+14, y0+7, x0+21, y0+8, color10001)"
+				48="fill(x0+12, y0+8, x0+13, y0+9, color10002)"
+				52="fill(x0+13, y0+8, x0+14, y0+9, color10003)"
+				56="fill(x0+14, y0+8, x0+15, y0+9, color10004)"
+				60="fill(x0+15, y0+8, x0+16, y0+9, color10001)"
+				80="fill(x0+16, y0+8, x0+21, y0+9, color10001)"
+				88="fill(x0+12, y0+9, x0+13, y0+10, color10005)"
+				92="fill(x0+13, y0+9, x0+14, y0+10, color10006)"
+				96="fill(x0+14, y0+9, x0+15, y0+10, color10007)"
+				100="fill(x0+15, y0+9, x0+16, y0+10, color10008)"
+				104="fill(x0+16, y0+9, x0+17, y0+10, color10009)"
+				108="fill(x0+17, y0+9, x0+18, y0+10, color10001)"
+				120="fill(x0+18, y0+9, x0+21, y0+10, color10001)"
+				128="fill(x0+12, y0+10, x0+13, y0+11, color10010)"
+				132="fill(x0+13, y0+10, x0+14, y0+11, color10006)"
+				144="fill(x0+14, y0+10, x0+17, y0+11, color10011)"
+				148="fill(x0+17, y0+10, x0+18, y0+11, color10012)"
+				152="fill(x0+18, y0+10, x0+19, y0+11, color10013)"
+				156="fill(x0+19, y0+10, x0+20, y0+11, color10001)"
+				160="fill(x0+20, y0+10, x0+21, y0+11, color10001)"
+				168="fill(x0+12, y0+11, x0+13, y0+12, color10010)"
+				172="fill(x0+13, y0+11, x0+14, y0+12, color10006)"
+				192="fill(x0+14, y0+11, x0+19, y0+12, color10014)"
+				196="fill(x0+19, y0+11, x0+20, y0+12, color10015)"
+				200="fill(x0+20, y0+11, x0+21, y0+12, color10001)"
+				208="fill(x0+12, y0+12, x0+13, y0+13, color10016)"
+				212="fill(x0+13, y0+12, x0+14, y0+13, color10006)"
+				232="fill(x0+14, y0+12, x0+19, y0+13, color10014)"
+				236="fill(x0+19, y0+12, x0+20, y0+13, color10015)"
+				240="fill(x0+20, y0+12, x0+21, y0+13, color10001)"
+				248="fill(x0+12, y0+13, x0+13, y0+14, color10016)"
+				252="fill(x0+13, y0+13, x0+14, y0+14, color10006)"
+				264="fill(x0+14, y0+13, x0+17, y0+14, color10011)"
+				268="fill(x0+17, y0+13, x0+18, y0+14, color10017)"
+				272="fill(x0+18, y0+13, x0+19, y0+14, color10013)"
+				276="fill(x0+19, y0+13, x0+20, y0+14, color10001)"
+				280="fill(x0+20, y0+13, x0+21, y0+14, color10001)"
+				288="fill(x0+12, y0+14, x0+13, y0+15, color10018)"
+				292="fill(x0+13, y0+14, x0+14, y0+15, color10006)"
+				296="fill(x0+14, y0+14, x0+15, y0+15, color10007)"
+				300="fill(x0+15, y0+14, x0+16, y0+15, color10008)"
+				304="fill(x0+16, y0+14, x0+17, y0+15, color10009)"
+				308="fill(x0+17, y0+14, x0+18, y0+15, color10001)"
+				320="fill(x0+18, y0+14, x0+21, y0+15, color10001)"
+				328="fill(x0+12, y0+15, x0+13, y0+16, color10019)"
+				332="fill(x0+13, y0+15, x0+14, y0+16, color10003)"
+				336="fill(x0+14, y0+15, x0+15, y0+16, color10004)"
+				340="fill(x0+15, y0+15, x0+16, y0+16, color10001)"
+				360="fill(x0+16, y0+15, x0+21, y0+16, color10001)"
+				400="fill(x0+12, y0+16, x0+21, y0+17, color10001)"
+			}	
+		}
 			
 		// ActionButtonStyle:hover
 		// {
