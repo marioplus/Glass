@@ -45,8 +45,8 @@ steam.styles
     myGameDetailsChildPanel.content=myPrimaryLight
 
     // 查看全部玩过此游戏的好友、查看全部成就
-      myAllBtnText=myPrimaryDark
-      myAllBtnText.hover=myPrimary
+      myAllBtnText=myText21
+      myAllBtnText.hover=myText21
       myAllBtnBg=myPrimary
       myAllBtnBg.hover=myPrimaryDark
 
