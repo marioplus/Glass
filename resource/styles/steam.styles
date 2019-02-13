@@ -3,6 +3,9 @@ steam.styles
   include "includes/colors.styles"
   include "includes/background.layout"
   include "includes/font.styles"
+  
+  
+  include "resource/layout/scrollBar.layout"
 
   colors {
     // colors section can include colors in "R G B A" form, or references to already defined colors;
@@ -18,9 +21,9 @@ steam.styles
     mySearchBorder="43 51 55 255" // 搜索框边框
 
     // 滚动条
-    myScrollBarBg="20 28 32 255"
-    myScrollBarBgHover="153 166 168 255"
-    myScrollBarBgActive="153 166 168 255"
+    myScrollBarBg=none
+    myScrollBarBgHover=myPrimaryAlpha
+    myScrollBarBgActive=myPrimaryAlpha
 
     // 游戏预览图
     myHerderImage=myDivider
@@ -1451,15 +1454,14 @@ steam.styles
 	"Csteamrootdialog ListPanelColumnheader"
     {
 		font-family=basefont
-		font-size=18
+    font-size=18
 		font-weight=600
     textcolor=myWhite
-		font-style="uppercase"
-		bgcolor=myGameDetailsDLCHeader
-		render_bg
-		{
-			// fill
-			// 0="fill (x0, y0 + 1, x1, y1, myTest )" // bg fill
+    font-style="uppercase"
+    // bgcolor=myGameDetailsDLCHeader
+    // bgcolor=red-600
+		render_bg {
+			// 0="fill (x0, y1-1, x1, y1, myGameDetailsDLCHeader)"
 		}
 	}
 
@@ -1558,31 +1560,26 @@ steam.styles
         }
 	}
 
+    // 表头 分割线 |
     ListPanelDragger
 	{
 		bgcolor="none"
 		render
 		{
 			//fill makes dragger visible
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 3, dialogbg )" // left
-			1="fill (x0, y0, x0+1, y0+3, propertysheetbg )" //dot
+			// 0="fill( x0, y0 + 2, x0 + 1, y1 - 3, dialogbg )" // left
+			// 1="fill (x0, y0, x0+1, y0+3, propertysheetbg )" //dot
 		}
     }
 
     ListPanelInterior
     {
-		inset="3 1 0 0"
-		font-size=15
-		textcolor="text2"
-		bgcolor="none"
-    render
-			{
-
-			}
-		render_bg
-			{
-
-			}
+      inset="3 1 0 0"
+      font-size=15
+      textcolor="text2"
+      bgcolor="none"
+      render {}
+      render_bg {}
     }
 
     ListPanelInterior:scrollbar
@@ -1603,25 +1600,22 @@ steam.styles
 	"CSteamRootDialog ListPanel"
 	{
 		padding-left=2
-		padding-right=2
+    padding-right=2
+
 	}
 
      "Csteamrootdialog ListPanelInterior"
     {
       inset="3 0 3 0"
 			bgcolor=none
-
 			render_bg {}
 		}
 
 	"Csteamrootdialog ListPanelInterior:scrollbar"
     {
       inset="3 0 -1 0"
-			bgcolor=none
-			render
-				{
-
-				}
+      bgcolor=none
+			render {}
 			render_bg {}
 
 	}
@@ -2164,282 +2158,7 @@ steam.styles
 		font-style=italic
 	}
 
-  // 滚动条
-	ScrollBar
-	{
-		inset="0 -16 0 -16"
-	}
-
-    ScrollBarButton.up {
-		  bgcolor=none
-		  //inset="-1 2 0 0"
-		  //image="graphics/icon_up_default"
-		  render_bg {}
-
-    }
-
-    ScrollBarButton.up:hover
-    {
-		bgcolor=none
-		//inset="-1 2 0 0"
-		//image="graphics/icon_up_hover"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceActive )"
-		}
-    }
-
-    ScrollBarButton.up:active
-    {
-		//inset="-1 2 0 0"
-		//image="graphics/icon_up_hover"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceActive )"
-		}
-    }
-
-    ScrollBarButton.up:disabled
-    {
-		inset="-1 2 0 0"
-		//image="graphics/icon_up_disabled"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceDisabled )"
-		}
-    }
-
-    ScrollBarButton.down
-	{
-		bgcolor=none
-		inset="-2 0 0 0"
-		//image="graphics/icon_down_default"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonface )"
-		}
-    }
-
-    ScrollBarButton.down:hover
-		{
-		inset="-2 0 0 0"
-		//image="graphics/icon_down_hover"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceActive )"
-		}
-    }
-
-    ScrollBarButton.down:active
-		{
-		inset="-2 0 0 0"
-		//image="graphics/icon_down_hover"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceActive )"
-		}
-    }
-
-
-     ScrollBarButton.down:disabled
-		{
-		inset="-2 0 0 0"
-		//image="graphics/icon_down_hover"
-		render_bg
-		{
-			// background fill
-			//0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceDisabled )"
-		}
-    }
-
-    ScrollBarButton.left
-    {
-		bgcolor=none
-		inset="1 3 0 0"
-		//image="graphics/icon_left_default"
-		render_bg
-			{
-				// center fill
-				//0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFace )"
-			}
-    }
-
-    ScrollBarButton.left:hover
-    {
-
-		//image="graphics/icon_left_hover"
-		inset="1 3 0 0"
-		render_bg
-			{
-				// center fill
-				//0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
-	    }
-    }
-
-    ScrollBarButton.right
-    {
-		bgcolor=none
-		//image="graphics/icon_right_default"
-		inset="0 2 0 0"
-		render_bg
-			{
-				// center fill
-				//0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFace )"
-	    }
-    }
-
-    ScrollBarButton.right:hover
-    {
-		//image="graphics/icon_right_hover"
-		inset="0 2 0 0"
-		render_bg
-			{
-			// center fill
-			//0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
-      }
-    }
-
-    // TODO: 滚动条滚动条背景
-    ScrollBarHandle  //vertical scrollbar thumb
-    {
-		bgcolor=none
-		//image="graphics/icon_scroll_handle"
-		render_bg
-		{
-			// center fill
-			//0="fill( x0+3, y0, x1, y1, myScrollBarBg )"
-		}
-    }
-
-    "ScrollBarHandle:hover"
-    {
-		//image="graphics/icon_scroll_handle_over"
-		render_bg
-		{
-			// center fill
-			0="fill( x0+3, y0, x1, y1, myScrollBarBgHover )"
-		}
-    }
-
-    "ScrollBarHandle:active"
-    {
-		//image="graphics/icon_scroll_handle_over"
-		render_bg
-		{
-			// center fill
-			0="fill( x0+3, y0 , x1, y1, myScrollBarBgActive )"
-		}
-    }
-
-
-
-    "SliderHoriz"  //horizontal scrollbar thumb
-    {
-	 	//image="graphics/icon_scroll_handle_horiz"
-      render
-      {
-      	// center fill
-        1="fill( x0 + 3, y0, x1, y1, myScrollBarBg )"
-			}
-    }
-
-    "SliderHoriz:hover"
-    {
-
-			//image="graphics/icon_scroll_handle_over_horiz"
-      render
-      	{
-      	// center fill
-        	0="fill( x0 + 3, y0 , x1, y1, myScrollBarBgHover )"
-				}
-    }
-
-    "SliderHoriz:active"
-    {
-
-    	//image="graphics/icon_scroll_handle_over_horiz"
-      	render {
-      	// center fill
-        	1="fill( x0 + 3, y0, x1, y1, myScrollBarBgActive )"
-		}
-    }
-
-    ScrollBarSlider // gutter
-    {
-      bgcolor="none"
-      render  {}
-      render_bg {}
-    }
-
-    ScrollBarSliderHoriz // gutter
-    {
-		bgcolor="none"
-		render{ }
-		render_bg { }
-    }
-
-
-    "GamesPage_Details ListPanel ScrollBarSlider" // gutter in games list detail view
-    {
-		bgcolor="none"
-		render{ }
-		render_bg
-		{
-      // TODO: 滚动条背景
-			//background fill
-			//0="gradient( x0, y0 + 6, x1, y0 + 200, scrollbg, none)"
-		}
-    }
-
-    ScrollBarSlider:disabled
-    {
-		bgcolor="none"
-		render_bg {}
-    }
-
-    "ScrollBar SliderHoriz" // gutter
-    {
-		bgcolor="dialogbg"
-    }
-
-	"HTML ScrollBar"
-	{
-		bgcolor="none"
-		render_bg {
-			0="fill(x0,y0,x1, y1 - 1, almostblack)"
-		}
-	}
-	"HTML ScrollBar.Horizontal"
-	{
-		bgcolor="none"
-		render_bg {
-			0="fill(x0,y0,x1+25,y1, almostblack)"
-		}
-	}
-
-	"HTML ScrollBarSlider.Horizontal"
-	{
-		bgcolor=none
-		render_bg {
-			//background fill
-			0="gradient_horizontal( x0 + 6, y0 + 5, x0 + 200, y1 - 2, dark, none)"
-		}
-
-	}
-
-	"HTML SliderHoriz"
-	{
-		bgcolor=none
-		render_bg
-		{
-		}
-	}
+  
 
     SectionedListPanel
     {

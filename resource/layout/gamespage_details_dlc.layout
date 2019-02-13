@@ -13,7 +13,6 @@
 
 	colors
 	{
-
 		RichText.InsetX "0"
 		RichText.InsetY "3"
 		GameDetailsDLC.ExtraVerticalSpacing "340"
@@ -42,6 +41,18 @@
 			selectedtextcolor="Label"
 			font-size=15
 			render_bg {}
+		}
+
+		ListPanelColumnheader {
+			margin=50
+			font-size=18
+			// minimum-height=40
+			font-weight=600
+			textcolor=myWhite
+			// bgcolor=red-a100
+			render_bg {
+				// 0="fill (x0, y1-1, x1, y1, myGameDetailsDLCHeader)"
+			}
 		}
 
 		"DLC_Uninstalled"
