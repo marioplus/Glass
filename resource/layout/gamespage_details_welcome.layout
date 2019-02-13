@@ -14,36 +14,46 @@
 
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
-		GameDetailsWelcome.ExtraVerticalSpacing "52"
+		GameDetailsWelcome.ExtraVerticalSpacing "152"
 		GameDetailsWelcome.WelcomeTextSpacing "0"
 	}
 
 	styles
 	{
-		nonsteamdetails 
-		{ 
-			bgcolor=BackgroundStart
+		nonsteamdetails {
+			bgcolor=none
+			render_bg {
+				1="image(x0, y0, x0+18, y0+18, graphics/shadows/left_top)"
+				2="image_tiled(x0+18, y0, x1-18, y0+18, graphics/shadows/top)"
+				3="image(x1-18, y0, x1, y0+18, graphics/shadows/right_top)"
+				4="image_tiled(x1-18, y0+18, x1, y1-18, graphics/shadows/right)"
+				5="image(x1-18, y1-18, x1, y1, graphics/shadows/right_bottom)"
+				6="image_tiled(x0+18, y1-18, x1-18, y1, graphics/shadows/bottom)"
+				7="image(x0, y1-18, x0+18, y1, graphics/shadows/left_bottom)"
+				8="image_tiled(x0, y0+18, x0+18, y1-18, graphics/shadows/left)"
+		    }
 		}
 
 		bodycontent
 		{
-			textcolor="Label"
-			selectedtextcolor="Label"	
+			textcolor=myGameDetailsChildPanel.content
+			selectedtextcolor=myText21	
 			font-size=15
 			render_bg {}
 		}
 
 		"RichText url"
 		{
+			
 			font-size=15
 		}
 	}
 
 	layout
 	{
-		region { name=body margin=10 width=max height=max }
-		place { region=body control=headerlabel width=max }
-		place { region=body y=26 control=bodybasic,bodynofriends,bodyhelp dir=down width=max spacing=2 }
+		region { name=body width=max height=max }
+		place { region=body margin=28 control=headerlabel width=max }
+		place { region=body  x=28 y=80 control=bodybasic,bodynofriends,bodyhelp dir=down width=max spacing=20 margin-right=28}
 	}
 
 }

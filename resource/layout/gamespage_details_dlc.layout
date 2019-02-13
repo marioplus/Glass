@@ -46,29 +46,23 @@
 		ListPanelColumnheader {
 			margin=50
 			font-size=18
-			// minimum-height=40
 			font-weight=600
-			textcolor=myWhite
-			// bgcolor=red-a100
+			textcolor=myPrimary
 			render_bg {
-				// 0="fill (x0, y1-1, x1, y1, myGameDetailsDLCHeader)"
 			}
 		}
 
-		"DLC_Uninstalled"
-		{
-			textcolor="labeldisabled"
-			selectedtextcolor="label"
+		DLC_Uninstalled {
+			textcolor=myGamesPageListColumnText.un_install
+			selectedtextcolor=myGamesPageListColumnText.selected
 		}
 
-		"DLC_Installed"
-		{
-			textcolor="text"
-			selectedtextcolor="white"
+		DLC_Installed {
+			textcolor=myGamesPageListColumnText.install
+			selectedtextcolor=myGamesPageListColumnText.selected
 		}
 
-		"mostrecenttime"
-		{
+		mostrecenttime {
 			font-size=0
 			padding-top=3
 			minimum-width=256
