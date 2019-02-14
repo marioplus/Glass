@@ -105,9 +105,11 @@ steam.styles
     myMusicDetailAlbum.artist=myPrimaryDark
     myMusicDetailAlbum.track=myText22
     myMusicDetailAlbum.track.hover=myPrimary
-
-
-
+    myMusicDetailAlbum.info=myPrimary
+    // 播放列表
+    myMusicDetailPlayListNum=myText22
+    myMusicDetailPlayListItem=myText21
+    myMusicDetailPlayListItem.hover=myPrimary
 
     black="0 0 0 255"
     dark="35 35 35 255"

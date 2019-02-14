@@ -144,7 +144,7 @@ colors {
 			padding-left=0
 			padding-right=10
 			font-size=15
-			textcolor=labeldisabled
+			textcolor=myMusicDetailAlbum.info
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none

@@ -1,10 +1,12 @@
 "includes/font.styles" {
     colors {
         // 游戏名称字体
-        myGameNameFont="Iomanoid"
+        // myGameNameFont="Iomanoid"
+        myGameNameFont="Scotsdale"
 
         // 基础字体
-        basefont="Microsoft YaHei Mono" // 其他设备
+        // basefont="Microsoft YaHei Mono" // 其他设备
+        basefont="Scotsdale" // 其他设备
         basefont="Helvetica" [$OSX] // mac os x
     }
 }
