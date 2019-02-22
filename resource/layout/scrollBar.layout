@@ -1,0 +1,116 @@
+"resource/layout/scrollBar.layout" {
+
+    styles {
+
+        ScrollBar {
+            inset="0 -20 0 -20" // 顶掉向上、向下箭头
+        }
+
+        // 滚动条背景
+        ScrollBarHandle {
+            bgcolor=none
+            render_bg {
+                0="fill(x1-10, y0, x1, y1, myScrollBarBg)"
+            }
+        }
+
+        ScrollBarHandle:hover {
+            bgcolor=none
+            render_bg {
+                0="fill(x1-10, y0, x1, y1, myScrollBarBgHover)"
+            }
+        }
+
+        ScrollBarHandle:active {
+            bgcolor=none
+            render_bg {
+                0="fill(x1-10, y0, x1, y1, myScrollBarBgActive)"
+            }
+        }
+
+
+
+        "SliderHoriz" {
+            //image="graphics/icon_scroll_handle_horiz"
+            render {
+                // center fill
+                1="fill( x0 + 3, y0, x1, y1, myScrollBarBg )"
+            }
+        }
+
+        "SliderHoriz:hover" {
+            //image="graphics/icon_scroll_handle_over_horiz"
+            render {
+                // center fill
+                0="fill( x0 + 3, y0 , x1, y1, myScrollBarBgHover )"
+            }
+        }
+
+        "SliderHoriz:active" {
+            //image="graphics/icon_scroll_handle_over_horiz"
+            render {
+                // center fill
+                1="fill( x0 + 3, y0, x1, y1, myScrollBarBgActive )"
+            }
+        }
+
+        ScrollBarSlider { // gutter 
+            bgcolor="none"
+            render  {}
+            render_bg {}
+        }
+
+        ScrollBarSliderHoriz { // gutter 
+            bgcolor="none"
+            render{ }
+            render_bg { }
+        }
+
+
+        "GamesPage_Details ListPanel ScrollBarSlider" { // gutter in games list detail view 
+            bgcolor="none"
+            render{ }
+            render_bg {
+                // TODO: 滚动条背景
+                //background fill
+                //0="gradient( x0, y0 + 6, x1, y0 + 200, scrollbg, none)"
+            }
+        }
+
+        ScrollBarSlider:disabled {
+            bgcolor="none"
+            render_bg {}
+        }
+
+        "ScrollBar SliderHoriz" { // gutter 
+            bgcolor="dialogbg"
+        }
+
+        "HTML ScrollBar" {
+            bgcolor="none"
+            render_bg {
+                0="fill(x0,y0,x1, y1 - 1, almostblack)"
+            }
+        }
+
+        "HTML ScrollBar.Horizontal" {
+            bgcolor="none"
+            render_bg {
+                0="fill(x0,y0,x1+25,y1, almostblack)"
+            }
+        }
+
+        "HTML ScrollBarSlider.Horizontal" {
+            bgcolor=none
+            render_bg {
+                //background fill
+                0="gradient_horizontal( x0 + 6, y0 + 5, x0 + 200, y1 - 2, dark, none)"
+            }
+        }
+
+        "HTML SliderHoriz" {
+            bgcolor=none
+            render_bg {}
+        }
+    }
+}

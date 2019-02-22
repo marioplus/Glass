@@ -7,6 +7,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
@@ -31,7 +32,7 @@ public class HttpUtils {
     }
 
     private <T> Optional<T> execute(GetDataHandler<T> handler, int method) {
-        try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
+        try (CloseableHttpClient httpclient = HttpClientBuilder.create().build()) {
             RequestBuilder requestBuilder;
 
             if (method == GET) {

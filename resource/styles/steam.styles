@@ -11,6 +11,8 @@ steam.styles
     // colors section can include colors in "R G B A" form, or references to already defined colors;
     // it can also include just general settings controls can pull from for extra customization
 
+    none="0 0 0 0"
+
     myBackground = "38 50 56 255"  // 主背景
     myDeputybackground = "25 34 39 255" // 副背景
     myDivider = "16 21 24 255" // 分割线
@@ -22,94 +24,129 @@ steam.styles
 
     // 滚动条
     myScrollBarBg=none
-    myScrollBarBgHover=myPrimaryAlpha
-    myScrollBarBgActive=myPrimaryAlpha
+    myScrollBarBgHover=myColorA
+    myScrollBarBgActive=myColorA
 
     // 游戏预览图
     myHerderImage=myDivider
     myHerderImage1=myDivider
 
     // 游戏名称
-    myGameName=myPrimaryLight
+    myGameName=myColorL
 
     // 开始游戏按钮
     myLaunchBtn=myBackground
     // 开始游戏下面的三行
-    myGameDetailsLabel=myPrimary
-    myGameDetailsValue=myPrimaryLight
+    myGameDetailsLabel=myColor
+    myGameDetailsValue=myColorL
     // 右侧的链接
-    myRightColumnLink=myPrimaryLight
-    myRightColumnLink.hover=myPrimaryDark
-    myRightColumnLink.disabled=myDisabled
-
+    myRightColumnLink=myColorL
+    myRightColumnLink.hover=myColorD
+    myRightColumnLink.disabled=myColorD
 
     // 游戏详情子面板
-    myGameDetailsChildPanel.title=myPrimary
-    myGameDetailsChildPanel.content=myPrimaryLight
+    myGameDetailsChildPanel.title=myColor
+    myGameDetailsChildPanel.content=myColorL
 
     // 查看全部玩过此游戏的好友、查看全部成就
-      myAllBtnText=myText21
-      myAllBtnText.hover=myText21
-      myAllBtnBg=myPrimary
-      myAllBtnBg.hover=myPrimaryDark
+      myAllBtnText=myAccent1
+      myAllBtnText.hover=myAccent1
+      myAllBtnBg=myColor
+      myAllBtnBg.hover=myColorD
 
     // 成就
       // 进度条
-      myAchievementsProgressBar.get=myPrimary
-      myAchievementsProgressBar.all=myPrimaryAlpha
+      myAchievementsProgressBar.get=myColor
+      myAchievementsProgressBar.all=myColorA
 
 
     // DLC 列表头
-    myGameDetailsDLCHeader=myPrimary
+    myGameDetailsDLCHeader=myColor
 
     // 按钮
     myBtnBG="0 0 0 0"
     myBtnBG.hover="225 245 254 50"
     myBtnBG.active="129 212 250 50"
     myBtnBG.disabled="0 0 0 50"
-    myBtnText=myPrimary
-    myBtnText.hover=myPrimaryLight
-    myBtnText.active=myPrimaryDark
-    myBtnText.disabled=myDisabled
+    myBtnText=myColor
+    myBtnText.hover=myColorL
+    myBtnText.active=myColorD
+    myBtnText.disabled=myColorD
 
     // 游戏列表
+    
+      // 游戏列表
+      // myGameListGroup=myColor
+      // myGameListItem=myColor
+      // myGameListItem.shadow=myColor
+      // myGameListItem.selected=myColor
+      // myGameListItem.bg=none
+
       // 列表组文字颜色
-      myGamesPageListSectionHeaderText=myPrimary
+      myGameListGroup=myColor
       // 列表项文字颜色
-      myGamesPageListColumnText=myWhite
-      myGamesPageListColumnText.hover=myPrimary
-      myGamesPageListColumnText.selected=myPrimary
-      myGamesPageListColumnText.install=myText21
-      myGamesPageListColumnText.un_install=myText22
+      myGameListItem=white
+      myGameListItem.hover=myColor
+      myGameListItem.selected=myColor
+      myGameListItem.install=myAccent1
+      myGameListItem.un_install=myAccent2
 
 
     // 下载页面
       // 下载详情
-      myDownloadSummary.title=myPrimary
-      myDownloadSummary.content=myPrimaryLight
-      myDownloadSummary.speed=myWhite
+      myDownloadSummary.title=myColor
+      myDownloadSummary.content=myColorL
+      myDownloadSummary.speed=white
       myDownloadSummary.disk="7 168 39 255"
       myDownloadSummary.net="129 212 250 50"
-      myDownloadProgressBar=myPrimaryDarkAlpha
-      myDownload.section=myPrimary
-      myDownload.type=myPrimary
-      myDownload.label=myPrimaryLight
-      myDownload.value=myWhite
+      myDownloadProgressBar=myColorDAlpha
+      myDownload.section=myColor
+      myDownload.type=myColor
+      myDownload.label=myColorL
+      myDownload.value=white
 
   // 音乐
     // 左侧列表
-    myMusicListText=myText21
-    myMusicListText.selected=myPrimary
+    myMusicListText=myAccent1
+    myMusicListText.selected=myColor
     // 右侧详情
-    myMusicDetailAlbum.title=myPrimary
-    myMusicDetailAlbum.artist=myPrimaryDark
-    myMusicDetailAlbum.track=myText22
-    myMusicDetailAlbum.track.hover=myPrimary
-    myMusicDetailAlbum.info=myPrimary
+    myMusicDetailAlbum.title=myColor
+    myMusicDetailAlbum.artist=myColorD
+    myMusicDetailAlbum.track=myAccent2
+    myMusicDetailAlbum.track.hover=myColor
+    myMusicDetailAlbum.info=myColor
     // 播放列表
-    myMusicDetailPlayListNum=myText22
-    myMusicDetailPlayListItem=myText21
-    myMusicDetailPlayListItem.hover=myPrimary
+    myMusicDetailPlayListNum=myAccent2
+    myMusicDetailPlayListItem=myAccent1
+    myMusicDetailPlayListItem.hover=myColor
+    // 按钮
+      //播放专辑
+      myMusicBtnPlayAlbum=myColor
+      myMusicBtnPlayAlbum.hover=myAccent1
+      myMusicBtnPlayAlbum.active=myAccent1
+      myMusicBtnPlayAlbumBg=none
+      myMusicBtnPlayAlbumBg.hover=myColorA
+      myMusicBtnPlayAlbumBg.active=myColor
+      // 其他，下面3个
+      myMusicBtnOther=myColor
+      myMusicBtnOther.hover=myAccent1
+      myMusicBtnOther.active=myAccent1
+      myMusicBtnOtherBg=none
+      myMusicBtnOtherBg.hover=myColorA
+      myMusicBtnOtherBg.active=myColor
+
+    // 控制台
+    myConsole=myAccent1
+    myConsole.selected=myColor
+    myConsoleBg=none
+    myConsoleBg.selected=myAccent1
+
+    myConsoleError=red-500
+    myConsoleError.selected=myAccent1
+    myConsoleErrorBg=none
+    myConsoleErrorBg.selected=red-500
+    
+
 
     black="0 0 0 255"
     dark="35 35 35 255"
@@ -1218,38 +1255,29 @@ steam.styles
 	  	bgcolor="none"
       font-size=15
       font-weight=400
-      textcolor=myPrimary
-      selectedtextcolor=myPrimary
-      // selectedbgcolor="myGameListItemSelected"
-      // selectedbgcolor=blue-500
-      shadowtextcolor=myPrimary
-      inset="0 -1 1 1"
-      render_bg {
-          // 0="fill( x0, y0 , x0+5, y1, bule-500 )"
-        }
     }
 
     "GameItem_Uninstalled"
     {
-      textcolor=myGamesPageListColumnText.un_install
-      selectedtextcolor=myGamesPageListColumnText.selected
+      textcolor=myGameListItem.un_install
+      selectedtextcolor=myGameListItem.selected
     }
     "GameItem_Uninstalled:hover"
     {
-      textcolor=myGamesPageListColumnText.selected
-      selectedtextcolor=myGamesPageListColumnText.selected
+      textcolor=myGameListItem.selected
+      selectedtextcolor=myGameListItem.selected
     }
 
     "GameItem_Installed"
     {
-      textcolor=myGamesPageListColumnText.install
-      selectedtextcolor=myGamesPageListColumnText.selected
+      textcolor=myGameListItem.install
+      selectedtextcolor=myGameListItem.selected
     }
 
     "GameItem_Installed:hover"
     {
-      textcolor=myGamesPageListColumnText.selected
-      selectedtextcolor=myGamesPageListColumnText.selected
+      textcolor=myGameListItem.selected
+      selectedtextcolor=myGameListItem.selected
     }
 
     "GameItem_Running"
@@ -1260,20 +1288,20 @@ steam.styles
 
     "GameItem_Running:hover"
     {
-      textcolor=myGamesPageListColumnText.selected
-      selectedtextcolor=myGamesPageListColumnText.selected
+      textcolor=myGameListItem.selected
+      selectedtextcolor=myGameListItem.selected
     }
 
     "GameItem_Shortcut"
     {
-      textcolor=myGamesPageListColumnText.selected
+      textcolor=myGameListItem.selected
       selectedtextcolor="white"
     }
 
     "GameItem_Shortcut:hover"
     {
-        textcolor=myGamesPageListColumnText.selected
-        selectedtextcolor=myGamesPageListColumnText.selected
+        textcolor=myGameListItem.selected
+        selectedtextcolor=myGameListItem.selected
     }
 
     "GameItem_Mod"
@@ -1284,8 +1312,8 @@ steam.styles
 
     "GameItem_Mod:hover"
     {
-        textcolor=myGamesPageListColumnText.selected
-        selectedtextcolor=myGamesPageListColumnText.selected
+        textcolor=myGameListItem.selected
+        selectedtextcolor=myGameListItem.selected
     }
 
     "GameItem_Updating"
@@ -1468,7 +1496,7 @@ steam.styles
 		font-family=basefont
     font-size=18
 		font-weight=600
-    textcolor=myWhite
+    textcolor=white
     font-style="uppercase"
     // bgcolor=myGameDetailsDLCHeader
     // bgcolor=red-600
@@ -2111,9 +2139,9 @@ steam.styles
 
     RichText
     {
-		textcolor=myPrimary
-    selectedtextcolor=myPrimary
-    selectedbgcolor=myText21
+		textcolor=myColor
+    selectedtextcolor=myColor
+    selectedbgcolor=myAccent1
 		font-family=basefont
 		font-size=14
 		font-weight=400
@@ -2141,7 +2169,7 @@ steam.styles
 	{
 		font-size=14
 		// textcolor="label"
-		// selectedtextcolor=myPrimary
+		// selectedtextcolor=myColor
 		font-style=underline
 	}
 
@@ -3060,15 +3088,15 @@ steam.styles
 	// TODO: 控制台字体
 	console_text_error
 	{
-		textcolor="Highlight3"
+		textcolor=myConsoleError
 		font-size=17
     font-weight=700
 		font-family="DejaVu Sans Mono" [$LINUX]
 		font-size=12 [$LINUX]
 		font-family="Menlo" [$OSX]
       	font-size=16 [$OSX]
-		selectedtextcolor="TextSelected"
-		selectedbgcolor="Focus"
+		selectedtextcolor=myConsoleError.selected
+		selectedbgcolor=myConsoleErrorBg.selected
 	}
 
 	console_text
@@ -3079,9 +3107,9 @@ steam.styles
 		font-size=12 [$LINUX]
 		font-family="Menlo" [$OSX]
 		font-size=14 [$OSX]
-		textcolor="text"
-		selectedtextcolor="TextSelected"
-		selectedbgcolor="Focus"
+		textcolor=myConsole
+		selectedtextcolor=myConsole.selected
+		selectedbgcolor=myConsoleBg.selected
 	}
 
 	friends_chat_text

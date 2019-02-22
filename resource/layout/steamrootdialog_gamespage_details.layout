@@ -111,13 +111,14 @@
 			render_bg {}
 			}
 
-		// TODO: 游戏列表头
+		// TODO: 游戏列表头 
 		ListPanelSectionHeader
 		{
-			inset="2 0 0 0"
-			textcolor=myGamesPageListSectionHeaderText
+			inset="0 0 0 0"
+			textcolor=myGameListGroup
 			minimum-height=30
-			font-size=16
+			padding-left=5
+			font-size=17
 			bgcolor=none
 			render_bg {}
 		}
@@ -133,11 +134,10 @@
 		{
 			bgcolor="none"
 			font-size=14
-			inset="2 2 0 0"
+			inset="0 0 0 0"
 			render {}
 			render_bg
 			{
-
 				0="fill( x0+1, y0+2, x1, y1 + 1, ButtonFace )"
 			}
 

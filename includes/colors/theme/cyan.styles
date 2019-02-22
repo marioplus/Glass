@@ -1,0 +1,31 @@
+"includes/colors/theme/cyan.styles" {
+    include "includes/colors/matelial_colors.styles"
+    colors {
+        myColor50 = cyan-50
+        myColor100 = cyan-100
+        myColor200 = cyan-200
+        myColor300 = cyan-300
+        myColor400 = cyan-400
+        myColor500 = cyan-500
+        myColor600 = cyan-600
+        myColor700 = cyan-700
+        myColor800 = cyan-800
+        myColor900 = cyan-900
+
+        // 透明
+        myColorA50 = cyan-a50
+        myColorA100 = cyan-a100
+        myColorA200 = cyan-a150
+
+        myColor = myColor500
+        myColorA = myColorA50
+
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}

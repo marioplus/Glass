@@ -31,7 +31,7 @@
 		}
 
 		Label {
-			textcolor=myGamesPageListSectionHeaderText
+			textcolor=myGameListGroup
 			selectedtextcolor="Text"
 			bgcolor=none
 			font-size=14
@@ -41,7 +41,7 @@
 
 		ListPanelSectionHeader {
 			inset="0 0 0 0"
-			textcolor=myGamesPageListSectionHeaderText
+			textcolor=myGameListGroup
 			minimum-height=30
 			font-size=16
 			font-style="uppercase"
@@ -59,7 +59,7 @@
 			font-size=20
 			minimum-height=35
 			font-weight=700
-			textcolor=myGamesPageListSectionHeaderText
+			textcolor=myGameListGroup
 			font-style="uppercase"
 			bgcolor=none
 			render {}

@@ -1,0 +1,12 @@
+"includes/colors/accent/dark.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        // 21-24 颜色逐渐变浅
+        
+        myAccent1="33 33 33 255"
+        myAccent2="117 117 117 255"
+        myAccent3="158 158 158 255"
+        myAccent4="224 224 224 255"
+    }
+}

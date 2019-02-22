@@ -1,0 +1,32 @@
+"includes/colors/theme/amber.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myColor50 = amber-50
+        myColor100 = amber-100
+        myColor200 = amber-200
+        myColor300 = amber-300
+        myColor400 = amber-400
+        myColor500 = amber-500
+        myColor600 = amber-600
+        myColor700 = amber-700
+        myColor800 = amber-800
+        myColor900 = amber-900
+        
+        // 透明
+        myColorA50 = amber-a50
+        myColorA100 = amber-a100
+        myColorA200 = amber-a150
+
+        myColor = myColor500
+        myColorA = myColorA50
+
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}

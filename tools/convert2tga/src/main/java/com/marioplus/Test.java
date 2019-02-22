@@ -3,6 +3,7 @@ package com.marioplus;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.util.EntityUtils;
@@ -85,4 +86,16 @@ public class Test extends JFrame implements ActionListener {
         return HttpUtils.create(url, entity).doPostData(new ImageData()).map(ImageData::getFilename).orElse("123");
     }
 
+    private void doPost(String url) {
+
+//        HttpUtils.create(url,null).doPostState(new GetStateHandle() {
+//            @Override
+//            public Boolean apply(HttpResponse httpResponse) {
+//                return null;
+//            }
+//        });
+//        HttpEntity entity = new StringEntity("","");
+
+        HttpUtils.create(url,null).doPostData("");
+    }
 }

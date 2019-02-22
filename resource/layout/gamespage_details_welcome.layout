@@ -37,7 +37,7 @@
 		bodycontent
 		{
 			textcolor=myGameDetailsChildPanel.content
-			selectedtextcolor=myText21	
+			selectedtextcolor=myAccent1
 			font-size=15
 			render_bg {}
 		}

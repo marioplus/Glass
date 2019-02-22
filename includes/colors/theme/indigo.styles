@@ -1,0 +1,32 @@
+"includes/colors/theme/indigo.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myColor50 = indigo-50
+        myColor100 = indigo-100
+        myColor200 = indigo-200
+        myColor300 = indigo-300
+        myColor400 = indigo-400
+        myColor500 = indigo-500
+        myColor600 = indigo-600
+        myColor700 = indigo-700
+        myColor800 = indigo-800
+        myColor900 = indigo-900
+        
+        // 透明
+        myColorA50 = indigo-a50
+        myColorA100 = indigo-a100
+        myColorA200 = indigo-a150
+    
+        myColor = myColor500
+        myColorA = myColorA50
+    
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+    
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}

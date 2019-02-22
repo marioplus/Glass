@@ -1,0 +1,32 @@
+"includes/colors/theme/deep_purple.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myColor50 = deep-purple-50
+        myColor100 = deep-purple-100
+        myColor200 = deep-purple-200
+        myColor300 = deep-purple-300
+        myColor400 = deep-purple-400
+        myColor500 = deep-purple-500
+        myColor600 = deep-purple-600
+        myColor700 = deep-purple-700
+        myColor800 = deep-purple-800
+        myColor900 = deep-purple-900
+        
+        // 透明
+        myColorA50 = deep-purple-a50
+        myColorA100 = deep-purple-a100
+        myColorA200 = deep-purple-a150
+    
+        myColor = myColor500
+        myColorA = myColorA50
+    
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+    
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}

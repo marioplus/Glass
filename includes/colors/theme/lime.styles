@@ -1,0 +1,32 @@
+"includes/colors/theme/lime.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myColor50 = lime-50
+        myColor100 = lime-100
+        myColor200 = lime-200
+        myColor300 = lime-300
+        myColor400 = lime-400
+        myColor500 = lime-500
+        myColor600 = lime-600
+        myColor700 = lime-700
+        myColor800 = lime-800
+        myColor900 = lime-900
+        
+        // 透明
+        myColorA50 = lime-a50
+        myColorA100 = lime-a100
+        myColorA200 = lime-a150
+    
+        myColor = myColor500
+        myColorA = myColorA50
+    
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+    
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}

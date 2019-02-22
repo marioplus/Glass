@@ -47,19 +47,19 @@
 			margin=50
 			font-size=18
 			font-weight=600
-			textcolor=myPrimary
+			textcolor=myGameDetailsDLCHeader
 			render_bg {
 			}
 		}
 
 		DLC_Uninstalled {
-			textcolor=myGamesPageListColumnText.un_install
-			selectedtextcolor=myGamesPageListColumnText.selected
+			textcolor=myGameListItem.un_install
+			selectedtextcolor=myGameListItem.selected
 		}
 
 		DLC_Installed {
-			textcolor=myGamesPageListColumnText.install
-			selectedtextcolor=myGamesPageListColumnText.selected
+			textcolor=myGameListItem.install
+			selectedtextcolor=myGameListItem.selected
 		}
 
 		mostrecenttime {

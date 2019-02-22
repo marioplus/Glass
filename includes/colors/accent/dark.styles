@@ -1,0 +1,10 @@
+"includes/colors/accent/dark.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myAccent1=black-1
+        myAccent2=black-2
+        myAccent3=black-3
+        myAccent4=black-4
+    }
+}

@@ -1,0 +1,32 @@
+"includes/colors/theme/green.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myColor50 = green-50
+        myColor100 = green-100
+        myColor200 = green-200
+        myColor300 = green-300
+        myColor400 = green-400
+        myColor500 = green-500
+        myColor600 = green-600
+        myColor700 = green-700
+        myColor800 = green-800
+        myColor900 = green-900
+        
+        // 透明
+        myColorA50 = green-a50
+        myColorA100 = green-a100
+        myColorA200 = green-a150
+    
+        myColor = myColor500
+        myColorA = myColorA50
+    
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+    
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}

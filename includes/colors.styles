@@ -1,57 +1,62 @@
 "includes/colors.styles" {
 
-    // 这色调
+    // 主题色
     // 除了你想要使用的颜色，其他的 include 前面应该有 // 来注释他们
-    // 此文件中只能有一条 include 前面没有 //
-    // 此文件中只能有一条 include 前面没有 //
-    // 此文件中只能有一条 include 前面没有 //
+    // 此区域中只能有一条 include 前面没有 //
+    // 此区域中只能有一条 include 前面没有 //
+    // 此区域中只能有一条 include 前面没有 //
 
     // 红色
-    // include "includes/colors/primary_text/red.styles"
+    // include "includes/colors/theme/red.styles"
     // 粉红色
-    // include "includes/colors/primary_text/pink.styles"
+    // include "includes/colors/theme/pink.styles"
     // 紫色
-    // include "includes/colors/primary_text/purple.styles"
+    // include "includes/colors/theme/purple.styles"
     // 深紫色
-    // include "includes/colors/primary_text/deep_purple.styles"
+    // include "includes/colors/theme/deep_purple.styles"
     // 靛青色
-    // include "includes/colors/primary_text/indigo.styles"
+    // include "includes/colors/theme/indigo.styles"
     // 蓝色
-    // include "includes/colors/primary_text/blue.styles"
+    // include "includes/colors/theme/blue.styles"
     // 浅蓝色
-    // include "includes/colors/primary_text/light_blue.styles"
+    // include "includes/colors/theme/light_blue.styles"
     // 青色
-    // include "includes/colors/primary_text/cyan.styles"
+    // include "includes/colors/theme/cyan.styles"
     // 深青色
-    include "includes/colors/primary_text/teal.styles"
+    // include "includes/colors/theme/teal.styles"
     // 绿色
-    // include "includes/colors/primary_text/green.styles"
+    // include "includes/colors/theme/green.styles"
     // 浅绿色
-    // include "includes/colors/primary_text/light_green.styles"
+    // include "includes/colors/theme/light_green.styles"
     // 青柠色
-    // include "includes/colors/primary_text/lime.styles"
+    // include "includes/colors/theme/lime.styles"
     // 黄色
-    // include "includes/colors/primary_text/yellow.styles"
+    // include "includes/colors/theme/yellow.styles"
     // 琥珀色
-    // include "includes/colors/primary_text/amber.styles"
+    // include "includes/colors/theme/amber.styles"
     // 橙色
-    // include "includes/colors/primary_text/orange.styles"
+    include "includes/colors/theme/orange.styles"
     // 深橙色
-    // include "includes/colors/primary_text/deep_orange.styles"
+    // include "includes/colors/theme/deep_orange.styles"
     // 棕色
-    // include "includes/colors/primary_text/brown.styles"
+    // include "includes/colors/theme/brown.styles"
 
     // 自定义颜色 留给你的颜色不多了
-    // includes/colors/primary_text/custom_color.styles 中会有详细的描述
-    // include "includes/colors/primary_text/custom_color.styles"
+    // includes/colors/theme/custom_color.styles 中会有详细的描述
+    // include "includes/colors/theme/custom_color.styles"
 
 /////////////////////////////////////////////////////////////////////////////////////
 
-    //游戏列表颜色
+    // 强调色
+    // 除了你想要使用的颜色，其他的 include 前面应该有 // 来注释他们
+    // 此区域中只能有一条 include 前面没有 //
+    // 此区域中只能有一条 include 前面没有 //
+    // 此区域中只能有一条 include 前面没有 //
+
     // 亮色
-    include "includes/colors/secondary_text/light.styles"
+    include "includes/colors/accent/light.styles"
     // 暗色
-    // include "includes/colors/secondary_text/dark.styles"
+    // include "includes/colors/accent/dark.styles"
     // 自定义
-    // include "includes/colors/secondary_text/custom.styles"
+    // include "includes/colors/accent/custom.styles"
 }

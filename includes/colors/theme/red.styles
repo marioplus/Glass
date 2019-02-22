@@ -1,0 +1,32 @@
+"includes/colors/theme/red.styles" {
+    include "includes/colors/matelial_colors.styles"
+
+    colors {
+        myColor50 = red-50
+        myColor100 = red-100
+        myColor200 = red-200
+        myColor300 = red-300
+        myColor400 = red-400
+        myColor500 = red-500
+        myColor600 = red-600
+        myColor700 = red-700
+        myColor800 = red-800
+        myColor900 = red-900
+        
+        // 透明
+        myColorA50 = red-a50
+        myColorA100 = red-a100
+        myColorA200 = red-a150
+    
+        myColor = myColor500
+        myColorA = myColorA50
+    
+        myColorL =  myColor300
+        myColorD = myColor700
+        myDisabled = grey-700
+    
+        myColoryA = myColorA50
+        myColorAL = myColorA100
+        myColorAD = myColorA150
+    }
+}
