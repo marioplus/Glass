@@ -3,26 +3,19 @@
 [size=3]这是一个自制的steam皮肤，由于有很多玻璃效果，我叫它 [b]Glass[/b]。[/size]
 [page]
 [page]
-[size=6][b]迷糊效果[/b][/size]
+[size=6][b]背景图模式[/b][/size]
 
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIALd.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIeot.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIZdI.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIVeA.png[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-026ae1d060d6dfc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-78d5a79da5c1e723.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-13e3a856289c232d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-f4d4cf389a6daab4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
 [page]
-[size=6][b]清晰效果[/b][/size]
+[size=6][b]纯色模式[/b][/size]
 
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIlQg.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtI3Lj.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtI1yQ.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIQSS.png[/img][/size]
-[page]
-[size=6][b]纯色效果[/b][/size]
-
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIlQg.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtI3Lj.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtI1yQ.png[/img][/size]
-[size=3][img]https://s1.ax1x.com/2018/07/26/PtIQSS.png[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-b52360d9b9fcec89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-6bb4178efa088a7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-9b479aa557ca2ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
+[size=3][img]https://upload-images.jianshu.io/upload_images/11296261-0d3d2c2a99fbcad9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img][/size]
 [page]
 [size=6][b]下载[/b][/size]
 
@@ -32,7 +25,7 @@
 [size=5][b]安装[/b][/size]
 
 [size=3]解压 [b]Glass.zip[/b]，解压后的文件夹丢到你的steam皮肤文件夹中，路径大概是这样的[b]x:\steam\skin\[/b]。完成后他看起来应该是这样的:[b]x:\steam\skin\Glass[/b]。[/size]
-[size=3]安装 [b]Glass\resource\fonts[/b] 文件夹中的 [b]iomanoid.ttf[/b] 和 [b]Microsoft YaHei Mono.ttf[/b] 两个字体。[/size]
+[size=3]安装 [b]Glass\resource\fonts[/b] 文件夹中的 [b]scotsdi.ttf[/b] 和 [b]Microsoft YaHei Mono.ttf[/b] 两个字体。[/size]
 [size=3]启动你的steam，在设置中更换皮肤为Glass。[/size]
 [size=3]什么？你不知道怎么换皮肤？如果我是你的话，我会在 [b]设置[/b]-[b]界面[/b] 中好好看看。[/size]
 [page]
@@ -107,7 +100,7 @@
 [page]
 [size=5][b]背景图模式与纯色模式切换[/b][/size]
 
-[size=3]纯色背景和图片背景的切换方式，删除/重命名 `Glass\graphics\bg\bg.tga` ，重启steam即可切换为纯色模式。反之切换至背景图模式。[/size]
+[size=3]纯色背景和图片背景的切换方式，删除/重命名 [b]Glass\graphics\bg\bg.tga[/b] ，重启steam即可切换为纯色模式。反之切换至背景图模式。[/size]
 [page]
 [size=5][b]自定义[/b][/size]
 [page]
@@ -129,7 +122,6 @@
 [size=5][b]自定义强调色[/b][/size]
 [size=3] 打开 [b]Glass\includes\colors\accent\custom.styles[/b]，修改第[b]7[/b]行-第[b]10[/b]行的几个颜色定义。然后切换强调色为自定义[/size]
 [page]
-[size=5][b]自定义背景图[/b][/size]
 [size=5][b]自定义背景图[/b][/size]
 
 [size=3][list=1]
@@ -161,23 +153,25 @@
 [size=5][b]更新日志[/b][/size]
 
 [size=4][b]2019/2/22[/b][/size]
-
 [size=3][list=1]
 [*]终于调整了[b]音乐[/b]界面
 [*]重做下载界面的快速开始游戏按钮
 [*]更换游戏详情页的游戏名称字体
 [*]将字体设置单独放在一个文件里 [b]Glass\includes\font.styles[/b]
 [*]增加强调色，预制两套颜色（亮/暗）
+[*]新闻和控制台选中文字有了更好的反馈
+[*]删除/调整[b]steam.styles[/b]中的无用颜色
+[*]调整游戏列表字体大小
 [/list][/size]
-[size=4][b]2019/01/31 纯色更新[/b][/size]
 
+[size=4][b]2019/01/31 纯色更新[/b][/size]
 [size=3][list=1]
 [*]调整了控制玻璃效果的阴影
 [*]重新制作了菜单按钮图标，原先的按钮图标在浅色背景下表现效果不佳
 [*]新增了纯色方式背景，干脆就叫纯色更新好了
 [/list][/size]
-[size=4][b]2018/8/8 配色更新[/b][/size]
 
+[size=4][b]2018/8/8 配色更新[/b][/size]
 [size=3][list=1]
 [*]统一调整配色，并配置17套配色，以及一个用于自定义配色的文件，现在只需要简单的注释代码就可以更换配色
 [*]调整游戏详情视图左边的游戏列表的列表项之间的间距，看起来更舒服
@@ -186,15 +180,15 @@
 [*]游戏详情页的游戏名（最大的那个游戏名称）颜色改为主题色
 [*]将好友图标重新调整出来，并制作新的图标
 [/list][/size]
-[size=4][b]2018/7/26[/b][/size]
 
+[size=4][b]2018/7/26[/b][/size]
 [size=3][list=1]
 [*]整合菜单steam、好友、视图、游戏、帮助为一个菜单，菜单使用steam logo代替文字
 [*]调整列表视图的样式，好看的不少，不过列表头上的分割线去不掉很烦。
 [*]将制作背景的原素材也放进来了。
 [/list][/size]
-[size=4][b]2018/7/25[/b][/size]
 
+[size=4][b]2018/7/25[/b][/size]
 [size=3][list=1]
 [*]处理下载页面
 [*]处理控制台页面
@@ -208,19 +202,18 @@
 [index]
     [#1]这是什么
     [#2]看看效果
-        *[#3]模糊效果
-        *[#4]清晰效果
-        *[#5]纯色效果
-    [#6]下载
-    [#7]安装
-    [#8]更换配色
-    [#9]更换配色
-    [#10]背景图模式与纯色模式切换
-    [#11]自定义
-        *[#12]自定义主题色
-        *[#13]自定义强调色
-        *[#14]自定义背景图
-    [#15]已知问题
-    [#16]更新日志
-    [#17]FQA
+        *[#3]背景图模式
+        *[#4]纯色模式
+    [#5]下载
+    [#6]安装
+    [#7]更换配色
+    [#8]背景图更换
+    [#9]背景图模式与纯色模式切换
+    [#10]自定义
+        *[#11]自定义主题色
+        *[#12]自定义强调色
+        *[#13]自定义背景图
+    [#14]已知问题
+    [#15]更新日志
+    [#16]FQA
 [/index]
