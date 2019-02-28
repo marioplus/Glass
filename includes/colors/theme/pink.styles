@@ -2,28 +2,28 @@
     include "includes/colors/matelial_colors.styles"
 
     colors {
-        myColor50 = pink-50
-        myColor100 = pink-100
-        myColor200 = pink-200
-        myColor300 = pink-300
-        myColor400 = pink-400
-        myColor500 = pink-500
-        myColor600 = pink-600
-        myColor700 = pink-700
-        myColor800 = pink-800
-        myColor900 = pink-900
+        myColor50 = pink50
+        myColor100 = pink100
+        myColor200 = pink200
+        myColor300 = pink300
+        myColor400 = pink400
+        myColor500 = pink500
+        myColor600 = pink600
+        myColor700 = pink700
+        myColor800 = pink800
+        myColor900 = pink900
         
         // 透明
-        myColorA50 = pink-a50
-        myColorA100 = pink-a100
-        myColorA200 = pink-a150
+        myColorA50 = pinka50
+        myColorA100 = pinka100
+        myColorA200 = pinka150
     
         myColor = myColor500
         myColorA = myColorA50
     
         myColorL =  myColor300
         myColorD = myColor700
-        myDisabled = grey-700
+        myDisabled = grey700
     
         myColoryA = myColorA50
         myColorAL = myColorA100

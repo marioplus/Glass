@@ -96,14 +96,14 @@ steam.styles
       // 下载详情
       myDownloadSummary.title=myColor
       myDownloadSummary.content=myColorL
-      myDownloadSummary.speed=white
+      myDownloadSummary.speed=myAccent1
       myDownloadSummary.disk="7 168 39 255"
       myDownloadSummary.net="129 212 250 50"
       myDownloadProgressBar=myColorDAlpha
       myDownload.section=myColor
       myDownload.type=myColor
       myDownload.label=myColorL
-      myDownload.value=white
+      myDownload.value=myAccent1
 
   // 音乐
     // 左侧列表
@@ -141,10 +141,10 @@ steam.styles
     myConsoleBg=none
     myConsoleBg.selected=myAccent1
 
-    myConsoleError=red-500
+    myConsoleError=red500
     myConsoleError.selected=myAccent1
     myConsoleErrorBg=none
-    myConsoleErrorBg.selected=red-500
+    myConsoleErrorBg.selected=red500
     
 
 
@@ -1282,7 +1282,7 @@ steam.styles
 
     "GameItem_Running"
     {
-      textcolor=blue-500
+      textcolor=blue500
       selectedtextcolor="white"
     }
 

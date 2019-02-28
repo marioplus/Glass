@@ -2,28 +2,28 @@
     include "includes/colors/matelial_colors.styles"
 
     colors {
-        myColor50 = deep-purple-50
-        myColor100 = deep-purple-100
-        myColor200 = deep-purple-200
-        myColor300 = deep-purple-300
-        myColor400 = deep-purple-400
-        myColor500 = deep-purple-500
-        myColor600 = deep-purple-600
-        myColor700 = deep-purple-700
-        myColor800 = deep-purple-800
-        myColor900 = deep-purple-900
+        myColor50 = deeppurple50
+        myColor100 = deeppurple100
+        myColor200 = deeppurple200
+        myColor300 = deeppurple300
+        myColor400 = deeppurple400
+        myColor500 = deeppurple500
+        myColor600 = deeppurple600
+        myColor700 = deeppurple700
+        myColor800 = deeppurple800
+        myColor900 = deeppurple900
         
         // 透明
-        myColorA50 = deep-purple-a50
-        myColorA100 = deep-purple-a100
-        myColorA200 = deep-purple-a150
+        myColorA50 = deeppurplea50
+        myColorA100 = deeppurplea100
+        myColorA200 = deeppurplea150
     
         myColor = myColor500
         myColorA = myColorA50
     
         myColorL =  myColor300
         myColorD = myColor700
-        myDisabled = grey-700
+        myDisabled = grey700
     
         myColoryA = myColorA50
         myColorAL = myColorA100

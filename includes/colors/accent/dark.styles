@@ -2,9 +2,9 @@
     include "includes/colors/matelial_colors.styles"
 
     colors {
-        myAccent1=black-1
-        myAccent2=black-2
-        myAccent3=black-3
-        myAccent4=black-4
+        myAccent1=black1
+        myAccent2=black2
+        myAccent3=black3
+        myAccent4=black4
     }
 }

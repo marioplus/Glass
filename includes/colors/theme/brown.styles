@@ -1,28 +1,28 @@
 "includes/colors/theme/brown.styles" {
     include "includes/colors/matelial_colors.styles"
     colors {
-        myColor50 = brown-50
-        myColor100 = brown-100
-        myColor200 = brown-200
-        myColor300 = brown-300
-        myColor400 = brown-400
-        myColor500 = brown-500
-        myColor600 = brown-600
-        myColor700 = brown-700
-        myColor800 = brown-800
-        myColor900 = brown-900
+        myColor50 = brown50
+        myColor100 = brown100
+        myColor200 = brown200
+        myColor300 = brown300
+        myColor400 = brown400
+        myColor500 = brown500
+        myColor600 = brown600
+        myColor700 = brown700
+        myColor800 = brown800
+        myColor900 = brown900
         
         // 透明
-        myColorA50 = brown-a50
-        myColorA100 = brown-a100
-        myColorA200 = brown-a150
+        myColorA50 = browna50
+        myColorA100 = browna100
+        myColorA200 = browna150
 
         myColor = myColor500
         myColorA = myColorA50
 
         myColorL =  myColor300
         myColorD = myColor700
-        myDisabled = grey-700
+        myDisabled = grey700
 
         myColoryA = myColorA50
         myColorAL = myColorA100

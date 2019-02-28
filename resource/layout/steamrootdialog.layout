@@ -534,48 +534,27 @@
 			}
 		}
 
-		parental_lock_button
-		{
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0, x1, y1, parental_lock_inactive1 )"
-				1="image( x0+9, y0+2, x1, y1, resource/notfamilyview )"
+		parental_lock_button {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/parental_unlock)"
+			}
+		}
+		parental_lock_button:hover {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/parental_unlock)"
 			}
 		}
 
-		parental_lock_button:hover
-		{
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0, x1, y1, parental_lock_inactive3 )"
-				1="image( x0+9, y0+2, x1, y1, resource/notfamilyview )"
+		parental_lock_button:selected {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/parental_lock )"
 			}
 
 		}
-
-		parental_lock_button:selected
-		{
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0, x1, y1, green6 )"
-				1="image( x0+9, y0+2, x1, y1, resource/familyview )"
+		parental_lock_button:selected:hover {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/parental_lock )"
 			}
-
-		}
-
-
-		parental_lock_button:selected:hover
-		{
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0, x1, y1, green5 )"
-				1="image( x0+9, y0+2, x1, y1, resource/familyview )"
-			}
-
 		}
 
 
@@ -875,11 +854,21 @@
 
 		// region { name=righttop align=right margin-top=9 spacing=8 height=24}
 		place {
-			// control="startvr, exitvr, AccountButton, InboxButton, AnnouncementButton, ParentalLockButton, universe_label, XPVistaAlert, SupportAlert"
-			control="universe_label, XPVistaAlert, SupportAlert, ParentalLockButton, AnnouncementButton, InboxButton, AccountButton, startvr, exitvr"
+			control="universe_label, XPVistaAlert, SupportAlert, AnnouncementButton, InboxButton, AccountButton, startvr, exitvr"
 			height=24
 			margin-top=5
 			spacing=4
+			dir=right
+			align=right
+			end-right="fullscreen"
+		}
+		place {
+			// control="startvr, exitvr, AccountButton, InboxButton, AnnouncementButton, ParentalLockButton, universe_label, XPVistaAlert, SupportAlert"
+			control=" ParentalLockButton"
+			height=24
+			width=20
+			margin-top=8
+			margin-right=143
 			dir=right
 			align=right
 			end-right="fullscreen"

@@ -2,28 +2,28 @@
     include "includes/colors/matelial_colors.styles"
 
     colors {
-        myColor50 = deep-orange-50
-        myColor100 = deep-orange-100
-        myColor200 = deep-orange-200
-        myColor300 = deep-orange-300
-        myColor400 = deep-orange-400
-        myColor500 = deep-orange-500
-        myColor600 = deep-orange-600
-        myColor700 = deep-orange-700
-        myColor800 = deep-orange-800
-        myColor900 = deep-orange-900
+        myColor50 = deeporange50
+        myColor100 = deeporange100
+        myColor200 = deeporange200
+        myColor300 = deeporange300
+        myColor400 = deeporange400
+        myColor500 = deeporange500
+        myColor600 = deeporange600
+        myColor700 = deeporange700
+        myColor800 = deeporange800
+        myColor900 = deeporange900
         
         // 透明
-        myColorA50 = deep-orange-a50
-        myColorA100 = deep-orange-a100
-        myColorA200 = deep-orange-a150
+        myColorA50 = deeporangea50
+        myColorA100 = deeporangea100
+        myColorA200 = deeporangea150
     
         myColor = myColor500
         myColorA = myColorA50
     
         myColorL =  myColor300
         myColorD = myColor700
-        myDisabled = grey-700
+        myDisabled = grey700
     
         myColoryA = myColorA50
         myColorAL = myColorA100
