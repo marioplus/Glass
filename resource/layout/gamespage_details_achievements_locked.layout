@@ -38,7 +38,7 @@
 		}	
 
 		achievementlabelmore {
-			// inset="-3 0 0 0"
+			inset="-2 0 0 0"
 			font-size=18
 			textcolor=myAllBtnText
 			font-family=basefont

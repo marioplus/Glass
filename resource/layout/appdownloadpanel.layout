@@ -202,7 +202,7 @@
 			bgcolor=none
 			render_bg
 			{
-				0="image( x0, y0, x1, y1, graphics/download_downloading )"
+				0="image( x0, y0, x1, y1, graphics/download/downloading )"
 			}
 		}
 

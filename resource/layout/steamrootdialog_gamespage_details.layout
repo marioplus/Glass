@@ -149,19 +149,19 @@
 			font-size=13
 			inset="2 2 0 0"
 			render {}
-
-
 		}
 
-		"CGamesListPanel ListPanelColumnSelectButton"
-		{
-       		inset="-3 3 0 0"
-        		render {
-          		5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
-        		}
-        		render_bg {
-        			1="fill( x0 + 1, y0, x1 - 1, y1, none )"
-        		}
+		"CGamesListPanel ListPanelColumnSelectButton" {
+			inset="-3 3 0 0"
+			bgcolor=none
+			render_bg {
+				5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_filter)"
+			}
+		}
+		"CGamesListPanel ListPanelColumnSelectButton:hover" {
+			render_bg {
+				5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_filter_hover)"
+			}
 		}
 
 		// TODO: 游戏预览图样式

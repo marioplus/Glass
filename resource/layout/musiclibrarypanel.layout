@@ -159,16 +159,15 @@
 			font-style=uppercase
 			render_bg
 			{
-				0="image( x0, y0 + 5, x1, y1, graphics/icon_collapse )"
+				0="image( x0, y0 + 5, x1, y1, graphics/icon_add)"
 			}
 		}
 		
 		MusicAddButton:hover
 		{
 			textcolor="white"
-			render_bg
-			{
-				0="image( x0, y0 + 5, x1, y1, graphics/icon_collapse_over )"
+			render_bg {
+				0="image( x0, y0 + 5, x1, y1, graphics/icon_add_hover)"
 			}
 		}			
 		

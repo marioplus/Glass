@@ -330,7 +330,7 @@ steam.styles {
 
         Button {
             font-family=basefont
-			font-size=16
+            font-size=16
 			font-weight=600
 			padding=5
             textcolor=myBtnText
@@ -1049,8 +1049,6 @@ steam.styles {
                 // 0="fill (x0, y1-1, x1, y1, myGameDetailsDLCHeader)"
             }
         }
-
-
         "Csteamrootdialog ListPanelColumnHeader:hover" {}
 
         "Csteamrootdialog ListPanelSectionCollapser" {
@@ -1066,75 +1064,25 @@ steam.styles {
             inset = "0 1 0 1"
             bgcolor=none
             render_bg {
-                1="fill( x0 , y0, x1, y1 - 1, propertysheetbg  )"
+                1="fill( x0 , y0, x1, y1 - 1, propertysheetbg)"
             }
         }
 
         ListPanelColumnSelectButton {// the games list column chooser
-            inset="-3 3 0 0"
-            render {
-                0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
-            }
-            render_bg {
-                1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-            }
+            render {}
         }
 
         ListPanelColumnSelectButton:hover {
-            inset="-3 3 0 0"
-            render {
-                0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-            }
-            render_bg {
-                1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-            }
+            render {}
         }
         ListPanelColumnSelectButton:selected {
-            inset="-3 3 0 0"
-            render {
-                0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-            }
-            render_bg {
-                1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-            }
-        }
-
-        "CGamesListPanel ListPanelColumnSelectButton" {
-            inset="-3 3 0 0"
-            render {
-                0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
-            }
-            render_bg {
-                1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-            }
-        }
-        "CGamesListPanel ListPanelColumnSelectButton:hover" {
-            inset="-3 3 0 0"
-            render {
-                0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-            }
-            render_bg {
-                1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-            }
-        }
-        "CGamesListPanel ListPanelColumnSelectButton:selected" {
-            inset="-3 3 0 0"
-            render {
-                0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-            }
-            render_bg {
-                1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-            }
+            render {}
         }
 
         // 表头 分割线 |
         ListPanelDragger {
             bgcolor="none"
-            render {
-                //fill makes dragger visible
-                // 0="fill( x0, y0 + 2, x0 + 1, y1 - 3, dialogbg )" // left
-                // 1="fill (x0, y0, x0+1, y0+3, propertysheetbg )" //dot
-            }
+            render {}
         }
 
         ListPanelInterior {
@@ -1231,8 +1179,6 @@ steam.styles {
             bgcolor=none
             render_bg {}
             image="graphics/icon_collapse"
-            inset="-4 0 0 0"
-            padding-top=-2
             // TODO: 游戏列表组图标间距
             // padding-bottom=-2
         }
@@ -1247,7 +1193,7 @@ steam.styles {
         }
 
         ListPanelSectionCollapser:hover [!$OSX] {
-            image="graphics/icon_collapse_over"
+            image="graphics/icon_collapse_hover"
         }
 
         ListPanelSectionCollapser:hover [$OSX] {
@@ -1263,7 +1209,7 @@ steam.styles {
         }
 
         ListPanelSectionCollapser:selected:hover [!$OSX] {
-            image="graphics/icon_expand_over"
+            image="graphics/icon_expand_hover"
         }
 
         ListPanelSectionCollapser:selected:hover [$OSX] {
@@ -1295,24 +1241,6 @@ steam.styles {
             }
             // corner_rounding=1
         }
-
-        // "Csteamrootdialog Menu" {
-		// 	bgcolor=red500
-		// 	// padding-right=4
-		// 	// inset="2 2 2 2"
-
-		// 	render_bg
-		// 	{
-		// 		// 0="gradient( x0 + 1, y0 + 1, x1 - 1, y0+140, MenuBG1, MenuBG2  )"
-		// 		// 1="fill( x0 + 1 , y0 + 140, x1 - 1, y1 - 1, MenuBG2  )"
-
-		// 		// // lines around
-		// 		// 2="fill( x0 + 1, y0, x1 - 1, y0 + 1, clientbg )"  // top
-		// 		// 3="fill( x0 + 1, y1 - 1, x1 - 1, y1, clientbg )"  // bottom
-		// 		// 4="fill( x0, y0 + 1, x0 + 1, y1 - 1, clientbg )"  // left
-		// 		// 5="fill( x1 - 1, y0 + 1, x1, y1 - 1, clientbg )"  // right
-		// 	}
-        // }
         
         MenuBar {
             bgcolor=dialogbg
@@ -1356,11 +1284,9 @@ steam.styles {
             bgcolor="none"
             render_bg {}
         }
-
         MenuButton:hover {
             textcolor="white"
         }
-
         MenuButton:selected {
             textcolor="white"
         }
@@ -1690,7 +1616,7 @@ steam.styles {
         }
 
         SectionedListPanelCollapser:selected:hover {
-            image="graphics/icon_expand_over"
+            image="graphics/icon_expand_hover"
         }
 
         Slider {
@@ -2135,31 +2061,6 @@ steam.styles {
             inset="1 -1 1 1"
         }
 
-        BackButton {
-            bgcolor=none
-            inset="-5 -1 0 0"
-            render_bg={}
-            image="graphics/icon_button_back"
-        }
-
-        BackButton:hover {
-            bgcolor=none
-            render_bg={}
-            image="graphics/icon_button_back_down"
-        }
-
-        BackButton:active {
-            bgcolor=none
-            render_bg={}
-            image="graphics/icon_button_back_down"
-        }
-
-        BackButton:disabled {
-            bgcolor=none
-            render_bg={}
-            image="graphics/icon_button_back_disabled"
-        }
-
         FullscreenButton {
             bgcolor=none
             render_bg={}
@@ -2233,103 +2134,83 @@ steam.styles {
             image="graphics/icon_vr_disabled"
         }
 
+        // 后退按钮
+        BackButton {
+            bgcolor=none
+            inset="-12 0 0 0"
+            image="graphics/icon_button_back"
+        }
+        BackButton:hover {
+            image="graphics/icon_button_back_down"
+        }
+        BackButton:active {
+            image="graphics/icon_button_back_down"
+        }
+        BackButton:disabled {
+            image="graphics/icon_button_back_disabled"
+        }
+        // 前进按钮
         ForwardButton {
             bgcolor=none
-            inset="-5 -1 0 0"
+            inset="-12 0 0 0"
             render_bg={}
             image="graphics/icon_button_forward"
         }
-
         ForwardButton:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_forward_over"
         }
-
         ForwardButton:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_forward_down"
         }
-
         ForwardButton:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_forward_disabled"
         }
 
         HomeButton {
             bgcolor=none
-            inset="-5 0 0 0"
+            inset="-12 0 0 0"
             render_bg={}
             image="graphics/icon_button_home"
         }
-
         HomeButton:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_home_over"
         }
-
         HomeButton:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_home_down"
         }
-
         HomeButton:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_home_disabled"
         }
 
         ReloadButton {
             bgcolor=none
-            inset="-5 0 0 0"
+            inset="-12 0 0 0"
             render_bg={}
             image="graphics/icon_button_reload"
         }
-
         ReloadButton:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_reload_over"
         }
-
         ReloadButton:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_reload_down"
         }
-
         ReloadButton:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_reload_disabled"
         }
 
         StopButton {
             bgcolor=none
-            inset="-5 0 0 0"
+            inset="-12 0 0 0"
             render_bg={}
             image="graphics/icon_button_stop"
         }
-
         StopButton:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_stop_over"
         }
-
         StopButton:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_stop_down"
         }
-
         StopButton:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_button_stop_disabled"
         }
 

@@ -26,13 +26,11 @@
 		"CGamesPage_Mini ListPanelColumnSelectButton" // the games list column chooser
 			{
 				inset="-3 3 0 0"
-				render
-				{
-				// background fill
-				1="fill( x0, y0 + 1, x1 - 1, y1, none )"  
-				2="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
+				render {
+					// background fill
+					// 2="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
 				}   
-			     render_bg {}
+			  render_bg {}
 			}
 	
 		"CGamesPage_Mini ListPanel"

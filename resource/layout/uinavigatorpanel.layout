@@ -7,7 +7,7 @@
 			"ControlName"		"imagepanel"
 			style="grouper"
 			group="library"
-			zpos="-4"
+			zpos="-2"
 		}
 		
 		"PageLoadThrobber"
@@ -187,11 +187,12 @@
 	
 	styles
 	{
-		grouper
-		{
+		// 搜索框背景
+		grouper {
 			bgcolor=none
-			render_bg {}
-			
+			render_bg {
+				// 0="image(x0, y0, x1, y1, graphics/searchBar)"
+			}
 		}
 		
 		headertextlarge
@@ -264,13 +265,11 @@
 	    }   
 		
 		// TODO: 搜索字体
-		LibrarySearch
-		{
-			padding-left=-4
+		LibrarySearch {
 			font-family=basefont
 			font-size=16
-			font-weight=400	
-			textcolor="text"	
+			textcolor="text"
+			bgcolor=none
 		}
 		
 		LibrarySearch:empty
@@ -290,8 +289,7 @@
 			font-style=italic
 			textcolor="texthover"
 			
-		}
-			
+		}	
 		LibrarySearch:disabled
 		{
 			font-style=italic
@@ -300,50 +298,30 @@
 		}
 		
 		// TODO: 搜索图标
-		LibrarySearchIcon
-		{
+		LibrarySearchIcon {
 			bgcolor="none"
-			inset="-1 0 0 0"
 			render_bg={}
 			image="graphics/icon_button_search"
-			padding-left=0
-			padding-right=-1
-			padding-top=-1
-		
 		}
-		
-		LibrarySearchIcon:disabled
-		{
+		LibrarySearchIcon:disabled {
 			bgcolor="none"
-			inset="-2 0 0 0"
 			render_bg={}
-			image="none"
-			padding-left=0
-			padding-right=-1
-		
+			image="graphics/icon_button_search"
 		}
 
-		MusicAddButton
-		{
+		// 新建播放列表按钮
+		MusicAddButton {
 			font-size=14
 			font-size=13 [$OSX]
 			font-family=basefont
 			textcolor="labelfocus"
 			font-style=uppercase
-			render_bg
-			{
-				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse )"
+			bgcolor=none
+			render_bg{
+				0="image(x0, y0 + 5, x1, y1, graphics/icon_add)"
 			}
 		}
-		
-		MusicAddButton:hover
-		{
-			textcolor="white"
-			render_bg
-			{
-				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse_over )"
-			}
-		}			
+		MusicAddButton:hover {}			
 		
 		MusicPlayerIcon
 		{
@@ -811,43 +789,66 @@
 		place { control="label_community_new" start="label_community" y="-40" x="15" width=0 height=0 }
 
 		// TODO: 前进、后退按钮
-		place { control="back,forward,refresh,stop,URLStatusImage,EVCert" x=3 y=0 height=30 spacing=2 margin-left=50 margin-top=0 }
+		// place { control="back,forward,refresh,stop,URLStatusImage,EVCert" x=3 y=0 height=30 spacing=0 margin-left=50 margin-top=0 }
+		place { control="back" height=30 width=30 x=50 y=0 align=left}
+		place { control="forward" height=30 width=30 y=0 align=left start="back"}
+		place { control="refresh" height=30 width=30 y=0 align=left start="forward"}
+		place { control="stop" height=30 width=30 y=0 align=left start="refresh"}
+		place { control="URLStatusImage" height=30 width=30 y=0 align=left start="stop"}
+		place { control="EVCert" height=30  y=0 align=left start="URLStatusImage"}
+		place { control="URLBar" height=30 y=0 width=400 start="EVCert" }
 		// place { control="back,forward" x=3 y=17 height=30 width=30 spacing=2 margin-left=0 margin-top=0 }
 		// TODO: 浏览器图标
 		// place { control="back,forward,refresh,stop,URLStatusImage,EVCert,URLBar" x=50 y=0 height=30 spacing=2 margin-top=0 }
-		place {
-			control="URLBar" start="EVCert" height=30 width=400
-		}
 			
-		place { control="PageLoadThrobber" align=right y=54 height=20 width=20  margin-right=9 margin-top=1 }
-		
- 	
-		place { control="library_search"  width=112}	
+		place { control="PageLoadThrobber" align=right y=54 height=20 width=20  margin-right=9 margin-top=1 }	
 
-		region {name="subnavbar" x=50 y=40 width=288 heigth=25}
+		// X=>50+15
+		region {name="subnavbar" x=65 y=45 width=270 heigth=30 }
 
 		// TODO: 搜索框背景 区域
 		place { control="subnavgroup_library" align=top-center height=30 width=max region="subnavbar" }
 
 		// TODO: 搜索框图标和文字
 		place [!$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 margin-top=7 margin-left=19 region="subnavbar" }
-		place  [$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 region="subnavbar" }
+		// place  [$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 region="subnavbar" }
+		place [!$OSX] {
+			region=subnavbar
+			control=library_search
+			align=left
+			x=20
+			y=8
+		}
+		place [!$OSX] {
+			region=subnavbar
+			control=label_search_icon
+			align=left
+			x=6
+			y=6
+		}
 		// TODO: 被干掉的搜索选项
-		place { control="library_filters" margin-top=5 align=right spacing=1 width=0 region="subnavbar" }
+		place [!$OSX] {
+			region=subnavbar
+			control=library_filters
+			align=right
+			y=6
+		}
+
  
 		place { control="library_zoom" width=82 height=20 }
 	    
 		// TODO: 游戏列表视图类型 style
 		region { name="libraryFilterView" align=bottom height=20 margin-right=20 }
+		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view"  				 region="libraryFilterView" align=right spacing=3 margin-right=0 }
 		place [!$OSX] { control="label_library_zoom" 										   				margin-top=3 region="libraryFilterView" align=right spacing=3 margin-right=207 }
 		place [!$OSX] { control="library_zoom"							 					   				margin-top=0 region="libraryFilterView" align=right spacing=3 margin-right=120 }
 		place [!$OSX] { control="label_zoom_separator, label_library_view" 					   				margin-top=3 region="libraryFilterView" align=right spacing=3 margin-right=68 }
-		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view"  				 region="libraryFilterView" align=right spacing=3 margin-right=0 }
 		place { control="library_filters_details,library_filters_list,library_filters_grid," 							 region="libraryFilterView" align=right spacing=3 margin-right=0 }
 		
 
-		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }
+		region { name="filterBox" align=left width=280 height=20 x=65 y=80}
 		place [$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=179 }
+		place [!$OSX] { control="library_music_menu,library_music_add_button" align=right spacing=0 region=filterBox }
 		
 
 			

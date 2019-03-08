@@ -34,17 +34,14 @@
 		    }
 		}
 
-		bodycontent
-		{
+		bodycontent {
 			textcolor=myGameDetailsChildPanel.content
-			selectedtextcolor=myAccent1
+			selectedtextcolor=none
 			font-size=15
 			render_bg {}
 		}
 
-		"RichText url"
-		{
-			
+		"RichText url" {
 			font-size=15
 		}
 	}
