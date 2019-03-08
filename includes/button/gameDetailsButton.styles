@@ -2,8 +2,8 @@
     colors{
     }
     styles {
-        "CGamesPage_Details_Friends Button" {
-            minimum-height=30
+        // "CGamesPage_Details_Friends Button" {
+        //     minimum-height=30
             // font-family=basefont
             // font-size=16
             // font-weight=600
@@ -21,7 +21,7 @@
 
             //     2="fill(x0, y0, x1, y1 red-500)"
             // }
-        }
+        // }
         //  Button:hover {
         //     textcolor=myBtnText.hover
         //     render_bg {

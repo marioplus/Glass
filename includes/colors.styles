@@ -7,7 +7,7 @@
     // 此区域中只能有一条 include 前面没有 //
 
     // 红色
-    // include "includes/colors/theme/red.styles"
+    include "includes/colors/theme/red.styles"
     // 粉红色
     // include "includes/colors/theme/pink.styles"
     // 紫色
@@ -17,7 +17,7 @@
     // 靛青色
     // include "includes/colors/theme/indigo.styles"
     // 蓝色
-    include "includes/colors/theme/blue.styles"
+    // include "includes/colors/theme/blue.styles"
     // 浅蓝色
     // include "includes/colors/theme/light_blue.styles"
     // 青色

@@ -5,7 +5,7 @@
 			text="#steam_about"
 			command="About"
 		}
-		Divider {}
+		// Divider {}
 		ChangeUser {
 			text="#steam_menu_changeuser"
 			command="ChangeUser"
@@ -15,20 +15,20 @@
 			shellcmd="steam://url/StoreAccount/"
 		}
 		Divider {}
-		BigPictureMode {
-			text="#steam_menu_bigpicturemode"
-			shellcmd="steam://open/bigpicture"
-		}
-		MiniMode [!$OSX] {
-			text="#steam_menu_minimode"
-			shellcmd="steam://open/minigameslist"
-		}
-		Divider {}
-		LargeMode [!$OSX] {
-			text="#steam_menu_largemode"
-			shellcmd="steam://open/largegameslist"
-		}
-		Divider {}
+		// BigPictureMode {
+		// 	text="#steam_menu_bigpicturemode"
+		// 	shellcmd="steam://open/bigpicture"
+		// }
+		// MiniMode [!$OSX] {
+		// 	text="#steam_menu_minimode"
+		// 	shellcmd="steam://open/minigameslist"
+		// }
+		// Divider {}
+		// LargeMode [!$OSX] {
+		// 	text="#steam_menu_largemode"
+		// 	shellcmd="steam://open/largegameslist"
+		// }
+		// Divider {}
 		MusicDetails {
 			text="#steam_menu_view_music_details"
 			shellcmd="steam://nav/music/details"
@@ -37,7 +37,7 @@
 			text="#steam_menu_view_musicplayer"
 			shellcmd="steam://open/musicplayer"
 		}
-		Divider {}
+		// Divider {}
 		Screenshots {
 			text="#steam_screenshots"
 			command="Screenshots"
