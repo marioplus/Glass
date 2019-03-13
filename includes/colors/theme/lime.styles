@@ -16,7 +16,7 @@
         // 透明
         myColorA50 = limea50
         myColorA100 = limea100
-        myColorA200 = limea150
+        myColorA150 = limea150
     
         myColor = myColor500
         myColorA = myColorA50

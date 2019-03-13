@@ -1,5 +1,15 @@
 "includes/colors.styles" {
 
+    // 图标颜色备忘
+    // 正常 : #95a4a2
+    // 悬浮 : eeffff
+    // 提醒蓝 : 1296db
+    // 提醒绿 : 009587
+    // 
+    // 
+
+
+
     // 主题色
     // 除了你想要使用的颜色，其他的 include 前面应该有 // 来注释他们
     // 此区域中只能有一条 include 前面没有 //
@@ -7,7 +17,7 @@
     // 此区域中只能有一条 include 前面没有 //
 
     // 红色
-    include "includes/colors/theme/red.styles"
+    // include "includes/colors/theme/red.styles"
     // 粉红色
     // include "includes/colors/theme/pink.styles"
     // 紫色
@@ -23,7 +33,7 @@
     // 青色
     // include "includes/colors/theme/cyan.styles"
     // 深青色
-    // include "includes/colors/theme/teal.styles"
+    include "includes/colors/theme/teal.styles"
     // 绿色
     // include "includes/colors/theme/green.styles"
     // 浅绿色

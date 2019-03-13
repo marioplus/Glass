@@ -76,8 +76,10 @@
 		{
 			bgcolor=none
 			render {}
-			render_bg
-			{
+			render_bg {
+				// 搜索框背景
+				// 0="image(x0+15, y0+15, x1, y1, graphics/searchBar)"
+				
 				 //0="gradient( x0+2, y0+2, x1-1, y1 - 1, dialogbg, almostblack )"
 				 //1="gradient( x0 +2, y0+2, x1-1, y0 + 20, backgroundstartsubtle, none )"
 				 // TODO: 游戏区域背景 2
@@ -247,7 +249,7 @@
 		region  { name="detailsbody" 	region=details y=350 height=max width=max overflow=allow-vertical }
 
 		// Empty list text, which goes across regions
-		place	{ control=emptylisttext x=0 y=0 width=max height=max margin=0 }
+		place	{ control=emptylisttext x=10 y=50 width=max height=max margin=0 }
 
 		// TODO: 左边游戏列表 layout
 		// Games list on left

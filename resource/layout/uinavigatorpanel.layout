@@ -300,8 +300,11 @@
 		// TODO: 搜索图标
 		LibrarySearchIcon {
 			bgcolor="none"
-			render_bg={}
-			image="graphics/icon_button_search"
+			image=none
+			render_bg={
+				0="image(x0+6, y0+6, x1, y1, graphics/icon_button_search)"
+				0="image(x0, y0, x1, y1, graphics/searchBar)"
+			}
 		}
 		LibrarySearchIcon:disabled {
 			bgcolor="none"
@@ -744,14 +747,14 @@
 			
 		LabelEVCert [$OSX]
 		{
-		font-family=basefont
-		font-size=14
-		textcolor="darkclientbg"
-		font-weight=400
-		bgcolor="html.secureurl"
-		inset-left=3
-		inset-right=4
-		inset-top=3	
+			font-family=basefont
+			font-size=14
+			textcolor="darkclientbg"
+			font-weight=400
+			bgcolor="html.secureurl"
+			inset-left=3
+			inset-right=4
+			inset-top=3	
 		}	
 		
 		URLStatusImage
@@ -811,7 +814,7 @@
 
 		// TODO: 搜索框图标和文字
 		place [!$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 margin-top=7 margin-left=19 region="subnavbar" }
-		// place  [$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 region="subnavbar" }
+		place  [$OSX] { control="label_search_icon,library_search" align=left height=17 spacing=1 region="subnavbar" }
 		place [!$OSX] {
 			region=subnavbar
 			control=library_search
@@ -823,8 +826,8 @@
 			region=subnavbar
 			control=label_search_icon
 			align=left
-			x=6
-			y=6
+			x=0
+			y=1
 		}
 		// TODO: 被干掉的搜索选项
 		place [!$OSX] {

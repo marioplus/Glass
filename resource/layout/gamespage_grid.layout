@@ -32,6 +32,8 @@
 		{
 			bgcolor="none"
 			render_bg {
+				// 搜索框
+				// 0="image(x0-20, y0, x1, y1, graphics/searchBar)"
 				// background gradient
 				//0="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 			}
@@ -70,9 +72,9 @@
 
 	layout
 	{
-		place { control = grid x=75 y=35 width=max height=max  }
+		place { control=grid x=80 y=35 width=max height=max }
 
-		place	{ control=emptylisttext x=0 y=0 margin=10 margin-top=9 width=max height=max }
+		place	{ control=emptylisttext x=65 y=50 width=max height=max}
 	}
 }
 

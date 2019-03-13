@@ -16,7 +16,7 @@
         // 透明
         myColorA50 = deeporangea50
         myColorA100 = deeporangea100
-        myColorA200 = deeporangea150
+        myColorA150 = deeporangea150
     
         myColor = myColor500
         myColorA = myColorA50
