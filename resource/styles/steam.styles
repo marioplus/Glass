@@ -839,9 +839,9 @@ steam.styles {
             font-family=basefont
             font-size=14
             font-weight=400
-            textcolor="text2"
-            selectedtextcolor="TextSelected"
-            selectedbgcolor="Focus"
+            textcolor=myAccent1
+            selectedtextcolor=myColor
+            selectedbgcolor=none
             shadowtextcolor="TextDisabled"	// the color of disabled line items
             inset="0 -1 1 1"
         }
@@ -1036,8 +1036,8 @@ steam.styles {
             bgcolor="none"
             render_bg {
                 // fill
-                0="fill (x0, y0 + 1, x1, y1 + 1, propertysheetbg)" // bg fill
-                1="fill (x0 + 1, y0 + 1, x1, y0 + 3, propertysheetbg)" // bg fill2
+                // 0="fill (x0, y0 + 1, x1, y1 + 1, propertysheetbg)" // bg fill
+                // 1="fill (x0 + 1, y0 + 1, x1, y0 + 3, propertysheetbg)" // bg fill2
             }
         }
 
@@ -1154,6 +1154,7 @@ steam.styles {
             font-size=16
             minimum-height=20
             font-style="uppercase"
+            bgcolor=none
             render_bg {
                 // 0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, Friends.ListHeaderFadeOut  )"
             }
@@ -1350,10 +1351,10 @@ steam.styles {
 
 
         Page {
-            bgcolor="none"
+            bgcolor=myMainBG
             render_bg {
                 // background gradient
-                0="gradient( x0, y0 + 18, x1, y1, DialogBG, PropertySheetBG )"
+                // 0="gradient( x0, y0 + 18, x1, y1, DialogBG, PropertySheetBG )"
             }
         }
 
