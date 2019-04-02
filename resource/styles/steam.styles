@@ -1402,12 +1402,12 @@ steam.styles {
             bgcolor=none
             render {}
             render_bg {
-                // 0="gradient( x0, y0, x1, y0+80, DialogBG, ClientBG )"
+                0="gradient( x0, y0, x1, y0+80, DialogBG, ClientBG )"
 
-                // 1="gradient_horizontal( x0, y1-1, x1, y1, ClientBG, Highlight5 )"    // bottom
-                // 2="gradient( x1-1, y0, x1, y1 , ClientBG, Highlight5 )" // right
-                // 3="fill( x0, y0, x1, y0+1, ClientBG )"  // top
-                // 4="fill( x0, y0, x0+1, y1, ClientBG )" // left
+                1="gradient_horizontal( x0, y1-1, x1, y1, ClientBG, Highlight5 )"    // bottom
+                2="gradient( x1-1, y0, x1, y1 , ClientBG, Highlight5 )" // right
+                3="fill( x0, y0, x1, y0+1, ClientBG )"  // top
+                4="fill( x0, y0, x0+1, y1, ClientBG )" // left
             }
         }
 
