@@ -24,7 +24,7 @@
         myColorD = myColor700
         myDisabled = grey700
 
-        myColoryA = myColorA50
+        myColorA = myColorA50
         myColorAL = myColorA100
         myColorAD = myColorA150
     }

@@ -58,14 +58,18 @@ steam.styles {
         myGameDetailsDLCHeader=myColor
 
         // 按钮
-        myBtnBG=none
-        myBtnBG.hover=myColorA
-        myBtnBG.active=myColor
-        myBtnBG.disabled=none
         myBtnText=myColor
         myBtnText.hover=myAccent1
         myBtnText.active=myAccent1
         myBtnText.disabled=myAccent3
+        myBtnBg=none
+        myBtnBg.hover=myColor
+        myBtnBg.active=myColorAL
+        myBtnBg.disabled=none
+        myBtnBgBorder=none
+        myBtnBgBorder.hover=myColor
+        myBtnBgBorder.active=myColorAD
+        myBtnBgBorder.disabled=none
 
         // 游戏列表
             // 列表组文字颜色
@@ -148,6 +152,33 @@ steam.styles {
         myMenuItemBg.hover="25 34 39 255"
         myMenuItemBg.selected=myMenuItemBg.hover
         myMenuItemDivider="118 132 136 255"
+
+        // myBtnText=myColor
+        // myBtnText.hover=myAccent1
+        // myBtnText.active=myAccent1
+        // myBtnText.disabled=myAccent3
+        // myBtnBg=none
+        // myBtnBg.hover=myColor
+        // myBtnBg.active=myColorA
+        // myBtnBg.disabled=none
+        // myBtnBgBorder=none
+        // myBtnBgBorder.hover=none
+        // myBtnBgBorder.active=myColorAD
+        // myBtnBgBorder.disabled=none
+
+        //下拉选择
+        myComboText=myAccent1
+        myComboText.hover=myAccent1
+        myComboText.focus=myAccent1
+        myComboText.focus.hover=myAccent1
+        myComboBg=myColorA
+        myComboBg.hover=myColorA
+        myComboBg.focus=myColorA
+        myComboBg.focus.hover=myColorA
+        myComboBgBorder=myColorAD
+        myComboBgBorder.hover=myColorAD
+        myComboBgBorder.focus=myColorAD
+        myComboBgBorder.focus.hover=myColorAD
 
 
         DragDrop.DragFrame        "255 255 255 192"
@@ -335,26 +366,49 @@ steam.styles {
 			font-weight=600
 			padding=5
             textcolor=myBtnText
-            bgcolor=myBtnBG
+            bgcolor=none
+            render_bg {
+                0="fill(x0+2, y0+2, x1, y1-2, myBtnBg)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder)"
+                4="fill(x0,     y1-2,   x1,     y1,     myBtnBgBorder)"
+            }
         }
         Button:hover {
             textcolor=myBtnText.hover
-            bgcolor=myBtnBG.active
+            // bgcolor=myBtnBg.active
+            render_bg {
+                0="fill(x0+2, y0+2, x1, y1-2, myBtnBg.hover)"
+                
+                1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder.hover)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder.hover)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder.hover)"
+                4="fill(x0,     y1-2,   x1,     y1,     myBtnBgBorder.hover)"
+            }
         }
         Button:active {
             textcolor=myBtnText.active
-            
-            bgcolor=myBtnBG.hover
             render_bg {
-                0="fill(x0, y0, x0+2, y1, myColorAD)"
-                1="fill(x0, y0, x1, y0+2, myColorAD)"
-                2="fill(x1-2, y0, x1, y1, myColorAD)"
-                3="fill(x0, y1-2, x1, y1, myColorAD)"
+                0="fill(x0+2, y0+2, x1, y1-2, myBtnBg.active)"
+                
+                1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder.active)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder.active)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder.active)"
+                4="fill(x0,     y1-2,   x1,     y1,     myBtnBgBorder.active)"
             }
         }
         Button:disabled {
             textcolor=myBtnText.disabled
-            bgcolor=myBtnBG.disabled
+            render_bg {
+                0="fill(x0+2, y0+2, x1, y1-2, myBtnBg.disabled)"
+                
+                1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder.disabled)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder.disabled)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder.disabled)"
+                4="fill(x0,     y1-2,   x1,     y1,     myBtnBgBorder.disabled)"
+            }
         }
         Button:focus {}
         Button:selected {}
@@ -483,132 +537,131 @@ steam.styles {
         }
 
         ComboBox {
-            inset="3 0 0 0"
-            textcolor="Text"
+            inset="6 0 6 0"
+            textcolor=myComboText
             font-family=basefont
             font-size="14"
-            selectedtextcolor="TextEntrySelected"
-            selectedbgcolor="TextSelectedBG"
+            bgcolor=none
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1, y1-2, myComboBg)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myComboBgBorder)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myComboBgBorder)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myComboBgBorder)"
+                4="fill(x0,     y1-2,   x1,     y1,     myComboBgBorder)"
             }
         }
         ComboBox:hover {
-            selectedbgcolor="none"
-            selectedtextcolor="Text"
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1, y1-2, myComboBg)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myComboBgBorder.hover)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myComboBgBorder.hover)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myComboBgBorder.hover)"
+                4="fill(x0,     y1-2,   x1,     y1,     myComboBgBorder.hover)"
             }
         }
         ComboBox:focus {
-            selectedbgcolor="none"
-            selectedtextcolor="Text"
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1, y1-2, myComboBg.focus)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myComboBgBorder.focus)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myComboBgBorder.focus)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myComboBgBorder.focus)"
+                4="fill(x0,     y1-2,   x1,     y1,     myComboBgBorder.focus)"
             }
         }
         ComboBox:focus:hover {
-            selectedbgcolor="none"
-            selectedtextcolor="Text"
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1, y1-2, myComboBg.focus.hover)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myComboBgBorder.focus.hover)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myComboBgBorder.focus.hover)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myComboBgBorder.focus.hover)"
+                4="fill(x0,     y1-2,   x1,     y1,     myComboBgBorder.focus.hover)"
             }
         }
 
-        "Page ComboBox" {
-            render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
-            }
-        }
-        "Page ComboBox:focus" {
-            render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
-            }
-        }
-        "Page ComboBox:hover" {
-            render_bg {
-                // background fill
-                0="gradient(x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
-            }
-        }
-        "Page ComboBox:focus:hover" {
-            render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
-            }
-        }
+        // "Page ComboBox" {
+        //     render_bg {
+        //         // background fill
+        //         0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+        //     }
+        // }
+        // "Page ComboBox:focus" {
+        //     render_bg {
+        //         // background fill
+        //         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        //     }
+        // }
+        // "Page ComboBox:hover" {
+        //     render_bg {
+        //         // background fill
+        //         0="gradient(x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
+        //     }
+        // }
+        // "Page ComboBox:focus:hover" {
+        //     render_bg {
+        //         // background fill
+        //         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        //     }
+        // }
 
 
         ComboBoxButton {
             bgcolor=none
-            padding-left=2
             image="graphics/icon_down_default"
-            // just draw a single line to divide it from the text
-            render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorder )"
-            }
+            render_bg{}
         }
         ComboBoxButton:hover {
             image="graphics/icon_down_hover"
-            // just draw a single line to divide it from the text
             render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, label )"
             }
         }
         ComboBoxButton:focus {
             bgcolor=none
             image="graphics/icon_down_focus"
-            // just draw a single line to divide it from the text
             render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive )"
             }
         }
         ComboBoxButton:focus:hover {
             bgcolor=none
             image="graphics/icon_down_default"
-            // just draw a single line to divide it from the text
             render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
             }
         }
 
-        "Page ComboBoxButton" {
-            bgcolor=none
-            image="graphics/icon_down_default"
-            // just draw a single line to divide it from the text
-            render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderPage )"
-            }
-        }
-        "Page ComboBoxButton:hover" {
-            image="graphics/icon_down_hover"
-            // just draw a single line to divide it from the text
-            render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
-            }
-        }
-        "Page ComboBoxButton:focus" {
-            bgcolor=none
-            image="graphics/icon_down_focus"
-            // just draw a single line to divide it from the text
-            render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
-            }
-        }
-        "Page ComboBoxButton:focus:hover" {
-            bgcolor=none
-            image="graphics/icon_down_focus"
-            // just draw a single line to divide it from the text
-            render_bg {
-                0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive )"
-            }
-        }
+        // "Page ComboBoxButton" {
+        //     bgcolor=none
+        //     image="graphics/icon_down_default"
+        //     // just draw a single line to divide it from the text
+        //     render_bg {
+        //         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderPage )"
+        //     }
+        // }
+        // "Page ComboBoxButton:hover" {
+        //     image="graphics/icon_down_hover"
+        //     // just draw a single line to divide it from the text
+        //     render_bg {
+        //         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
+        //     }
+        // }
+        // "Page ComboBoxButton:focus" {
+        //     bgcolor=none
+        //     image="graphics/icon_down_focus"
+        //     // just draw a single line to divide it from the text
+        //     render_bg {
+        //         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
+        //     }
+        // }
+        // "Page ComboBoxButton:focus:hover" {
+        //     bgcolor=none
+        //     image="graphics/icon_down_focus"
+        //     // just draw a single line to divide it from the text
+        //     render_bg {
+        //         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive )"
+        //     }
+        // }
 
         Divider {
             bgcolor="none"
@@ -2146,38 +2199,34 @@ steam.styles {
         // 后退按钮
         BackButton {
             bgcolor=none
-            inset="-12 0 0 0"
-            image="graphics/icon_button_back"
+            image="graphics/url/icon_button_back"
         }
         BackButton:hover {
-            image="graphics/icon_button_back_down"
+            image="graphics/url/icon_button_back_down"
         }
         BackButton:active {
-            image="graphics/icon_button_back_down"
+            image="graphics/url/icon_button_back_down"
         }
         BackButton:disabled {
-            image="graphics/icon_button_back_disabled"
+            image="graphics/url/icon_button_back_disabled"
         }
         // 前进按钮
         ForwardButton {
-            bgcolor=none
-            inset="-12 0 0 0"
             render_bg={}
-            image="graphics/icon_button_forward"
+            image="graphics/url/icon_button_forward"
         }
         ForwardButton:hover {
-            image="graphics/icon_button_forward_over"
+            image="graphics/url/icon_button_forward_over"
         }
         ForwardButton:active {
-            image="graphics/icon_button_forward_down"
+            image="graphics/url/icon_button_forward_down"
         }
         ForwardButton:disabled {
-            image="graphics/icon_button_forward_disabled"
+            image="graphics/url/icon_button_forward_disabled"
         }
 
         HomeButton {
             bgcolor=none
-            inset="-12 0 0 0"
             render_bg={}
             image="graphics/icon_button_home"
         }
@@ -2193,34 +2242,32 @@ steam.styles {
 
         ReloadButton {
             bgcolor=none
-            inset="-12 0 0 0"
             render_bg={}
-            image="graphics/icon_button_reload"
+            image="graphics/url/icon_button_reload"
         }
         ReloadButton:hover {
-            image="graphics/icon_button_reload_over"
+            image="graphics/url/icon_button_reload_over"
         }
         ReloadButton:active {
-            image="graphics/icon_button_reload_down"
+            image="graphics/url/icon_button_reload_down"
         }
         ReloadButton:disabled {
-            image="graphics/icon_button_reload_disabled"
+            image="graphics/url/icon_button_reload_disabled"
         }
 
         StopButton {
             bgcolor=none
-            inset="-12 0 0 0"
             render_bg={}
-            image="graphics/icon_button_stop"
+            image="graphics/url/icon_button_stop"
         }
         StopButton:hover {
-            image="graphics/icon_button_stop_over"
+            image="graphics/url/icon_button_stop_over"
         }
         StopButton:active {
-            image="graphics/icon_button_stop_down"
+            image="graphics/url/icon_button_stop_down"
         }
         StopButton:disabled {
-            image="graphics/icon_button_stop_disabled"
+            image="graphics/url/icon_button_stop_disabled"
         }
 
         //T ODO: 游戏详情 面板 标题 style
