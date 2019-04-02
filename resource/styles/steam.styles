@@ -125,60 +125,71 @@ steam.styles {
             myMusicBtnOtherBg.active=myColor
 
         // 控制台
-        myConsole=myAccent1
-        myConsole.selected=myColor
-        myConsoleBg=none
-        myConsoleBg.selected=myAccent1
+            myConsole=myAccent1
+            myConsole.selected=myColor
+            myConsoleBg=none
+            myConsoleBg.selected=myAccent1
 
-        myConsoleError=red500
-        myConsoleError.selected=myAccent1
-        myConsoleErrorBg=none
-        myConsoleErrorBg.selected=red500
+            myConsoleError=red500
+            myConsoleError.selected=myAccent1
+            myConsoleErrorBg=none
+            myConsoleErrorBg.selected=red500
 
         // 菜单
-        // myMenuItemText="53 53 53 255"
-        // myMenuItemText.hover="53 53 53 255"
-        // myMenuItemText.selected="53 53 53 255"
-        // myMenuItemBg="255 255 255 255"
-        // myMenuItemBg.hover="225 225 225 225"
-        // myMenuItemBg.selected="225 225 225 225"
-        // myMenuItemDivider="225 225 225 225"
+            myMenuBg="38 50 56 255"
+            myMenuItemText="238 255 255 255"
+            myMenuItemText.hover="128 203 169 255"
+            myMenuItemText.selected=myMenuItemText.hover
+            
+            myMenuItemBg=myMenuBg
+            myMenuItemBg.hover="25 34 39 255"
+            myMenuItemBg.selected=myMenuItemBg.hover
+            myMenuItemDivider="118 132 136 255"
 
-        myMenuBg="38 50 56 255"
-        myMenuItemText="238 255 255 255"
-        myMenuItemText.hover="128 203 169 255"
-        myMenuItemText.selected=myMenuItemText.hover
-        myMenuItemBg=myMenuBg
-        myMenuItemBg.hover="25 34 39 255"
-        myMenuItemBg.selected=myMenuItemBg.hover
-        myMenuItemDivider="118 132 136 255"
+        //下拉选择 （ComboBoxButtom）
+            myComboText=myAccent1
+            myComboText.hover=myAccent1
+            myComboText.focus=myAccent1
+            myComboText.focus.hover=myAccent1
 
-        // myBtnText=myColor
-        // myBtnText.hover=myAccent1
-        // myBtnText.active=myAccent1
-        // myBtnText.disabled=myAccent3
-        // myBtnBg=none
-        // myBtnBg.hover=myColor
-        // myBtnBg.active=myColorA
-        // myBtnBg.disabled=none
-        // myBtnBgBorder=none
-        // myBtnBgBorder.hover=none
-        // myBtnBgBorder.active=myColorAD
-        // myBtnBgBorder.disabled=none
+            myComboBg=myColorA
+            myComboBg.hover=myColorA
+            myComboBg.focus=myColorA
+            myComboBg.focus.hover=myColorA
 
-        //下拉选择
-        myComboText=myAccent1
-        myComboText.hover=myAccent1
-        myComboText.focus=myAccent1
-        myComboText.focus.hover=myAccent1
-        myComboBg=myColorA
-        myComboBg.hover=myColorA
-        myComboBg.focus=myColorA
-        myComboBg.focus.hover=myColorA
-        myComboBgBorder=myColorAD
-        myComboBgBorder.hover=myColorAD
-        myComboBgBorder.focus=myColorAD
-        myComboBgBorder.focus.hover=myColorAD
+            myComboBgBorder=myColorAD
+            myComboBgBorder.hover=myColorAD
+            myComboBgBorder.focus=myColorAD
+            myComboBgBorder.focus.hover=myColorAD
+
+        // 标签头（PageTab）
+            myPageTabText=myAccent1
+            myPageTabText.hover=myPageTabText
+            myPageTabText.selected=myPageTabText
+            myPageTabText.selected.hover=myPageTabText
+            myPageTabText.focus=myPageTabText
+            
+            myPageTabBg=myColor900
+            myPageTabBg.hover=myPageTabBg
+            myPageTabBg.selected=myColor
+            myPageTabBg.selected.hover=myPageTabBg.selected
+            myPageTabBg.focus=myPageTabBg.selected
+
+        // 切换按钮 （ToggleButton）
+            myToggleText=myAccent1
+            myToggleText.focus=myToggleText
+            myToggleText.selected=myAccent1
+            myToggleText.hover=myAccent1
+
+            myToggleBg=myColorA
+            myToggleBg.hover=myToggleBg
+            myToggleBg.selected=myColorAD
+            myToggleBg.focus=myToggleBg.selected
+
+            myToggleBorder=myToggleBg
+            myToggleBorder.hover=myToggleBorder
+            myToggleBorder.selected=myToggleBg.selected
+            myToggleBorder.focus=myToggleBorder.selected
 
 
         DragDrop.DragFrame        "255 255 255 192"
@@ -552,8 +563,9 @@ steam.styles {
             }
         }
         ComboBox:hover {
+            textcolor=myComboText.hover
             render_bg {
-                0="fill(x0+2, y0+2, x1, y1-2, myComboBg)"
+                0="fill(x0+2, y0+2, x1, y1-2, myComboBg.hover)"
 
                 1="fill(x0,     y0,     x1,     y0+2,   myComboBgBorder.hover)"
                 2="fill(x0,     y0+2,   x0+2,   y1-2,   myComboBgBorder.hover)"
@@ -562,6 +574,7 @@ steam.styles {
             }
         }
         ComboBox:focus {
+            textcolor=myComboText.focus
             render_bg {
                 0="fill(x0+2, y0+2, x1, y1-2, myComboBg.focus)"
 
@@ -572,6 +585,7 @@ steam.styles {
             }
         }
         ComboBox:focus:hover {
+            textcolor=myComboText.focus.hover
             render_bg {
                 0="fill(x0+2, y0+2, x1, y1-2, myComboBg.focus.hover)"
 
@@ -615,20 +629,15 @@ steam.styles {
         }
         ComboBoxButton:hover {
             image="graphics/icon_down_hover"
-            render_bg {
-            }
+            render_bg {}
         }
         ComboBoxButton:focus {
-            bgcolor=none
             image="graphics/icon_down_focus"
-            render_bg {
-            }
+            render_bg {}
         }
         ComboBoxButton:focus:hover {
-            bgcolor=none
             image="graphics/icon_down_default"
-            render_bg {
-            }
+            render_bg {}
         }
 
         // "Page ComboBoxButton" {
@@ -666,7 +675,7 @@ steam.styles {
         Divider {
             bgcolor="none"
             render {
-                0="gradient_horizontal( x0, y1 - 1, x1, y1, divider, propertysheetbg )"
+                0="fill( x0, y1 - 1, x1, y1, myDivider)"
             }
         }
 
@@ -1420,69 +1429,35 @@ steam.styles {
             bgcolor="DialogBG"
         }
 
+
         PageTab {
-            textcolor="Label"
             font-family=basefont
-            font-size=13
+            font-size=15
             font-style=Uppercase
-            font-weight=400
-            inset="0 -2 0 0"
-            render_bg {
-                // background gradient
-                0="fill( x0, y0 , x1, y1 - 4, PropertySheetBG )"
-                1="fill(x0, y1-2, x1+3000, y1 -1, divider )"
-            }
+            font-weight=700
+            bgcolor=none
+            textcolor=myPageTabText
+            bgcolor=myPageTabBg
+            render={}
+            render_bg={}
         }
-
-
         PageTab:selected {
-            textcolor="texthover"
-            font-family=basefont
-            font-size=13
-            font-style=Uppercase
-            font-weight=400
-            inset="0 -2 0 0"
-            bgcolor="none"
-            render_bg {
-                // background gradient
-                0="gradient( x0, y0 , x1, y1, divider, dialogbg )"
-                1="fill(x1, y1-2, x1+3000, y1 - 1, divider )"
-            }
+            textcolor=myPageTabText.selected
+            bgcolor=myPageTabBg.selected
         }
-
-
         PageTab:hover {
-            textcolor="texthover"
-            font-family=basefont
-            font-size=13
-            font-style=Uppercase
-            font-weight=400
-            inset="0 -2 0 0"
-            render_bg {
-                // background gradient
-                0="fill( x0, y0 , x1, y1 - 4, buttonfacehover )"
-                1="fill(x0, y1-2, x1+3000, y1 -1, divider )"
-            }
+            textcolor=myPageTabText.hover
+            bgcolor=myPageTabBg.hover
         }
-
         PageTab:selected:hover {
-            textcolor="texthover"
-            font-family=basefont
-            font-size=13
-            font-style=Uppercase
-            font-weight=400
-            inset="0 -2 0 0"
-            bgcolor="none"
-            render_bg {
-                // background gradient
-                0="gradient( x0, y0 , x1, y1, divider, dialogbg )"
-                1="fill(x1, y1-2, x1+3000, y1 - 1, divider )"
-            }
+            textcolor=myPageTabText.selected.hover
+            bgcolor=myPageTabBg.selected.hover
+        }
+        PageTab:Focus {
+            textcolor=myPageTabText.focus
+            bgcolor=myPageTabBg.focus
         }
 
-        PageTab:Focus {
-            textcolor="Texthover"
-        }
 
         "PageDragFrame PageTab" {
             font-size=14
@@ -1862,81 +1837,94 @@ steam.styles {
         }
 
         ToggleButton {
-            inset="1 0 0 0"
+            inset="0 0 0 0"
             inset="1 3 0 0" [$OSX]
             font-family=basefont
             font-size=13
             font-weight=400
-            textcolor="Text"
+
             bgcolor=none
+            render={}
+            textcolor=myToggleText
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1-2, y1-2, myToggleBg)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myToggleBorder)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myToggleBorder)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myToggleBorder)"
+                4="fill(x0,     y1-2,   x1,     y1,     myToggleBorder)"
             }
         }
+        // ToggleButton:focus {
+        //     textcolor=myToggleText.focus
+        //     render_bg {
+        //         0="fill(x0+2, y0+2, x1-2, y1-2, myToggleBg.focus)"
 
-        ToggleButton:focus {
-            textcolor="TextHover"
-            bgcolor="none"
-            render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
-            }
-        }
-
+        //         1="fill(x0,     y0,     x1,     y0+2,   myToggleBorder.focus)"
+        //         2="fill(x0,     y0+2,   x0+2,   y1-2,   myToggleBorder.focus)"
+        //         3="fill(x1-2,   y0+2,   x1,     y1-2,   myToggleBorder.focus)"
+        //         4="fill(x0,     y1-2,   x1,     y1,     myToggleBorder.focus)"
+        //     }
+        // }
         ToggleButton:hover {
-            textcolor="TextHover"
-            bgcolor="none"
+            textcolor=myToggleText.hover
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1-2, y1-2, myToggleBg.hover)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myToggleBorder.hover)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myToggleBorder.hover)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myToggleBorder.hover)"
+                4="fill(x0,     y1-2,   x1,     y1,     myToggleBorder.hover)"
             }
         }
-
         ToggleButton:selected {
-            textcolor="TextHover"
-            bgcolor="none"
+            textcolor=myToggleText.selected
             render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
+                0="fill(x0+2, y0+2, x1-2, y1-2, myToggleBg.selected)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myToggleBorder.selected)"
+                2="fill(x0,     y0+2,   x0+2,   y1-2,   myToggleBorder.selected)"
+                3="fill(x1-2,   y0+2,   x1,     y1-2,   myToggleBorder.selected)"
+                4="fill(x0,     y1-2,   x1,     y1,     myToggleBorder.selected)"
             }
         }
 
-        "Page ToggleButton" {
-            font-family=basefont
-            font-size=13
-            font-weight=400
-            textcolor="Text"
-            bgcolor=none
-            render_bg {
-                // background fill
-                0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
-            }
-        }
+        // "Page ToggleButton" {
+        //     font-family=basefont
+        //     font-size=13
+        //     font-weight=400
+        //     textcolor="Text"
+        //     bgcolor=none
+        //     render_bg {
+        //         // background fill
+        //         0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+        //     }
+        // }
 
-        "Page ToggleButton:hover" {
-            textcolor="TextHover"
-            bgcolor="none"
-            render_bg {
-                0="gradient( x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
-            }
-        }
+        // "Page ToggleButton:hover" {
+        //     textcolor="TextHover"
+        //     bgcolor="none"
+        //     render_bg {
+        //         0="gradient( x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
+        //     }
+        // }
 
-        "Page ToggleButton:focus" {
-            textcolor="TextHover"
-            bgcolor="none"
-            render_bg {
-                0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"
-            }
-        }
+        // "Page ToggleButton:focus" {
+        //     textcolor="TextHover"
+        //     bgcolor="none"
+        //     render_bg {
+        //         0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"
+        //     }
+        // }
 
-        "Page ToggleButton:selected" {
-            textcolor="TextHover"
-            bgcolor="none"
-            render_bg {
-                0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
-            }
-        }
+        // "Page ToggleButton:selected" {
+        //     textcolor="TextHover"
+        //     bgcolor="none"
+        //     render_bg {
+        //         0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
+        //     }
+        // }
+
 
         // the background and frame of a tooltip
         TooltipWindow {
