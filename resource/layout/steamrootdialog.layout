@@ -770,7 +770,7 @@
 		place { control="online_friends" height=12 y=38 width=0 region=bottom align=right dir=right margin-right=56 }
 
 
-		region { name="leftButtom" align=bottom x=0 height=50 width=50}
+		region { name="leftButtom" align=bottom x=0 height=70 width=50}
 		place { control="view_friends" x=0 y=0 region="leftButtom" height=50 width=50 dir=down  }
 		// place { control="view_friends" height=50 width=50 y=5 x=0 region=bottom align=left dir=right margin-right=56 }
 	

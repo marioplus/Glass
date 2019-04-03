@@ -500,52 +500,53 @@ steam.styles {
             inset="1 1 1 1"
             textcolor="text2"
             bgcolor=none
-            render	{ }
+            render	{}
             render_bg {
-                // background gradient
-                1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
+                // 0="fill(x0+2, y0+2, x1-2, y1-2, myColorA)"
+
+                1="fill(x0,     y0,     x1,     y0+2,   myColorD)" // top
+                2="fill(x0,     y1-2,   x1,     y1,     myColorD)" // botton
+                3="fill(x0,     y0+2,   x0+2,   y1-2,   myColorD)" // left
+                4="fill(x1-2,   y0+2,   x1,     y1-2,   myColorD)" // right
             }
         }
         CheckButtonList:scrollbar {
             inset="1 1 1 1"
             textcolor="text2"
-            bgcolor=none
-            render	{ }
+            render	{}
             render_bg {
                 // background gradient
-                1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
+                // 1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
             }
         }
 
-        "Page CheckButtonList" {
-            inset="1 1 1 1"
-            textcolor="text2"
-            bgcolor=none
-            render	{ }
-            render_bg {
-                // background fill
-                1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
-            }
-        }
+        // "Page CheckButtonList" {
+        //     inset="1 1 1 1"
+        //     textcolor="text2"
+        //     bgcolor=none
+        //     render	{ }
+        //     render_bg {
+        //         // background fill
+        //         1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
+        //     }
+        // }
+        // "Page CheckButtonList:scrollbar" {
+        //     inset="1 1 1 1"
+        //     textcolor="text2"
+        //     bgcolor=none
+        //     render { }
+        //     render_bg {
+        //         // background fill
+        //         1="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
+        //     }
+        // }
+        // "CheckbuttonList Checkbutton" {
+        //     textcolor="label"
+        // }
 
-        "Page CheckButtonList:scrollbar" {
-            inset="1 1 1 1"
-            textcolor="text2"
-            bgcolor=none
-            render { }
-            render_bg {
-                // background fill
-                1="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
-            }
-        }
-
-        "CheckbuttonList Checkbutton" {
-            textcolor="label"
-        }
-
-        "CheckbuttonList Checkbutton:focus" {
-            textcolor="texthover"
-        }
+        // "CheckbuttonList Checkbutton:focus" {
+        //     textcolor="texthover"
+        // }
 
         ComboBox {
             inset="6 0 6 0"
@@ -1693,73 +1694,43 @@ steam.styles {
             font-style=uppercase
         }
 
+
         TextEntry {
             font-family=basefont
             font-size=14
-            textcolor="Text"
             font-weight=400
-            bgcolor="none"
-            selectedtextcolor="white"
-            selectedbgcolor="TextSelectedBG"
-            shadowtextcolor="text"  // this is the cursor color
-
-            inset-left=4
-            inset-top=0
-            render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-            }
-        }
-
-        "Page TextEntry" {
-            render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-            }
-        }
-
-        TextEntry:focus {
-            textcolor="TextHover"
+            inset-left=5
+            inset-right=5
             bgcolor=none
+            textcolor=myAccent1
+            selectedtextcolor=myColor
+            selectedbgcolor=myAccent1
+            shadowtextcolor=myColor  // this is the cursor color
             render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
+                1="fill(x0,        y0,         x1,         y0 + 1,     myAccent2)"  // top
+                2="fill(x0,        y1 - 1,     x1,         y1,         myAccent2)"  // bottom
+                3="fill(x0,        y0 + 1,     x0 + 1,     y1 - 1,     myAccent2)"  // left
+                4="fill(x1 - 1,    y0 + 1,     x1,         y1 - 1,     myAccent2)"  // right
             }
         }
-
-        "Page TextEntry:focus" {
-            textcolor="TextHover"
+        TextEntry:focus {
             render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
+                1="fill(x0,        y0,         x1,         y0 + 1,     myColorAD)"  // top
+                2="fill(x0,        y1 - 1,     x1,         y1,         myColorAD)"  // bottom
+                3="fill(x0,        y0 + 1,     x0 + 1,     y1 - 1,     myColorAD)"  // left
+                4="fill(x1 - 1,    y0 + 1,     x1,         y1 - 1,     myColorAD)"  // right
             }
         }
-
-
         TextEntry:disabled {
             textcolor="TextDisabled"
             bgcolor="ButtonFaceDisabled"
             render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderDisabled )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // right
+                1="fill(x0,        y0,         x1,         y0 + 1,     myAccent3)"  // top
+                2="fill(x0,        y1 - 1,     x1,         y1,         myAccent3)"  // bottom
+                3="fill(x0,        y0 + 1,     x0 + 1,     y1 - 1,     myAccent3)"  // left
+                4="fill(x1 - 1,    y0 + 1,     x1,         y1 - 1,     myAccent3)"  // right
             }
         }
-
         // The 'empty' style is used for 'hint text' in text entry fields.
         // If the text box does not have focus and does not have content, a
         // hint text property will be shown with this style. This is comment
@@ -1769,34 +1740,52 @@ steam.styles {
             textcolor=LabelDisabled
         }
 
+        // "Page TextEntry" {
+        //     render {
+        //         // lines around
+        //         1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+        //         2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+        //         3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+        //         4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+        //     }
+        // }
+        // "Page TextEntry:focus" {
+        //     textcolor="TextHover"
+        //     render {
+        //         // lines around
+        //         1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
+        //         2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
+        //         3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
+        //         4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
+        //     }
+        // }
+
+
         TextEntryLarge {
             font-family=basefont
-            font-size=18
-            textcolor="Text"
+            font-size=14
             font-weight=400
-            bgcolor="none"
-            selectedtextcolor="TextEntrySelected"
-            selectedbgcolor="TextSelectedBG"
-            shadowtextcolor="text"  // this is the cursor color
-
-            inset-left=4
+            inset-left=5
+            inset-right=5
+            bgcolor=none
+            textcolor=myAccent1
+            selectedtextcolor=myColor
+            selectedbgcolor=myAccent1
+            shadowtextcolor=myColor  // this is the cursor color
             render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+                1="fill(x0,        y0,         x1,         y0 + 1,     myAccent2)"  // top
+                2="fill(x0,        y1 - 1,     x1,         y1,         myAccent2)"  // bottom
+                3="fill(x0,        y0 + 1,     x0 + 1,     y1 - 1,     myAccent2)"  // left
+                4="fill(x1 - 1,    y0 + 1,     x1,         y1 - 1,     myAccent2)"  // right
             }
         }
 
         TextEntryLarge:focus {
-            textcolor="TextHover"
             render {
-                // lines around
-                1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
-                2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus  )"  // bottom
-                3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus  )"  // left
-                4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus  )"  // right
+                1="fill(x0,        y0,         x1,         y0 + 1,     myColorAD)"  // top
+                2="fill(x0,        y1 - 1,     x1,         y1,         myColorAD)"  // bottom
+                3="fill(x0,        y0 + 1,     x0 + 1,     y1 - 1,     myColorAD)"  // left
+                4="fill(x1 - 1,    y0 + 1,     x1,         y1 - 1,     myColorAD)"  // right
             }
         }
 
