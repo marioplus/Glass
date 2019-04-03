@@ -140,7 +140,7 @@ steam.styles {
             myMenuItemText="238 255 255 255"
             myMenuItemText.hover="128 203 169 255"
             myMenuItemText.selected=myMenuItemText.hover
-            
+
             myMenuItemBg=myMenuBg
             myMenuItemBg.hover="25 34 39 255"
             myMenuItemBg.selected=myMenuItemBg.hover
@@ -168,7 +168,7 @@ steam.styles {
             myPageTabText.selected=myPageTabText
             myPageTabText.selected.hover=myPageTabText
             myPageTabText.focus=myPageTabText
-            
+
             myPageTabBg=myColor900
             myPageTabBg.hover=myPageTabBg
             myPageTabBg.selected=myColor
@@ -392,7 +392,7 @@ steam.styles {
             // bgcolor=myBtnBg.active
             render_bg {
                 0="fill(x0+2, y0+2, x1, y1-2, myBtnBg.hover)"
-                
+
                 1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder.hover)"
                 2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder.hover)"
                 3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder.hover)"
@@ -403,7 +403,7 @@ steam.styles {
             textcolor=myBtnText.active
             render_bg {
                 0="fill(x0+2, y0+2, x1, y1-2, myBtnBg.active)"
-                
+
                 1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder.active)"
                 2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder.active)"
                 3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder.active)"
@@ -414,7 +414,7 @@ steam.styles {
             textcolor=myBtnText.disabled
             render_bg {
                 0="fill(x0+2, y0+2, x1, y1-2, myBtnBg.disabled)"
-                
+
                 1="fill(x0,     y0,     x1,     y0+2,   myBtnBgBorder.disabled)"
                 2="fill(x0,     y0+2,   x0+2,   y1-2,   myBtnBgBorder.disabled)"
                 3="fill(x1-2,   y0+2,   x1,     y1-2,   myBtnBgBorder.disabled)"
@@ -1303,7 +1303,7 @@ steam.styles {
             // minimum-height=180
             // padding-right=4
             inset="2 2 2 2"
-            render {} 
+            render {}
             render_bg {
                 0="fill(x0, y0, x0+1, y1, myMenuItemDivider)"
                 1="fill(x1-1, y0, x1, y1, myMenuItemDivider)"
@@ -1312,7 +1312,7 @@ steam.styles {
             }
             // corner_rounding=1
         }
-        
+
         MenuBar {
             bgcolor=dialogbg
             padding-right=1
@@ -1395,6 +1395,7 @@ steam.styles {
             bgcolor=none
         }
 
+        // 游戏中消息
         Notification {
             font-family=basefont
             font-size=15
@@ -2116,23 +2117,13 @@ steam.styles {
             render_bg={}
             image="graphics/icon_controller_bpm"
         }
-
-
         FullscreenButton:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_controller_bpm_over"
         }
-
         FullscreenButton:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_controller_bpm_down"
         }
-
         FullscreenButton:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_controller_bpm_disabled"
         }
 
@@ -2141,22 +2132,13 @@ steam.styles {
             render_bg={}
             image="graphics/icon_vr"
         }
-
         VRButton:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_vr_over"
         }
-
         VRButton:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_vr_down"
         }
-
         VRButton:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_vr_disabled"
         }
 
@@ -2165,35 +2147,27 @@ steam.styles {
             render_bg={}
             image="graphics/icon_vr_happy"
         }
-
         VRButtonExit:hover {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_vr_happy_over"
         }
-
         VRButtonExit:active {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_vr_happy_down"
         }
-
         VRButtonExit:disabled {
-            bgcolor=none
-            render_bg={}
             image="graphics/icon_vr_disabled"
         }
 
         // 后退按钮
         BackButton {
             bgcolor=none
+            render_bg={}
             image="graphics/url/icon_button_back"
         }
         BackButton:hover {
             image="graphics/url/icon_button_back_down"
         }
         BackButton:active {
-            image="graphics/url/icon_button_back_down"
+            image="graphics/url/icon_button_back_over"
         }
         BackButton:disabled {
             image="graphics/url/icon_button_back_disabled"
@@ -2516,7 +2490,7 @@ steam.styles {
             // minimum-height=180
             // padding-right=4
             inset="2 2 2 2"
-            render {} 
+            render {}
             render_bg {
                 0="fill(x0, y0, x0+1, y1, myMenuItemDivider)"
                 1="fill(x1-1, y0, x1, y1, myMenuItemDivider)"
@@ -2544,7 +2518,7 @@ steam.styles {
             textcolor=myMenuItemText.hover
             bgcolor=myMenuItemBg.hover
         }
-            
+
 
         SuperNavMenuDivider {
             // textcolor="none"
