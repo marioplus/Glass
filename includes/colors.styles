@@ -29,7 +29,7 @@
     // 蓝色
     // include "includes/colors/theme/blue.styles"
     // 浅蓝色
-    // include "includes/colors/theme/light_blue.styles"
+    include "includes/colors/theme/light_blue.styles"
     // 青色
     // include "includes/colors/theme/cyan.styles"
     // 深青色

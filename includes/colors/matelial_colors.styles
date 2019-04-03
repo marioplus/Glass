@@ -15,7 +15,7 @@
 
         // 这里包含了我所有使用颜色，具体效果可在 includes/colors/material color.png 中查看
         // xxx50 ~ xxx900 为 Material Design 中的颜色值
-        // xxxa50、xxx100、xxxa150 为xxx500 的alpha分别为50、100、150的时候的颜色
+        // xxxa50、xxxa100、xxxa150 为xxx500 的alpha分别为50、100、150的时候的颜色
 
         // 白色
         white1="255 255 255 255" // 100%
