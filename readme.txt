@@ -2,6 +2,29 @@
 
 [size=3]这是一个自制的steam皮肤，由于有很多玻璃效果，我叫它 [b]Glass[/b]。[/size]
 [page]
+[size=5][b]2019/4/4更新内容[/b][/size]
+
+[size=3]感谢 @_deckale 老哥提供的好友图标[/size]
+
+[size=3][list=1]
+[*]调整了菜单的样式：
+[img]https://upload-images.jianshu.io/upload_images/11296261-ccf2dd1d1e81b06f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img]
+[*]调整了设置的样式：
+[img]https://upload-images.jianshu.io/upload_images/11296261-1b6122900b5ff12b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img]
+[*]调整了搜索框的样式：
+[img]https://upload-images.jianshu.io/upload_images/11296261-cf7b5b2f44e5d55c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img]
+[*]调整了按钮的样式
+[*]调整了输入框的样式
+[*]适配了工具页
+[*]调整了背景的渲染模式，由原先的平铺改为拉伸，2k屏的体验会好些。
+[*]几乎重做了界面上所有能看到的图标，特别是主菜单的几个图标，现在在浅色背景下有了更好的体验
+[*]重新做了浏览器相关的那些图标，终于可以整齐的排列了
+[*]移除自带的无主之地背景
+[*]新增一张只狼的背景
+[*]修复了家庭监护模式图标位置重叠的问题
+[/list][/size]
+
+[page]
 [page]
 [size=6][b]背景图模式[/b][/size]
 
@@ -152,6 +175,35 @@
 [page]
 [size=5][b]更新日志[/b][/size]
 
+[size=4][b]2019/4/4[/b][/size]
+
+[size=3]感谢 @_deckale 老哥提供的好友图标[/size]
+
+[size=3][list=1]
+[*]调整了菜单的样式：
+[img]https://upload-images.jianshu.io/upload_images/11296261-ccf2dd1d1e81b06f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img]
+[*]调整了设置的样式：
+[img]https://upload-images.jianshu.io/upload_images/11296261-1b6122900b5ff12b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img]
+[*]调整了搜索框的样式：
+[img]https://upload-images.jianshu.io/upload_images/11296261-cf7b5b2f44e5d55c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240[/img]
+[*]调整了按钮的样式
+[*]调整了输入框的样式
+[*]适配了工具页
+[*]调整了背景的渲染模式，由原先的平铺改为拉伸，2k屏的体验会好些。
+[*]几乎重做了界面上所有能看到的图标，特别是主菜单的几个图标，现在在浅色背景下有了更好的体验
+[*]重新做了浏览器相关的那些图标，终于可以整齐的排列了
+[*]移除自带的无主之地背景
+[*]新增一张只狼的背景
+[*]修复了家庭监护模式图标位置重叠的问题
+[/list][/size]
+
+
+[size=4][b]2019/2/27[/b][/size]
+[size=3][list=1]
+[*]上次更新误删除了几个颜色值，fix
+[/list][/size]
+
+
 [size=4][b]2019/2/22[/b][/size]
 [size=3][list=1]
 [*]终于调整了[b]音乐[/b]界面
@@ -201,19 +253,20 @@
 
 [index]
     [#1]这是什么
-    [#2]看看效果
-        *[#3]背景图模式
-        *[#4]纯色模式
-    [#5]下载
-    [#6]安装
-    [#7]更换配色
-    [#8]背景图更换
-    [#9]背景图模式与纯色模式切换
-    [#10]自定义
-        *[#11]自定义主题色
-        *[#12]自定义强调色
-        *[#13]自定义背景图
-    [#14]已知问题
-    [#15]更新日志
-    [#16]FQA
+    [#2]2019/4/4更新内容
+    [#3]看看效果
+        *[#4]背景图模式
+        *[#5]纯色模式
+    [#6]下载
+    [#7]安装
+    [#8]更换配色
+    [#9]背景图更换
+    [#10]背景图模式与纯色模式切换
+    [#11]自定义
+        *[#12]自定义主题色
+        *[#13]自定义强调色
+        *[#14]自定义背景图
+    [#15]已知问题
+    [#16]更新日志
+    [#17]FQA
 [/index]
